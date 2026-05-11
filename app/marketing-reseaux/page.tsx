@@ -3,7 +3,7 @@
 import {
   Sparkles,
   Megaphone,
-  Instagram,
+  Image,
   CalendarDays,
   BarChart3,
   Users,
@@ -127,7 +127,7 @@ export default function MarketingReseauxPage() {
       <section className="mt-10 grid grid-cols-3 gap-6">
         {[
           [Megaphone, "Campagnes", "Pilotez vos offres, audiences et messages."],
-          [Instagram, "Réseaux sociaux", "Planifiez Instagram, LinkedIn, TikTok et Facebook."],
+          [Image, "Réseaux sociaux", "Planifiez Instagram, LinkedIn, TikTok et Facebook."],
           [BarChart3, "Analyse", "Mesurez portée, engagement, leads et conversion."],
           [Users, "Audience", "Segmentez vos clients et prospects."],
           [ImagePlus, "Créatifs", "Préparez visuels, scripts et publications."],
