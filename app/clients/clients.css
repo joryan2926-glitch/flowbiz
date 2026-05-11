@@ -1,0 +1,878 @@
+.clientsLayout {
+  min-height: 100vh;
+  display: flex;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(37,99,235,.2), transparent 28%),
+    radial-gradient(circle at 82% 15%, rgba(147,51,234,.24), transparent 34%),
+    #050816;
+  color: white;
+  overflow: hidden;
+}
+
+.mainContent {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 28px 34px;
+}
+
+.topbar,
+.topActions,
+.statTop,
+.sectionHeader {
+  display: flex;
+  align-items: center;
+}
+
+.topbar {
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  padding: 14px 0;
+  background: rgba(5,8,22,.82);
+  backdrop-filter: blur(18px);
+}
+
+.topbar h2 {
+  font-size: 36px;
+  background: linear-gradient(90deg, #fff, #a5b4fc, #38bdf8);
+  background-clip: text;
+  color: transparent;
+}
+
+.topbar p,
+.card p,
+.heroContent p,
+.clientRow p,
+.clientData span,
+.sidebarCard p {
+  color: #94a3b8;
+}
+
+.topActions {
+  gap: 14px;
+}
+
+.searchBar {
+  width: 390px;
+  height: 48px;
+  padding: 0 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.09);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchBar input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: white;
+}
+
+.notifBtn,
+.iaTopBtn {
+  height: 48px;
+  border: 0;
+  color: white;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.notifBtn {
+  width: 48px;
+  position: relative;
+  background: rgba(255,255,255,.06);
+}
+
+.notifBtn span {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #ec4899;
+}
+
+.iaTopBtn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 18px;
+  font-weight: 900;
+  background: linear-gradient(90deg,#2563eb,#9333ea);
+}
+
+.heroCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 34px;
+  padding: 42px;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed,#ec4899);
+  display: grid;
+  grid-template-columns: 1fr 290px;
+  gap: 24px;
+  box-shadow: 0 35px 110px rgba(79,70,229,.35);
+}
+
+.heroGlow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  right: -120px;
+  top: -120px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.18);
+  filter: blur(90px);
+  animation: softFloat 6s infinite ease-in-out;
+}
+
+.heroLogo {
+  position: absolute;
+  right: 32px;
+  top: 28px;
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  padding: 8px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.14);
+  box-shadow: 0 0 45px rgba(147,51,234,.45);
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+.watermarkLogo {
+  position: absolute;
+  right: 42px;
+  bottom: 24px;
+  width: 150px;
+  opacity: .08;
+  animation: watermarkPulse 7s ease-in-out infinite;
+}
+
+.heroContent,
+.heroSignal {
+  position: relative;
+  z-index: 2;
+}
+
+.heroContent span {
+  font-weight: 900;
+  color: #dbeafe;
+}
+
+.heroContent h1 {
+  font-size: clamp(40px, 4.6vw, 66px);
+  line-height: .95;
+  letter-spacing: -.06em;
+  margin: 14px 0;
+  max-width: 860px;
+}
+
+.heroContent p {
+  color: rgba(255,255,255,.82);
+  max-width: 740px;
+  line-height: 1.65;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 14px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn,
+.greenBtn,
+.smallBtn,
+.fullBtn {
+  border: 0;
+  cursor: pointer;
+  padding: 14px 20px;
+  border-radius: 16px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  transition: .25s ease;
+}
+
+.primaryBtn {
+  background: white;
+  color: #050816;
+}
+
+.secondaryBtn {
+  background: rgba(255,255,255,.15);
+  color: white;
+}
+
+.greenBtn,
+.fullBtn {
+  background: #22c55e;
+  color: white;
+}
+
+.heroSignal {
+  align-self: center;
+  padding: 24px;
+  border-radius: 26px;
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(18px);
+  animation: softFloat 4s ease-in-out infinite;
+}
+
+.heroSignal strong {
+  display: block;
+  margin: 12px 0 6px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+.statCard,
+.card,
+.filterBar {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.025));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px);
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.05);
+  transition: .28s ease;
+}
+
+.card:hover,
+.statCard:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(56,189,248,.35);
+  box-shadow: 0 0 45px rgba(56,189,248,.12), 0 0 70px rgba(147,51,234,.16);
+}
+
+.statTop,
+.sectionHeader {
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.statCard h2 {
+  font-size: 38px;
+  margin: 16px 0 8px;
+}
+
+.statIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+}
+
+.statIcon.blue { background: rgba(37,99,235,.18); }
+.statIcon.purple { background: rgba(147,51,234,.18); }
+.statIcon.green { background: rgba(34,197,94,.18); }
+.statIcon.pink { background: rgba(236,72,153,.18); }
+
+.miniLine {
+  height: 5px;
+  margin-top: 18px;
+  border-radius: 999px;
+  animation: lineGrow 2s infinite alternate ease-in-out;
+}
+
+.miniLine.blue { background: linear-gradient(90deg,#2563eb,#38bdf8); }
+.miniLine.purple { background: linear-gradient(90deg,#7c3aed,#ec4899); }
+.miniLine.green { background: linear-gradient(90deg,#22c55e,#14b8a6); }
+.miniLine.pink { background: linear-gradient(90deg,#ec4899,#f97316); }
+
+.filterBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.filterBar > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+}
+
+.filterButtons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filterButtons button {
+  border: 0;
+  padding: 10px 13px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  color: #cbd5e1;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.filterButtons .activeFilter {
+  background: linear-gradient(90deg,#2563eb,#9333ea);
+  color: white;
+}
+
+.crmGrid {
+  display: grid;
+  grid-template-columns: 1.55fr .95fr;
+  gap: 28px;
+}
+
+.leftColumn,
+.rightColumn {
+  display: grid;
+  gap: 28px;
+}
+
+.kanbanGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.kanbanCol {
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.04);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.kanbanCol:hover,
+.activeKanban {
+  transform: translateY(-5px);
+  background: rgba(147,51,234,.16);
+}
+
+.clientList {
+  display: grid;
+  gap: 12px;
+}
+
+.clientRow {
+  width: 100%;
+  border: 0;
+  color: white;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 50px 1fr 110px 100px 80px;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.035);
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.clientRow:hover,
+.activeClient {
+  transform: translateX(6px);
+  background: rgba(147,51,234,.14);
+}
+
+.avatar,
+.bigAvatar {
+  border-radius: 16px;
+  background: linear-gradient(135deg,#2563eb,#9333ea);
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+}
+
+.avatar { width: 50px; height: 50px; }
+.bigAvatar { width: 72px; height: 72px; font-size: 24px; }
+
+.statusBadge {
+  width: fit-content;
+  padding: 8px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  background: rgba(147,51,234,.16);
+  color: #d8b4fe;
+}
+
+.vip { background: rgba(245,158,11,.15); color: #fbbf24; }
+.premium { background: rgba(147,51,234,.18); color: #d8b4fe; }
+.récurrent { background: rgba(34,197,94,.15); color: #22c55e; }
+.àrisque { background: rgba(236,72,153,.15); color: #fb7185; }
+.nouveau { background: rgba(56,189,248,.15); color: #38bdf8; }
+.inactif { background: rgba(148,163,184,.15); color: #cbd5e1; }
+
+.timeline {
+  display: grid;
+  gap: 14px;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+}
+
+.timelineIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#2563eb,#9333ea);
+  display: grid;
+  place-items: center;
+}
+
+.timelineItem button {
+  border: 0;
+  border-radius: 13px;
+  padding: 10px 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.serviceCard {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.07);
+}
+
+.serviceCard span {
+  color: #38bdf8;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.serviceCard h4 {
+  margin: 12px 0 8px;
+}
+
+.serviceCard strong {
+  display: block;
+  margin-top: 12px;
+  color: #22c55e;
+}
+
+.serviceActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.serviceActions button,
+.serviceActions a {
+  border: 0;
+  padding: 12px 15px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.08);
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.clientPanel {
+  animation: panelSlide .35s ease both;
+}
+
+.clientPanelTop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.clientPanelTop .statusBadge {
+  margin-left: auto;
+}
+
+.scoreBox {
+  margin: 22px 0;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(147,51,234,.14);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scoreBox strong {
+  font-size: 34px;
+}
+
+.scoreCircle {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: conic-gradient(#22c55e 82%, rgba(255,255,255,.12) 0);
+  display: grid;
+  place-items: center;
+}
+
+.scoreCircle span {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #050816;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+}
+
+.clientData,
+.documentsList,
+.drawerList {
+  display: grid;
+  gap: 13px;
+}
+
+.clientData div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.aiClientInsight {
+  margin: 22px 0;
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(56,189,248,.12);
+}
+
+.clientActions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px;
+}
+
+.clientActions a,
+.clientActions button {
+  border: 0;
+  text-align: center;
+  padding: 12px;
+  border-radius: 14px;
+  background: white;
+  color: #050816;
+  text-decoration: none;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.profitGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.profitGrid div {
+  padding: 15px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+}
+
+.profitGrid span {
+  display: block;
+  color: #94a3b8;
+  margin-bottom: 7px;
+}
+
+.documentsList a {
+  padding: 13px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+  color: white;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 22px 1fr 18px;
+  align-items: center;
+  gap: 10px;
+}
+
+.automationFlow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.automationFlow div {
+  padding: 13px;
+  border-radius: 15px;
+  background: rgba(255,255,255,.04);
+  text-align: center;
+}
+
+.notesBox {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(245,158,11,.12);
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(12px);
+  display: grid;
+  place-items: center;
+}
+
+.clientModal {
+  position: relative;
+  width: min(520px, 92vw);
+  padding: 34px;
+  border-radius: 32px;
+  background: radial-gradient(circle at 20% 0%, rgba(56,189,248,.15), transparent 35%), rgba(5,9,22,.98);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 30px 100px rgba(0,0,0,.55);
+  animation: modalPop .28s ease both;
+}
+
+.modalIcon {
+  width: 62px;
+  height: 62px;
+  border-radius: 20px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed,#ec4899);
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+}
+
+.modalFields {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.modalFields input {
+  height: 48px;
+  border: 1px solid rgba(255,255,255,.1);
+  background: rgba(255,255,255,.05);
+  border-radius: 15px;
+  padding: 0 14px;
+  color: white;
+  outline: 0;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+}
+
+.modalActions button,
+.modalActions a {
+  flex: 1;
+  height: 48px;
+  border: 0;
+  border-radius: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+}
+
+.modalActions button {
+  background: rgba(255,255,255,.08);
+  color: white;
+}
+
+.modalActions a {
+  background: white;
+  color: #050816;
+}
+
+.aiDrawer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 460px;
+  height: 100vh;
+  z-index: 80;
+  padding: 30px;
+  background: rgba(5,9,22,.97);
+  border-left: 1px solid rgba(255,255,255,.1);
+  backdrop-filter: blur(24px);
+  animation: slideIn .35s ease both;
+}
+
+.closeAi {
+  position: absolute;
+  right: 22px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 14px;
+  background: rgba(255,255,255,.08);
+  color: white;
+  cursor: pointer;
+}
+
+.drawerHead {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.drawerHead img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: rgba(255,255,255,.08);
+  padding: 6px;
+}
+
+.drawerList div {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.045);
+}
+
+.drawerList a,
+.drawerList button {
+  display: inline-flex;
+  margin-top: 12px;
+  border: 0;
+  background: white;
+  color: #050816;
+  padding: 10px 14px;
+  border-radius: 13px;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes softFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes logoFloat {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-7px) rotate(3deg); }
+}
+
+@keyframes watermarkPulse {
+  0%,100% { opacity: .06; transform: scale(1); }
+  50% { opacity: .13; transform: scale(1.04); }
+}
+
+@keyframes lineGrow {
+  from { width: 40%; }
+  to { width: 100%; }
+}
+
+@keyframes panelSlide {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(.94) translateY(16px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 1200px) {
+  .statsGrid,
+  .crmGrid,
+  .servicesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heroCard,
+  .filterBar {
+    grid-template-columns: 1fr;
+  }
+
+  .kanbanGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clientRow {
+    grid-template-columns: 50px 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .clientsLayout {
+    display: block;
+  }
+
+  .statsGrid,
+  .crmGrid,
+  .servicesGrid,
+  .kanbanGrid,
+  .profitGrid,
+  .clientActions,
+  .automationFlow {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar,
+  .topActions,
+  .filterBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .searchBar {
+    width: 100%;
+  }
+
+  .heroContent h1 {
+    font-size: 38px;
+  }
+
+  .aiDrawer {
+    width: 100%;
+  }
+}
