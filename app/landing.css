@@ -1,700 +1,5 @@
 /* =========================================================
-FLOWBIZ LANDING — CSS PREMIUM FINAL SANS WEBKIT
-========================================================= */
-
-
-* {
-  box-sizing: border-box;
-}
-
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background: #040711;
-  color: #ffffff;
-  font-family: Inter, system-ui, sans-serif;
-  scroll-behavior: smooth;
-}
-
-
-.homePage {
-  min-height: 100vh;
-  padding: 26px 42px 42px;
-  overflow-x: hidden;
-  background:
-    radial-gradient(circle at 14% 10%, rgba(0, 255, 157, 0.24), transparent 30%),
-    radial-gradient(circle at 78% 12%, rgba(124, 92, 255, 0.34), transparent 34%),
-    radial-gradient(circle at 50% 74%, rgba(0, 212, 255, 0.10), transparent 38%),
-    linear-gradient(135deg, #040711 0%, #0d1228 52%, #050711 100%);
-}
-
-
-/* HEADER */
-
-
-.siteHeader {
-  width: 100%;
-  max-width: 1240px;
-  height: 82px;
-  margin: 0 auto;
-  padding: 0 18px;
-  border-radius: 26px;
-  position: sticky;
-  top: 16px;
-  z-index: 50;
-
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 22px;
-
-
-  background: rgba(8, 12, 28, 0.74);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(22px);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
-}
-
-
-.brand {
-  color: #ffffff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-
-.brandIcon {
-  width: 46px;
-  height: 46px;
-  border-radius: 16px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, #00ff9d, #00d4ff, #7c5cff);
-  box-shadow: 0 0 28px rgba(0, 212, 255, 0.28);
-  font-weight: 900;
-}
-
-
-.brand strong {
-  display: block;
-  font-size: 19px;
-  letter-spacing: -0.04em;
-}
-
-
-.brand span {
-  display: block;
-  margin-top: 2px;
-  color: #aab0c5;
-  font-size: 11px;
-  font-weight: 700;
-}
-
-
-.siteNav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-
-.siteNav a,
-.footerLinks a {
-  color: #cfd4e8;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 900;
-  transition: 0.18s ease;
-}
-
-
-.siteNav a:hover,
-.footerLinks a:hover {
-  color: #00ff9d;
-}
-
-
-.headerActions {
-  display: flex;
-  gap: 10px;
-}
-
-
-/* MAIN BLOCKS */
-
-
-.hero,
-.problemSolution,
-.sellerJourney,
-.modules,
-.pricing,
-.security,
-.faq,
-.finalCta,
-.footer {
-  width: 100%;
-  max-width: 1240px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-/* HERO */
-
-
-.hero {
-  min-height: calc(100vh - 110px);
-  padding: 72px 0 42px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-}
-
-
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 680px;
-  height: 680px;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.12), transparent 65%);
-  animation: flowGlow 7s ease-in-out infinite;
-  pointer-events: none;
-}
-
-
-.heroLogo {
-  width: 136px;
-  height: 136px;
-  object-fit: contain;
-  border-radius: 30px;
-  padding: 12px;
-  margin-bottom: 22px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow:
-    0 0 42px rgba(0, 212, 255, 0.28),
-    0 24px 76px rgba(0, 0, 0, 0.36);
-  animation: logoFloat 4.5s ease-in-out infinite;
-  position: relative;
-  z-index: 1;
-}
-
-
-.heroBadge,
-.sectionLabel {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 9px 16px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, rgba(124, 92, 255, 0.28), rgba(0, 212, 255, 0.12));
-  border: 1px solid rgba(124, 92, 255, 0.38);
-  color: #dcd6ff;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  box-shadow: 0 0 24px rgba(124, 92, 255, 0.22);
-  position: relative;
-  z-index: 1;
-}
-
-
-h1 {
-  max-width: 1120px;
-  margin: 26px 0 18px;
-  font-size: clamp(52px, 8vw, 118px);
-  line-height: 0.9;
-  letter-spacing: -0.095em;
-  background: linear-gradient(135deg, #00ff9d, #00d4ff, #7c5cff);
-  color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 28px rgba(0, 212, 255, 0.16));
-  position: relative;
-  z-index: 1;
-}
-
-
-.hero p {
-  max-width: 900px;
-  margin: 0 auto;
-  color: #d4d8ea;
-  font-size: clamp(18px, 2vw, 24px);
-  line-height: 1.6;
-  font-weight: 650;
-  position: relative;
-  z-index: 1;
-}
-
-
-/* BUTTONS */
-
-
-.heroActions,
-.trustBar,
-.ctaActions {
-  margin-top: 34px;
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 1;
-}
-
-
-.primaryBtn,
-.secondaryBtn,
-.smallBtn,
-.ghostBtn,
-.headerBtn,
-.priceBtn {
-  min-height: 52px;
-  padding: 0 22px;
-  border-radius: 18px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-weight: 950;
-  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
-}
-
-
-.primaryBtn,
-.headerBtn,
-.priceBtn {
-  background: linear-gradient(135deg, #00ff9d, #00d4ff, #7c5cff);
-  color: #ffffff;
-  box-shadow: 0 0 38px rgba(0, 212, 255, 0.24);
-}
-
-
-.secondaryBtn,
-.smallBtn,
-.ghostBtn {
-  background: rgba(255, 255, 255, 0.09);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  color: #ffffff;
-}
-
-
-.primaryBtn:hover,
-.secondaryBtn:hover,
-.smallBtn:hover,
-.ghostBtn:hover,
-.headerBtn:hover,
-.priceBtn:hover,
-.moduleCard:hover,
-.step:hover,
-.glassCard:hover,
-.priceCard:hover,
-.faqItem:hover {
-  transform: translateY(-4px);
-}
-
-
-.primaryBtn:hover,
-.headerBtn:hover,
-.priceBtn:hover {
-  box-shadow: 0 0 48px rgba(0, 255, 157, 0.26);
-}
-
-
-/* TRUST */
-
-
-.trustBar span {
-  padding: 11px 15px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.075);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #cfd4e8;
-  font-size: 13px;
-  font-weight: 850;
-}
-
-
-/* SECTIONS */
-
-
-.problemSolution,
-.sellerJourney,
-.modules,
-.pricing,
-.security,
-.faq,
-.finalCta {
-  margin-top: 84px;
-}
-
-
-.sectionIntro h2,
-.sectionTop h2,
-.finalCta h2 {
-  margin: 16px 0 0;
-  font-size: clamp(34px, 4vw, 60px);
-  line-height: 0.98;
-  letter-spacing: -0.065em;
-}
-
-
-.twoGrid,
-.securityGrid,
-.faqGrid {
-  margin-top: 26px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-}
-
-
-.steps {
-  margin-top: 26px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-
-.moduleGrid,
-.pricingGrid {
-  margin-top: 26px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-
-.glassCard,
-.step,
-.moduleCard,
-.priceCard,
-.faqItem,
-.finalCta {
-  border-radius: 32px;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.052));
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow:
-    0 26px 78px rgba(0, 0, 0, 0.30),
-    inset 0 1px 0 rgba(255, 255, 255, 0.11);
-  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
-}
-
-
-.glassCard:hover,
-.step:hover,
-.moduleCard:hover,
-.priceCard:hover,
-.faqItem:hover {
-  border-color: rgba(0, 212, 255, 0.34);
-  background:
-    linear-gradient(145deg, rgba(124, 92, 255, 0.18), rgba(255, 255, 255, 0.06));
-}
-
-
-.glassCard,
-.step,
-.moduleCard,
-.priceCard,
-.faqItem {
-  padding: 26px;
-}
-
-
-.glassCard svg,
-.moduleCard > svg,
-.faqItem > svg {
-  width: 36px;
-  height: 36px;
-  color: #00d4ff;
-  filter: drop-shadow(0 0 16px rgba(0, 212, 255, 0.34));
-}
-
-
-.step span {
-  color: #00d4ff;
-  font-weight: 950;
-  font-size: 13px;
-}
-
-
-h3 {
-  margin: 18px 0 10px;
-  font-size: 23px;
-  letter-spacing: -0.03em;
-}
-
-
-.glassCard p,
-.step p,
-.moduleCard p,
-.priceCard p,
-.faqItem p,
-.finalCta p {
-  margin: 0;
-  color: #aab0c5;
-  line-height: 1.58;
-  font-size: 14px;
-}
-
-
-.sectionTop {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-
-.moduleCard {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-
-.moduleCard span {
-  margin-top: 20px;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  color: #00ff9d;
-  font-weight: 950;
-  font-size: 14px;
-}
-
-
-/* PRICING */
-
-
-.priceCard strong {
-  display: block;
-  margin: 14px 0;
-  font-size: 38px;
-  letter-spacing: -0.055em;
-  color: #00ff9d;
-}
-
-
-.priceCard ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-  display: grid;
-  gap: 11px;
-}
-
-
-.priceCard li {
-  color: #cfd4e8;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-size: 14px;
-}
-
-
-/* CTA */
-
-
-.finalCta {
-  margin-bottom: 55px;
-  padding: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  position: relative;
-  overflow: hidden;
-}
-
-
-.finalCta::after {
-  content: "";
-  position: absolute;
-  width: 260px;
-  height: 260px;
-  right: -90px;
-  top: -90px;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(0, 255, 157, 0.18), transparent 70%);
-  pointer-events: none;
-}
-
-
-/* FOOTER */
-
-
-.footer {
-  padding: 30px 0 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.10);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 22px;
-  flex-wrap: wrap;
-}
-
-
-.footer p {
-  color: #aab0c5;
-  margin: 5px 0 0;
-  font-size: 13px;
-}
-
-
-.footerLinks {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-
-.footerLinks a {
-  color: #cfd4e8;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 850;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-
-/* ANIMATIONS */
-
-
-@keyframes logoFloat {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-
-
-  50% {
-    transform: translateY(-10px) scale(1.025);
-  }
-}
-
-
-@keyframes flowGlow {
-  0%, 100% {
-    transform: translateY(0) translateX(0);
-    opacity: 0.75;
-  }
-
-
-  50% {
-    transform: translateY(-24px) translateX(18px);
-    opacity: 1;
-  }
-}
-
-
-/* PRODUCTIVITÉ : MINI EFFET CADENCE */
-
-
-.moduleCard,
-.priceCard,
-.step {
-  animation: productivityFade 0.7s ease both;
-}
-
-
-@keyframes productivityFade {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* RESPONSIVE */
-
-
-@media (max-width: 980px) {
-  .homePage {
-    padding: 20px 16px 40px;
-  }
-
-
-  .siteHeader {
-    height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    top: 0;
-    padding: 18px;
-  }
-
-
-  .siteNav,
-  .headerActions {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-
-  .hero {
-    min-height: auto;
-    padding: 60px 0;
-  }
-
-
-  .heroLogo {
-    width: 110px;
-    height: 110px;
-  }
-
-
-  .steps,
-  .moduleGrid,
-  .pricingGrid,
-  .twoGrid,
-  .securityGrid,
-  .faqGrid {
-    grid-template-columns: 1fr;
-  }
-
-
-  .sectionTop,
-  .finalCta,
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-
-  .primaryBtn,
-  .secondaryBtn,
-  .smallBtn,
-  .ghostBtn,
-  .headerBtn,
-  .priceBtn {
-    width: 100%;
-  }
-}
-
-
-/* =========================================================
-FLOWBIZ LANDING — UPGRADE PREMIUM FINAL
+LANDING FLOWBIZ — UPGRADE PREMIUM FINAL
 ========================================================= */
 
 
@@ -707,13 +12,12 @@ FLOWBIZ LANDING — UPGRADE PREMIUM FINAL
   content: "";
   position: fixed;
   inset: 0;
-  pointer-events: none;
   z-index: 0;
+  pointer-events: none;
   background:
     linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.65), transparent 75%);
+  background-size: 44px 44px;
 }
 
 
@@ -724,39 +28,70 @@ FLOWBIZ LANDING — UPGRADE PREMIUM FINAL
 
 
 .siteHeader {
-  animation: headerReveal 0.7s ease both;
+  top: 18px;
+  padding: 0 20px;
+  border-radius: 26px;
+  background: rgba(7, 11, 26, 0.72);
+  border: 1px solid rgba(255,255,255,0.13);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.32);
 }
 
 
-.heroLogo {
-  animation:
-    logoFloat 4.5s ease-in-out infinite,
-    logoGlow 3s ease-in-out infinite;
+.brandIcon {
+  box-shadow: 0 0 32px rgba(0,212,255,0.32);
+  animation: logoPulse 3.5s ease-in-out infinite;
 }
 
 
-.heroBadge {
-  animation: badgePulse 3s ease-in-out infinite;
+.hero {
+  position: relative;
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 680px;
+  height: 680px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(0,212,255,0.12), transparent 65%);
+  animation: floatGlow 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+
+.heroBadge,
+.sectionLabel {
+  box-shadow: 0 0 26px rgba(124,92,255,0.24);
 }
 
 
 h1 {
-  animation: titleReveal 0.9s ease both;
+  filter: drop-shadow(0 0 30px rgba(0,212,255,0.16));
+  animation: fadeUp 0.8s ease both;
 }
 
 
-.hero p {
-  animation: fadeUp 1s ease 0.12s both;
-}
-
-
-.heroActions {
-  animation: fadeUp 1s ease 0.22s both;
-}
-
-
+.hero p,
+.heroActions,
 .trustBar {
-  animation: fadeUp 1s ease 0.32s both;
+  animation: fadeUp 0.9s ease both;
+}
+
+
+.primaryBtn,
+.headerBtn,
+.priceBtn {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 42px rgba(0,212,255,0.28);
+}
+
+
+.primaryBtn:hover,
+.headerBtn:hover,
+.priceBtn:hover {
+  box-shadow: 0 0 55px rgba(0,255,157,0.32);
 }
 
 
@@ -764,9 +99,21 @@ h1 {
 .step,
 .moduleCard,
 .priceCard,
-.faqItem {
+.faqItem,
+.finalCta {
   position: relative;
   overflow: hidden;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+
+.glassCard:hover,
+.step:hover,
+.moduleCard:hover,
+.priceCard:hover,
+.faqItem:hover {
+  border-color: rgba(0,212,255,0.36);
+  background: linear-gradient(145deg, rgba(124,92,255,0.18), rgba(255,255,255,0.06));
 }
 
 
@@ -778,14 +125,9 @@ h1 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(255,255,255,0.13) 45%,
-    transparent 70%
-  );
-  transform: translateX(-120%);
-  transition: transform 0.7s ease;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.14) 45%, transparent 70%);
+  transform: translateX(-130%);
+  transition: transform 0.75s ease;
   pointer-events: none;
 }
 
@@ -795,110 +137,50 @@ h1 {
 .moduleCard:hover::before,
 .priceCard:hover::before,
 .faqItem:hover::before {
-  transform: translateX(120%);
+  transform: translateX(130%);
 }
 
 
-.primaryBtn,
-.headerBtn,
-.priceBtn {
-  position: relative;
-  overflow: hidden;
+.moduleCard,
+.priceCard,
+.step {
+  animation: fadeUp 0.7s ease both;
 }
 
 
-.primaryBtn::after,
-.headerBtn::after,
-.priceBtn::after {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  background: linear-gradient(135deg, #00ff9d, #00d4ff, #7c5cff, #00ff9d);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  z-index: -1;
-}
-
-
-.primaryBtn:hover::after,
-.headerBtn:hover::after,
-.priceBtn:hover::after {
-  opacity: 1;
-}
-
-
-.moduleCard:nth-child(1),
-.step:nth-child(1),
-.priceCard:nth-child(1) {
-  animation-delay: 0.05s;
-}
-
-
-.moduleCard:nth-child(2),
-.step:nth-child(2),
-.priceCard:nth-child(2) {
-  animation-delay: 0.12s;
-}
-
-
-.moduleCard:nth-child(3),
-.step:nth-child(3),
-.priceCard:nth-child(3) {
-  animation-delay: 0.19s;
-}
-
-
-.moduleCard:nth-child(4),
-.step:nth-child(4),
-.priceCard:nth-child(4) {
-  animation-delay: 0.26s;
+.finalCta {
+  background:
+    radial-gradient(circle at 90% 10%, rgba(0,255,157,0.18), transparent 30%),
+    linear-gradient(145deg, rgba(255,255,255,0.14), rgba(255,255,255,0.055));
 }
 
 
 .footer {
-  opacity: 0.95;
+  opacity: 0.96;
 }
 
 
-/* ACCESSIBILITÉ */
-
-
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid rgba(0, 212, 255, 0.8);
-  outline-offset: 4px;
+/* anti-blocage clic */
+a,
+button,
+.primaryBtn,
+.secondaryBtn,
+.smallBtn,
+.ghostBtn,
+.headerBtn,
+.priceBtn,
+.moduleCard {
+  pointer-events: auto;
 }
 
 
-/* ANIMATIONS */
-
-
-@keyframes headerReveal {
-  from {
-    opacity: 0;
-    transform: translateY(-14px);
-  }
-
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hero::before,
+.homePage::before {
+  pointer-events: none;
 }
 
 
-@keyframes titleReveal {
-  from {
-    opacity: 0;
-    transform: translateY(22px) scale(0.98);
-  }
-
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
+/* animations */
 
 
 @keyframes fadeUp {
@@ -915,30 +197,28 @@ button:focus-visible {
 }
 
 
-@keyframes logoGlow {
+@keyframes floatGlow {
   0%, 100% {
-    box-shadow:
-      0 0 42px rgba(0, 212, 255, 0.28),
-      0 24px 76px rgba(0, 0, 0, 0.36);
+    transform: translateY(0) translateX(0);
+    opacity: 0.75;
   }
 
 
   50% {
-    box-shadow:
-      0 0 58px rgba(0, 255, 157, 0.34),
-      0 24px 86px rgba(124, 92, 255, 0.22);
+    transform: translateY(-24px) translateX(18px);
+    opacity: 1;
   }
 }
 
 
-@keyframes badgePulse {
+@keyframes logoPulse {
   0%, 100% {
-    box-shadow: 0 0 24px rgba(124, 92, 255, 0.22);
+    transform: scale(1);
   }
 
 
   50% {
-    box-shadow: 0 0 36px rgba(0, 212, 255, 0.30);
+    transform: scale(1.04);
   }
 }
 
@@ -949,5 +229,153 @@ button:focus-visible {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+/* =========================================================
+FLOWBIZ — FUTURE PREMIUM UPGRADE FINAL
+========================================================= */
+
+
+.homePage {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(0,255,157,0.26), transparent 28%),
+    radial-gradient(circle at 84% 8%, rgba(124,92,255,0.34), transparent 34%),
+    radial-gradient(circle at 50% 80%, rgba(0,212,255,0.12), transparent 36%),
+    linear-gradient(135deg, #030611 0%, #0b1024 48%, #040711 100%);
+}
+
+
+.siteHeader {
+  background: rgba(5, 8, 20, 0.78);
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow:
+    0 28px 90px rgba(0,0,0,0.38),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+
+.heroBadge,
+.sectionLabel {
+  background:
+    linear-gradient(135deg, rgba(0,255,157,0.16), rgba(124,92,255,0.24));
+  border-color: rgba(0,212,255,0.35);
+}
+
+
+h1 {
+  text-shadow:
+    0 0 28px rgba(0,212,255,0.18),
+    0 0 70px rgba(124,92,255,0.12);
+}
+
+
+.hero p {
+  color: #d9def2;
+}
+
+
+.primaryBtn,
+.headerBtn,
+.priceBtn {
+  background:
+    linear-gradient(135deg, #00ff9d 0%, #00d4ff 45%, #7c5cff 100%);
+  box-shadow:
+    0 0 42px rgba(0,212,255,0.28),
+    0 18px 46px rgba(0,0,0,0.28);
+}
+
+
+.secondaryBtn,
+.smallBtn,
+.ghostBtn {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.055));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+
+.glassCard,
+.step,
+.moduleCard,
+.priceCard,
+.faqItem,
+.finalCta {
+  border-radius: 34px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow:
+    0 30px 90px rgba(0,0,0,0.34),
+    inset 0 1px 0 rgba(255,255,255,0.10);
+}
+
+
+.moduleCard:hover,
+.priceCard:hover,
+.step:hover,
+.glassCard:hover,
+.faqItem:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,255,157,0.34);
+  box-shadow:
+    0 34px 100px rgba(0,0,0,0.42),
+    0 0 36px rgba(0,212,255,0.12);
+}
+
+
+.moduleCard svg,
+.glassCard svg,
+.faqItem svg {
+  color: #00ff9d;
+}
+
+
+.priceCard strong {
+  background: linear-gradient(135deg, #00ff9d, #00d4ff);
+  color: transparent;
+  background-clip: text;
+}
+
+
+.trustBar span {
+  background: rgba(255,255,255,0.085);
+  border-color: rgba(255,255,255,0.14);
+}
+
+
+.finalCta {
+  border-color: rgba(0,255,157,0.22);
+}
+
+
+/* effet productivité futuriste */
+.moduleCard::after,
+.priceCard::after,
+.step::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 2px;
+  left: 26px;
+  bottom: 18px;
+  background: linear-gradient(90deg, #00ff9d, transparent);
+  opacity: 0.55;
+}
+
+
+/* meilleure lisibilité mobile */
+@media (max-width: 980px) {
+  h1 {
+    font-size: clamp(42px, 13vw, 72px);
+  }
+
+
+  .hero p {
+    font-size: 16px;
+  }
+
+
+  .siteNav {
+    gap: 10px;
   }
 }
