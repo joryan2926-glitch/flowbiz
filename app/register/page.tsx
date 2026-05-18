@@ -1,12 +1,16 @@
 "use client";
 
+
 import "./register.css";
 
-import { useState } from "react";
 
+import Link from "next/link";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 
+
 import { supabase } from "@/app/lib/supabase";
+
 
 import {
   Mail,
@@ -19,462 +23,230 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-export default function RegisterPage() {
 
+export default function RegisterPage() {
   const router = useRouter();
 
-  /*
-  =========================================
-  STATES
-  =========================================
-  */
 
-  const [fullName, setFullName] =
-    useState("");
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
-  const [email, setEmail] =
-    useState("");
 
-  const [password, setPassword] =
-    useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const [confirmPassword,
-    setConfirmPassword] =
-    useState("");
 
-  const [showPassword,
-    setShowPassword] =
-    useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
-  const [showConfirmPassword,
-    setShowConfirmPassword] =
-    useState(false);
 
-  const [loading, setLoading] =
-    useState(false);
-
-  const [error, setError] =
-    useState("");
-
-  const [success, setSuccess] =
-    useState("");
-
-  /*
-  =========================================
-  REGISTER
-  =========================================
-  */
-
-  async function handleRegister(
-    e: React.FormEvent
-  ) {
-
+  async function handleRegister(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    setError("");
 
+    setError("");
     setSuccess("");
 
-    /*
-    =========================================
-    VALIDATION
-    =========================================
-    */
 
-    if (
-      !fullName ||
-      !email ||
-      !password ||
-      !confirmPassword
-    ) {
-
-      setError(
-        "Veuillez remplir tous les champs."
-      );
-
+    if (!fullName.trim() || !email.trim() || !password || !confirmPassword) {
+      setError("Veuillez remplir tous les champs.");
       return;
     }
+
 
     if (password.length < 6) {
-
-      setError(
-        "Le mot de passe doit contenir au moins 6 caractères."
-      );
-
+      setError("Le mot de passe doit contenir au moins 6 caractères.");
       return;
     }
 
-    if (
-      password !==
-      confirmPassword
-    ) {
 
-      setError(
-        "Les mots de passe ne correspondent pas."
-      );
-
+    if (password !== confirmPassword) {
+      setError("Les mots de passe ne correspondent pas.");
       return;
     }
+
 
     try {
-
       setLoading(true);
 
-      /*
-      =========================================
-      SUPABASE SIGNUP
-      =========================================
-      */
 
-      const {
-        data,
-        error,
-      } = await supabase.auth.signUp({
-
-        email,
-
+      const { data, error: signUpError } = await supabase.auth.signUp({
+        email: email.trim(),
         password,
-
         options: {
-
           data: {
-
-            full_name: fullName,
-
+            full_name: fullName.trim(),
           },
-
         },
-
       });
 
-      /*
-      =========================================
-      ERROR
-      =========================================
-      */
 
-      if (error) {
-
-        setError(error.message);
-
-        setLoading(false);
-
+      if (signUpError) {
+        setError(signUpError.message);
         return;
       }
 
-      /*
-      =========================================
-      PROFILE INSERT
-      =========================================
-      */
 
       if (data.user) {
+        const { error: profileError } = await supabase.from("profiles").upsert({
+          id: data.user.id,
+          full_name: fullName.trim(),
+          email: email.trim(),
+          plan: "free",
+          role: "user",
+          created_at: new Date().toISOString(),
+        });
 
-        await supabase
-          .from("profiles")
-          .upsert({
 
-            id: data.user.id,
-
-            full_name: fullName,
-
-            email: email,
-
-            plan: "free",
-
-            role: "user",
-
-            created_at:
-              new Date().toISOString(),
-
-          });
-
+        if (profileError) {
+          console.warn("Profil non créé :", profileError.message);
+        }
       }
 
-      /*
-      =========================================
-      SUCCESS
-      =========================================
-      */
 
-      setSuccess(
-        "Compte créé avec succès."
-      );
+      setSuccess("Compte créé avec succès. Redirection...");
 
-      /*
-      =========================================
-      AUTO LOGIN REDIRECT
-      =========================================
-      */
 
       setTimeout(() => {
-
         router.push("/dashboard");
-
-      }, 1500);
-
-    } catch (err:any) {
-
-      setError(
-        "Une erreur est survenue."
-      );
-
+      }, 1200);
+    } catch (err) {
+      console.error(err);
+      setError("Une erreur est survenue pendant la création du compte.");
     } finally {
-
       setLoading(false);
-
     }
   }
 
+
   return (
-
-    <div className="registerPage">
-
-      {/* BG */}
-
+    <main className="registerPage">
       <div className="registerGlowOne" />
       <div className="registerGlowTwo" />
 
-      {/* CARD */}
 
-      <div className="registerCard">
-
-        {/* LOGO */}
-
-        <div className="registerLogoBox">
-
+      <section className="registerCard">
+        <Link href="/" className="registerLogoBox">
           <img
-            src="/flowbiz-logo.png"
+            src="/logo-flowbiz.png"
             alt="FlowBiz"
             className="registerLogo"
           />
+        </Link>
 
-        </div>
-
-        {/* TITLE */}
 
         <span className="registerBadge">
-
           <ShieldCheck />
-
           FLOWBIZ AUTH
-
         </span>
 
-        <h1>
-          Créer un compte
-        </h1>
+
+        <h1>Créer un compte</h1>
+
 
         <p className="registerDescription">
-
-          Accédez à votre espace
-          business intelligent,
-          CRM, IA, facturation,
-          automatisations et analytics.
-
+          Accédez à votre espace business intelligent : CRM, IA,
+          facturation, automatisations et analytics.
         </p>
 
-        {/* ERROR */}
 
-        {
-          error && (
+        {error && <div className="errorBox">{error}</div>}
+        {success && <div className="successBox">{success}</div>}
 
-            <div className="errorBox">
 
-              {error}
-
-            </div>
-          )
-        }
-
-        {/* SUCCESS */}
-
-        {
-          success && (
-
-            <div className="successBox">
-
-              {success}
-
-            </div>
-          )
-        }
-
-        {/* FORM */}
-
-        <form
-          onSubmit={handleRegister}
-          className="registerForm"
-        >
-
-          {/* NAME */}
-
+        <form onSubmit={handleRegister} className="registerForm">
           <div className="inputBox">
-
             <User />
-
             <input
               type="text"
               placeholder="Nom complet"
               value={fullName}
-              onChange={(e)=>
-                setFullName(
-                  e.target.value
-                )
-              }
+              onChange={(e) => setFullName(e.target.value)}
+              autoComplete="name"
             />
-
           </div>
 
-          {/* EMAIL */}
 
           <div className="inputBox">
-
             <Mail />
-
             <input
               type="email"
               placeholder="Adresse email"
               value={email}
-              onChange={(e)=>
-                setEmail(
-                  e.target.value
-                )
-              }
+              onChange={(e) => setEmail(e.target.value)}
+              autoComplete="email"
             />
-
           </div>
 
-          {/* PASSWORD */}
 
           <div className="inputBox">
-
             <Lock />
-
             <input
-              type={
-                showPassword
-                  ? "text"
-                  : "password"
-              }
+              type={showPassword ? "text" : "password"}
               placeholder="Mot de passe"
               value={password}
-              onChange={(e)=>
-                setPassword(
-                  e.target.value
-                )
-              }
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="new-password"
             />
+
 
             <button
               type="button"
               className="eyeBtn"
-              onClick={() =>
-                setShowPassword(
-                  !showPassword
-                )
-              }
+              onClick={() => setShowPassword((value) => !value)}
+              aria-label="Afficher ou masquer le mot de passe"
             >
-
-              {
-                showPassword
-                ? <EyeOff />
-                : <Eye />
-              }
-
+              {showPassword ? <EyeOff /> : <Eye />}
             </button>
-
           </div>
 
-          {/* CONFIRM */}
 
           <div className="inputBox">
-
             <Lock />
-
             <input
-              type={
-                showConfirmPassword
-                  ? "text"
-                  : "password"
-              }
-              placeholder="Confirmer mot de passe"
+              type={showConfirmPassword ? "text" : "password"}
+              placeholder="Confirmer le mot de passe"
               value={confirmPassword}
-              onChange={(e)=>
-                setConfirmPassword(
-                  e.target.value
-                )
-              }
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              autoComplete="new-password"
             />
+
 
             <button
               type="button"
               className="eyeBtn"
-              onClick={() =>
-                setShowConfirmPassword(
-                  !showConfirmPassword
-                )
-              }
+              onClick={() => setShowConfirmPassword((value) => !value)}
+              aria-label="Afficher ou masquer la confirmation"
             >
-
-              {
-                showConfirmPassword
-                ? <EyeOff />
-                : <Eye />
-              }
-
+              {showConfirmPassword ? <EyeOff /> : <Eye />}
             </button>
-
           </div>
 
-          {/* BUTTON */}
 
-          <button
-            type="submit"
-            className="registerBtn"
-            disabled={loading}
-          >
-
-            {
-              loading ? (
-
-                <>
-                  <Loader2 className="spin" />
-                  Création...
-                </>
-
-              ) : (
-
-                <>
-                  Créer mon compte
-                  <ArrowRight />
-                </>
-
-              )
-            }
-
+          <button type="submit" className="registerBtn" disabled={loading}>
+            {loading ? (
+              <>
+                <Loader2 className="spin" />
+                Création...
+              </>
+            ) : (
+              <>
+                Créer mon compte
+                <ArrowRight />
+              </>
+            )}
           </button>
-
         </form>
 
-        {/* FOOTER */}
 
         <div className="registerFooter">
-
           Déjà un compte ?
-
-          <span
-            onClick={() =>
-              router.push("/login")
-            }
-          >
-            Se connecter
-          </span>
-
+          <Link href="/login">Se connecter</Link>
         </div>
-
-      </div>
-
-    </div>
+      </section>
+    </main>
   );
 }
