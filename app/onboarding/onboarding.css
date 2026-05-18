@@ -1,0 +1,533 @@
+.onboardingPage{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+
+.onboardingTop{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.onboardingBadge{
+  color:#79ffca;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:3px;
+  margin-bottom:12px;
+}
+
+.onboardingTitle{
+  font-size:56px;
+  line-height:1;
+  letter-spacing:-2px;
+  font-weight:900;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #8dd7ff,
+      #d699ff
+    );
+
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.progressContainer{
+  width:320px;
+}
+
+.progressInfos{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:10px;
+
+  color:#8f9bb7;
+  font-size:13px;
+}
+
+.progressBar{
+  width:100%;
+  height:12px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  overflow:hidden;
+}
+
+.progressFill{
+  height:100%;
+
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #69b9ff,
+      #ff78ca
+    );
+
+  transition:.35s ease;
+}
+
+.onboardingCard{
+  padding:34px;
+
+  border-radius:34px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18,22,36,.96),
+      rgba(10,12,22,.94)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.05);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.42);
+
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+}
+
+.stepContent{
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+
+.stepHeader{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.stepIcon{
+  width:58px;
+  height:58px;
+
+  border-radius:18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.stepHeader h2{
+  font-size:34px;
+  font-weight:900;
+}
+
+.stepHeader p{
+  color:#8f9bb7;
+  margin-top:6px;
+}
+
+.formGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.inputGroup{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.inputGroup label{
+  font-size:14px;
+  font-weight:700;
+}
+
+.inputGroup input,
+.inputGroup select{
+  height:58px;
+
+  padding:0 18px;
+
+  border:none;
+  outline:none;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  color:white;
+}
+
+.modulesGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.moduleCard{
+  min-height:140px;
+
+  border:none;
+
+  padding:22px;
+
+  border-radius:26px;
+
+  background:
+    rgba(255,255,255,.03);
+
+  color:white;
+
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:space-between;
+
+  cursor:pointer;
+
+  transition:.25s ease;
+
+  position:relative;
+}
+
+.moduleCard:hover{
+  transform:translateY(-4px);
+}
+
+.activeModule{
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(105,185,255,.12),
+      rgba(255,120,202,.08)
+    );
+}
+
+.moduleIcon{
+  width:52px;
+  height:52px;
+
+  border-radius:16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.checkIcon{
+  position:absolute;
+
+  top:18px;
+  right:18px;
+
+  color:#79ffca;
+}
+
+.integrationGrid{
+  display:grid;
+  gap:18px;
+}
+
+.integrationCard{
+  min-height:88px;
+
+  border:none;
+
+  border-radius:24px;
+
+  padding:20px 24px;
+
+  background:
+    rgba(255,255,255,.03);
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  color:white;
+
+  transition:.25s ease;
+
+  cursor:pointer;
+}
+
+.integrationCard:hover{
+  transform:translateY(-2px);
+}
+
+.activeIntegration{
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(105,185,255,.08),
+      rgba(255,120,202,.08)
+    );
+}
+
+.integrationLeft{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.integrationIcon{
+  width:50px;
+  height:50px;
+
+  border-radius:16px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.brandingGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.brandingCard{
+  min-height:180px;
+
+  border-radius:28px;
+
+  background:
+    rgba(255,255,255,.03);
+
+  padding:24px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.uploadButton{
+  width:180px;
+  height:54px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #69b9ff,
+      #ff78ca
+    );
+
+  color:white;
+
+  font-weight:700;
+}
+
+.colorChoices{
+  display:flex;
+  gap:16px;
+}
+
+.color{
+  width:42px;
+  height:42px;
+
+  border-radius:999px;
+
+  cursor:pointer;
+}
+
+.blue{
+  background:#69b9ff;
+}
+
+.purple{
+  background:#8b6dff;
+}
+
+.green{
+  background:#73ffba;
+}
+
+.pink{
+  background:#ff78ca;
+}
+
+.finalStep{
+  align-items:center;
+  text-align:center;
+}
+
+.finalIcon{
+  width:120px;
+  height:120px;
+
+  border-radius:999px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(105,185,255,.16),
+      rgba(255,120,202,.16)
+    );
+
+  color:#8ed4ff;
+}
+
+.finalStep h2{
+  font-size:52px;
+  font-weight:900;
+}
+
+.finalStep p{
+  max-width:640px;
+
+  color:#8f9bb7;
+
+  line-height:1.7;
+}
+
+.activationCards{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.activationCard{
+  height:58px;
+
+  padding:0 22px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.launchButton{
+  margin-top:12px;
+
+  height:62px;
+
+  padding:0 28px;
+
+  border:none;
+
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #69b9ff,
+      #ff78ca
+    );
+
+  color:white;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  font-size:16px;
+  font-weight:800;
+
+  cursor:pointer;
+}
+
+.onboardingFooter{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:18px;
+}
+
+.secondaryButton,
+.primaryButton{
+  height:56px;
+
+  padding:0 24px;
+
+  border:none;
+
+  border-radius:18px;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  cursor:pointer;
+
+  font-weight:700;
+}
+
+.secondaryButton{
+  background:
+    rgba(255,255,255,.04);
+
+  color:white;
+}
+
+.primaryButton{
+  background:
+    linear-gradient(
+      135deg,
+      #69b9ff,
+      #ff78ca
+    );
+
+  color:white;
+}
+
+@media(max-width:1100px){
+
+  .formGrid,
+  .modulesGrid,
+  .brandingGrid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .onboardingTop{
+    flex-direction:column;
+  }
+
+  .progressContainer{
+    width:100%;
+  }
+
+  .onboardingTitle{
+    font-size:42px;
+  }
+
+}

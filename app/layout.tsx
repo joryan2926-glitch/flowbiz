@@ -1,27 +1,26 @@
-import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "FlowBiz Plateforme",
-  description: "Plateforme intelligente de gestion, pilotage et développement d’entreprise.",
-};
+import type {
+  Metadata,
+} from "next";
 
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-  themeColor: "#050816",
+export const metadata: Metadata = {
+  title: "FlowBiz",
+  description:
+    "FlowBiz SaaS Platform",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
-
-

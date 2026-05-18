@@ -1,0 +1,467 @@
+/* ======================================================
+FLOWBIZ FILES
+ULTRA PREMIUM UI
+====================================================== */
+
+.filesPage{
+
+  min-height:100vh;
+
+  padding:32px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(110,89,255,0.18),
+      transparent 30%),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,212,255,0.12),
+      transparent 30%),
+
+    #070b14;
+
+  color:white;
+}
+
+/* ======================================================
+HEADER
+====================================================== */
+
+.filesHeader{
+
+  margin-bottom:32px;
+}
+
+.filesBadge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  margin-bottom:18px;
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+.filesHeader h1{
+
+  font-size:44px;
+
+  font-weight:800;
+
+  margin-bottom:12px;
+}
+
+.filesHeader p{
+
+  color:
+    rgba(255,255,255,0.65);
+
+  line-height:1.7;
+}
+
+/* ======================================================
+UPLOAD
+====================================================== */
+
+.filesUpload{
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr 260px;
+
+  gap:18px;
+
+  margin-bottom:28px;
+}
+
+.filesUpload input{
+
+  height:58px;
+
+  padding:0 18px;
+
+  border:none;
+
+  outline:none;
+
+  border-radius:16px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  color:white;
+}
+
+/* ======================================================
+BUTTON
+====================================================== */
+
+.uploadButton{
+
+  height:58px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:10px;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff);
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+}
+
+/* ======================================================
+SEARCH
+====================================================== */
+
+.filesSearch{
+
+  height:58px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  padding:0 18px;
+
+  margin-bottom:28px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+}
+
+.filesSearch input{
+
+  flex:1;
+
+  background:none;
+
+  border:none;
+
+  outline:none;
+
+  color:white;
+}
+
+/* ======================================================
+LIST
+====================================================== */
+
+.filesList{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+}
+
+/* ======================================================
+CARD
+====================================================== */
+
+.fileCard{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  padding:24px;
+
+  border-radius:28px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  transition:0.25s;
+}
+
+.fileCard:hover{
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(110,89,255,0.28);
+}
+
+/* ======================================================
+LEFT
+====================================================== */
+
+.fileLeft{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:18px;
+
+  flex:1;
+}
+
+/* ======================================================
+ICON
+====================================================== */
+
+.fileIcon{
+
+  width:64px;
+
+  height:64px;
+
+  border-radius:20px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff);
+
+  flex-shrink:0;
+}
+
+/* ======================================================
+TEXT
+====================================================== */
+
+.fileLeft h3{
+
+  font-size:20px;
+
+  margin-bottom:10px;
+}
+
+.fileLeft span{
+
+  display:block;
+
+  margin-bottom:14px;
+
+  color:
+    rgba(255,255,255,0.6);
+}
+
+/* ======================================================
+META
+====================================================== */
+
+.fileMeta{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:14px;
+}
+
+.fileMeta div{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:10px 14px;
+
+  border-radius:14px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  color:
+    rgba(255,255,255,0.68);
+
+  font-size:13px;
+}
+
+/* ======================================================
+RIGHT
+====================================================== */
+
+.fileRight{
+
+  display:flex;
+
+  gap:14px;
+}
+
+/* ======================================================
+DOWNLOAD
+====================================================== */
+
+.fileDownload,
+.fileDelete{
+
+  width:52px;
+
+  height:52px;
+
+  border:none;
+
+  border-radius:16px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:0.2s;
+}
+
+.fileDownload:hover{
+
+  background:
+    rgba(0,212,255,0.16);
+
+  color:#00d4ff;
+}
+
+.fileDelete:hover{
+
+  background:
+    rgba(255,77,109,0.18);
+
+  color:#ff4d6d;
+}
+
+/* ======================================================
+LOADER
+====================================================== */
+
+.filesLoader{
+
+  width:100%;
+
+  min-height:100vh;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:#070b14;
+}
+
+.spin{
+
+  animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+@media(max-width:1000px){
+
+  .filesUpload{
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .fileCard{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+
+  .fileRight{
+
+    width:100%;
+  }
+}
+
+@media(max-width:768px){
+
+  .filesPage{
+
+    padding:20px;
+  }
+
+  .filesHeader h1{
+
+    font-size:34px;
+  }
+}

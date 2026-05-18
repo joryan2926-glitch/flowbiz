@@ -1,0 +1,2007 @@
+/* =========================================
+FLOWBIZ ANALYTICS
+ULTIMATE PREMIUM FINAL
+OPTIMISATION COMPLÈTE
+========================================= */
+
+/* =========================================
+GLOBAL PAGE
+========================================= */
+
+.analyticsPage{
+
+  position:relative;
+
+  min-height:100vh;
+
+  padding:28px;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(0,212,255,.10),
+      transparent 32%
+    ),
+
+    radial-gradient(circle at top right,
+      rgba(123,92,255,.12),
+      transparent 34%
+    ),
+
+    linear-gradient(
+      180deg,
+      #071018 0%,
+      #0b111b 100%
+    );
+
+  overflow-x:hidden;
+}
+
+/* =========================================
+LAYOUT FIX
+========================================= */
+
+.analyticsGrid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(280px,1fr)
+    );
+
+  gap:18px;
+
+  align-items:start;
+}
+
+.bottomGrid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(250px,1fr)
+    );
+
+  gap:18px;
+
+  margin-top:18px;
+}
+
+/* =========================================
+PREMIUM CARD
+========================================= */
+
+.analyticsWidget,
+.analyticsStatCard,
+.bottomCard,
+.clientsSection,
+.analyticsAiBar{
+
+  position:relative;
+
+  border-radius:26px;
+
+  padding:22px;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(19,28,41,.92),
+      rgba(10,15,25,.96)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.06);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.03);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border .25s ease;
+}
+
+/* =========================================
+CARD HOVER
+========================================= */
+
+.analyticsWidget:hover,
+.analyticsStatCard:hover,
+.bottomCard:hover,
+.clientRow:hover{
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(0,212,255,.24);
+
+  box-shadow:
+    0 0 0 1px rgba(0,212,255,.10),
+    0 18px 55px rgba(0,212,255,.16);
+}
+
+/* =========================================
+LIGHT EFFECT
+========================================= */
+
+.analyticsWidget::before,
+.analyticsStatCard::before,
+.bottomCard::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.06),
+      transparent 30%
+    );
+
+  opacity:0;
+
+  transition:.3s;
+}
+
+.analyticsWidget:hover::before,
+.analyticsStatCard:hover::before,
+.bottomCard:hover::before{
+
+  opacity:1;
+}
+
+/* =========================================
+TOPBAR
+========================================= */
+
+.analyticsTopbar{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:flex-start;
+
+  gap:24px;
+
+  margin-bottom:22px;
+}
+
+.analyticsTopbar h1{
+
+  font-size:54px;
+
+  line-height:1;
+
+  margin-top:12px;
+
+  margin-bottom:12px;
+
+  font-weight:800;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #00d4ff
+    );
+
+  background-clip:text;
+
+  color:transparent;
+}
+
+.analyticsTopbar p{
+
+  max-width:720px;
+
+  line-height:1.7;
+
+  color:#8fa4c0;
+}
+
+/* =========================================
+BADGE
+========================================= */
+
+.analyticsBadge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  background:
+    rgba(0,212,255,.10);
+
+  border:
+    1px solid rgba(0,212,255,.18);
+
+  color:#6ee7ff;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  letter-spacing:.4px;
+
+  box-shadow:
+    0 0 24px rgba(0,212,255,.18);
+}
+
+/* =========================================
+TOP ACTIONS
+========================================= */
+
+.analyticsActions{
+
+  display:flex;
+
+  gap:14px;
+}
+
+.analyticsActions button,
+.analyticsAiBtn,
+.filterBtn{
+
+  border:none;
+
+  cursor:pointer;
+
+  border-radius:16px;
+
+  padding:13px 20px;
+
+  font-weight:700;
+
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00d4ff,
+      #7b5cff
+    );
+
+  transition:
+    transform .2s ease,
+    opacity .2s ease,
+    box-shadow .2s ease;
+
+  box-shadow:
+    0 8px 24px rgba(0,212,255,.24);
+}
+
+.analyticsActions button:hover,
+.analyticsAiBtn:hover,
+.filterBtn:hover{
+
+  transform:
+    translateY(-2px);
+
+  opacity:.92;
+}
+
+/* =========================================
+AI BAR
+========================================= */
+
+.analyticsAiBar{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:18px;
+
+  margin-bottom:24px;
+}
+
+.analyticsAiLeft{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:18px;
+}
+
+.analyticsAiLeft svg{
+
+  width:34px;
+  height:34px;
+
+  color:#00d4ff;
+}
+
+/* =========================================
+KPI
+========================================= */
+
+.analyticsStats{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px,1fr)
+    );
+
+  gap:18px;
+
+  margin-bottom:22px;
+}
+
+.analyticsStatCard{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:18px;
+}
+
+.analyticsStatCard h2{
+
+  font-size:34px;
+
+  margin-bottom:6px;
+}
+
+.analyticsStatCard span{
+
+  color:#8ea2bc;
+
+  font-size:14px;
+}
+
+.analyticsIcon{
+
+  width:64px;
+  height:64px;
+
+  border-radius:18px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,212,255,.18),
+      rgba(123,92,255,.18)
+    );
+
+  box-shadow:
+    0 0 22px rgba(0,212,255,.16);
+}
+
+/* =========================================
+COLORS KPI
+========================================= */
+
+.revenue h2{
+  color:#00ff95;
+}
+
+.clients h2{
+  color:#6ee7ff;
+}
+
+.invoices h2{
+  color:#7b5cff;
+}
+
+.pending h2{
+  color:#ffb347;
+}
+
+/* =========================================
+CHART FIX
+========================================= */
+
+.analyticsWidget.large{
+
+  min-height:280px;
+
+  max-height:320px;
+
+  grid-column:
+    span 2;
+}
+
+.chartContainer{
+
+  height:180px;
+
+  margin-top:12px;
+
+  display:flex;
+
+  align-items:flex-end;
+
+  justify-content:center;
+}
+
+.chartBars{
+
+  display:flex;
+
+  align-items:flex-end;
+
+  gap:14px;
+
+  height:100%;
+}
+
+.bar{
+
+  width:30px;
+
+  border-radius:16px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #00d4ff,
+      #7b5cff
+    );
+
+  box-shadow:
+    0 0 24px rgba(0,212,255,.24);
+}
+
+.h1{height:48%;}
+.h2{height:72%;}
+.h3{height:58%;}
+.h4{height:88%;}
+.h5{height:62%;}
+.h6{height:78%;}
+.h7{height:100%;}
+
+/* =========================================
+WIDGET TITLES
+========================================= */
+
+.widgetMiniTop,
+.widgetTop{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:12px;
+
+  margin-bottom:18px;
+
+  font-weight:700;
+
+  color:white;
+}
+
+.widgetTop h3{
+
+  font-size:28px;
+
+  margin-top:6px;
+}
+
+.widgetTop span{
+
+  font-size:13px;
+
+  color:#6ee7ff;
+}
+
+/* =========================================
+TEXT COLORS
+========================================= */
+
+.green{
+  color:#00ff95;
+}
+
+.red{
+  color:#ff5c7a;
+}
+
+.blue{
+  color:#00d4ff;
+}
+
+.purple{
+  color:#9b7bff;
+}
+
+.orange{
+  color:#ffb347;
+}
+
+/* =========================================
+CLIENTS
+========================================= */
+
+.clientsSection{
+
+  margin-top:22px;
+}
+
+.clientsTable{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:14px;
+
+  margin-top:18px;
+}
+
+.clientRow{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:18px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.03);
+
+  border:
+    1px solid rgba(255,255,255,.04);
+
+  transition:.2s;
+}
+
+.clientLeft{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+}
+
+.clientAvatar{
+
+  width:52px;
+  height:52px;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-weight:800;
+
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00d4ff,
+      #7b5cff
+    );
+}
+
+.clientRevenue{
+
+  font-size:22px;
+
+  font-weight:800;
+
+  color:#00ff95;
+}
+
+/* =========================================
+SEARCH
+========================================= */
+
+.analyticsToolbar{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:18px;
+
+  margin-top:24px;
+
+  margin-bottom:22px;
+}
+
+.analyticsSearch{
+
+  flex:1;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  padding:0 18px;
+
+  height:60px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid rgba(255,255,255,.06);
+}
+
+.analyticsSearch input{
+
+  flex:1;
+
+  background:none;
+
+  border:none;
+
+  outline:none;
+
+  color:white;
+
+  font-size:15px;
+}
+
+/* =========================================
+BOTTOM CARDS
+========================================= */
+
+.bottomCard{
+
+  min-height:180px;
+}
+
+.trafficStats{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  margin-top:20px;
+}
+
+.trafficStats strong{
+
+  display:block;
+
+  font-size:28px;
+
+  margin-bottom:6px;
+}
+
+.trafficStats span{
+
+  color:#8ea2bc;
+}
+
+/* =========================================
+SCROLLBAR
+========================================= */
+
+*{
+  scrollbar-width:thin;
+  scrollbar-color:#00d4ff transparent;
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width:1100px){
+
+  .analyticsWidget.large{
+    grid-column:span 1;
+  }
+}
+
+@media(max-width:768px){
+
+  .analyticsPage{
+    padding:18px;
+  }
+
+  .analyticsTopbar{
+    flex-direction:column;
+  }
+
+  .analyticsTopbar h1{
+    font-size:38px;
+  }
+
+  .analyticsAiBar{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .analyticsToolbar{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .analyticsSearch{
+    width:100%;
+  }
+
+  .trafficStats{
+    flex-direction:column;
+    gap:14px;
+  }
+}
+
+@media(max-width:540px){
+
+  .analyticsTopbar h1{
+    font-size:30px;
+  }
+
+  .widgetTop h3{
+    font-size:22px;
+  }
+
+  .analyticsStatCard{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .analyticsActions{
+    width:100%;
+  }
+
+  .analyticsActions button{
+    flex:1;
+  }
+
+  .clientRow{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:14px;
+  }
+}
+/* =========================================
+FLOWBIZ ANALYTICS
+ULTIMATE MICRO-OPTIMISATIONS
+À AJOUTER EN BAS DU CSS
+========================================= */
+
+/* =========================================
+GPU RENDER
+========================================= */
+
+.analyticsWidget,
+.analyticsStatCard,
+.bottomCard,
+.clientRow,
+.analyticsAiBar,
+.analyticsSearch,
+.chartContainer{
+
+  transform:translateZ(0);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+/* =========================================
+PREMIUM ANIMATION
+========================================= */
+
+.analyticsWidget,
+.analyticsStatCard,
+.bottomCard{
+
+  animation:
+    fadeUp .45s ease;
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:
+      translateY(12px);
+  }
+
+  to{
+    opacity:1;
+    transform:
+      translateY(0);
+  }
+}
+
+/* =========================================
+GLASS INTENSITY
+========================================= */
+
+.analyticsWidget,
+.analyticsStatCard,
+.bottomCard,
+.clientsSection,
+.analyticsAiBar{
+
+  backdrop-filter:
+    blur(22px)
+    saturate(160%);
+}
+
+/* =========================================
+PREMIUM BORDER LIGHT
+========================================= */
+
+.analyticsWidget::after,
+.analyticsStatCard::after,
+.bottomCard::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  border-radius:inherit;
+
+  padding:1px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.12),
+      transparent 35%,
+      rgba(0,212,255,.10)
+    );
+
+  opacity:.5;
+
+  pointer-events:none;
+}
+
+/* =========================================
+CHART IMPROVEMENT
+========================================= */
+
+.chartContainer{
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.chartContainer::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:auto 0 0 0;
+
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.14),
+      transparent
+    );
+}
+
+.chartBars .bar{
+
+  transition:
+    transform .22s ease,
+    opacity .22s ease;
+}
+
+.chartBars .bar:hover{
+
+  transform:
+    scaleY(1.05);
+
+  opacity:.9;
+}
+
+/* =========================================
+TOPBAR CLEAN
+========================================= */
+
+.analyticsTopbar{
+
+  position:sticky;
+
+  top:0;
+
+  z-index:20;
+
+  backdrop-filter:
+    blur(20px);
+
+  padding-bottom:18px;
+
+  margin-bottom:28px;
+}
+
+/* =========================================
+WIDGET SPACING
+========================================= */
+
+.analyticsWidget{
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:space-between;
+}
+
+/* =========================================
+SMART GRID
+========================================= */
+
+.analyticsGrid{
+
+  align-items:stretch;
+}
+
+.analyticsGrid > *{
+
+  min-height:190px;
+}
+
+/* =========================================
+BUTTON PREMIUM
+========================================= */
+
+.analyticsActions button,
+.analyticsAiBtn,
+.filterBtn{
+
+  letter-spacing:.2px;
+
+  font-size:14px;
+}
+
+.analyticsActions button:hover,
+.analyticsAiBtn:hover,
+.filterBtn:hover{
+
+  box-shadow:
+    0 10px 28px rgba(0,212,255,.28);
+}
+
+/* =========================================
+SEARCH PREMIUM
+========================================= */
+
+.analyticsSearch{
+
+  transition:
+    border .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+}
+
+.analyticsSearch:focus-within{
+
+  border-color:
+    rgba(0,212,255,.24);
+
+  box-shadow:
+    0 0 0 4px rgba(0,212,255,.08);
+}
+
+/* =========================================
+CLIENT ROW
+========================================= */
+
+.clientRow{
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.clientRow::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:0;
+  bottom:0;
+
+  width:4px;
+
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #00d4ff,
+      #7b5cff
+    );
+
+  opacity:0;
+
+  transition:.22s;
+}
+
+.clientRow:hover::before{
+  opacity:1;
+}
+
+/* =========================================
+NUMBERS
+========================================= */
+
+.analyticsStatCard h2,
+.clientRevenue,
+.trafficStats strong{
+
+  letter-spacing:-1px;
+}
+
+/* =========================================
+TEXT CLARITY
+========================================= */
+
+.analyticsPage h1,
+.analyticsPage h2,
+.analyticsPage h3,
+.analyticsPage h4{
+
+  text-rendering:optimizeLegibility;
+}
+
+/* =========================================
+LIVE PULSE
+========================================= */
+
+.analyticsBadge{
+
+  position:relative;
+}
+
+.analyticsBadge::before{
+
+  content:"";
+
+  width:8px;
+  height:8px;
+
+  border-radius:50%;
+
+  background:#00ff95;
+
+  box-shadow:
+    0 0 14px #00ff95;
+
+  animation:pulseLive 1.5s infinite;
+}
+
+@keyframes pulseLive{
+
+  0%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+  50%{
+    transform:scale(1.6);
+    opacity:.45;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
+/* =========================================
+SCROLL IMPROVEMENT
+========================================= */
+
+.analyticsPage{
+
+  scroll-behavior:smooth;
+}
+
+/* =========================================
+WIDGET TITLE ALIGN
+========================================= */
+
+.widgetMiniTop{
+
+  min-height:28px;
+}
+
+/* =========================================
+CARD INNER SPACING
+========================================= */
+
+.analyticsWidget p,
+.analyticsWidget span{
+
+  line-height:1.5;
+}
+
+/* =========================================
+SECTION GAP
+========================================= */
+
+.analyticsStats,
+.analyticsGrid,
+.bottomGrid{
+
+  margin-bottom:22px;
+}
+
+/* =========================================
+LOW HEIGHT SCREEN
+========================================= */
+
+@media(max-height:800px){
+
+  .analyticsWidget.large{
+
+    min-height:240px;
+    max-height:260px;
+  }
+
+  .chartContainer{
+    height:130px;
+  }
+}
+
+/* =========================================
+ULTRA WIDE SCREEN
+========================================= */
+
+@media(min-width:1800px){
+
+  .analyticsPage{
+
+    max-width:1700px;
+
+    margin:auto;
+  }
+}
+
+/* =========================================
+TABLET
+========================================= */
+
+@media(max-width:992px){
+
+  .analyticsGrid{
+
+    grid-template-columns:
+      repeat(
+        auto-fit,
+        minmax(240px,1fr)
+      );
+  }
+
+  .analyticsStatCard h2{
+    font-size:28px;
+  }
+}
+
+/* =========================================
+MOBILE FINAL
+========================================= */
+
+@media(max-width:768px){
+
+  .analyticsPage{
+    padding:14px;
+  }
+
+  .analyticsWidget,
+  .analyticsStatCard,
+  .bottomCard,
+  .clientsSection,
+  .analyticsAiBar{
+
+    border-radius:20px;
+
+    padding:18px;
+  }
+
+  .analyticsTopbar h1{
+    line-height:1.1;
+  }
+
+  .analyticsWidget.large{
+
+    min-height:220px;
+  }
+
+  .chartBars{
+    gap:8px;
+  }
+
+  .chartBars .bar{
+    width:20px;
+  }
+}
+
+/* =========================================
+SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+  .analyticsTopbar h1{
+    font-size:26px;
+  }
+
+  .analyticsStatCard h2{
+    font-size:24px;
+  }
+
+  .widgetTop h3{
+    font-size:18px;
+  }
+
+  .trafficStats strong{
+    font-size:22px;
+  }
+
+  .analyticsActions{
+    flex-direction:column;
+  }
+
+  .analyticsActions button{
+    width:100%;
+  }
+}
+/* =========================================================
+ANALYTICS — UPGRADE ULTRA PREMIUM FINAL
+========================================================= */
+
+
+.analyticsPage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 42px 44px 100px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(0, 255, 157, 0.20), transparent 28%),
+    radial-gradient(circle at 68% 12%, rgba(124, 92, 255, 0.28), transparent 34%),
+    radial-gradient(circle at 50% 85%, rgba(0, 212, 255, 0.08), transparent 38%),
+    linear-gradient(135deg, #040711 0%, #0d1228 48%, #060713 100%);
+  overflow-x: hidden;
+}
+
+
+.analyticsPage * {
+  box-sizing: border-box;
+}
+
+
+.analyticsTopbar,
+.analyticsAiBar,
+.analyticsStats,
+.analyticsGrid,
+.analyticsToolbar,
+.clientsSection,
+.analyticsError {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.analyticsTopbar {
+  min-height: 150px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+
+.analyticsBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.28), rgba(0, 212, 255, 0.12));
+  border: 1px solid rgba(124, 92, 255, 0.38);
+  color: #dcd6ff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  box-shadow: 0 0 24px rgba(124, 92, 255, 0.22);
+}
+
+
+.analyticsBadge svg {
+  width: 15px;
+  height: 15px;
+}
+
+
+.analyticsTopbar h1 {
+  max-width: 850px;
+  margin: 0;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+  text-shadow:
+    0 0 18px rgba(124, 92, 255, 0.35),
+    0 0 40px rgba(0, 212, 255, 0.12);
+}
+
+
+.analyticsTopbar p {
+  max-width: 760px;
+  margin: 16px 0 0;
+  color: #aab0c5;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+.analyticsActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+.analyticsActions button {
+  min-height: 46px;
+  padding: 0 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+  transition: 0.18s ease;
+}
+
+
+.analyticsActions button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #7c5cff, #00d4ff);
+  border-color: transparent;
+}
+
+
+.analyticsActions svg {
+  width: 17px;
+  height: 17px;
+}
+
+
+/* ERROR */
+
+
+.analyticsError {
+  margin-bottom: 22px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 80, 80, 0.12);
+  border: 1px solid rgba(255, 80, 80, 0.32);
+  color: #ffbcbc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.analyticsError button {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 11px;
+  background: rgba(255,255,255,0.09);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+/* AI BAR */
+
+
+.analyticsAiBar {
+  margin-bottom: 28px;
+  padding: 22px 24px;
+  border-radius: 30px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.13), rgba(255,255,255,0.055));
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow:
+    0 24px 70px rgba(0,0,0,0.28),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+
+.analyticsAiLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.analyticsAiLeft > svg {
+  width: 42px;
+  height: 42px;
+  color: #00d4ff;
+  filter: drop-shadow(0 0 18px rgba(0, 212, 255, 0.35));
+}
+
+
+.analyticsAiLeft h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+
+.analyticsAiLeft p {
+  margin: 5px 0 0;
+  color: #aab0c5;
+  font-size: 13px;
+}
+
+
+.analyticsAiBtn {
+  min-height: 44px;
+  padding: 0 15px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 255, 157, 0.28);
+  background: rgba(0, 255, 157, 0.12);
+  color: #c9ffe8;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+
+/* KPI */
+
+
+.analyticsStats {
+  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+
+.analyticsStatCard {
+  min-height: 130px;
+  padding: 24px;
+  border-radius: 30px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.14), rgba(255,255,255,0.055));
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow:
+    0 24px 70px rgba(0,0,0,0.28),
+    inset 0 1px 0 rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: 0.18s ease;
+}
+
+
+.analyticsStatCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 212, 255, 0.36);
+  background:
+    linear-gradient(145deg, rgba(124,92,255,0.18), rgba(255,255,255,0.07));
+}
+
+
+.analyticsStatCard svg {
+  width: 34px;
+  height: 34px;
+  filter: drop-shadow(0 0 14px rgba(124, 92, 255, 0.35));
+}
+
+
+.analyticsStatCard.revenue svg { color: #00ff9d; }
+.analyticsStatCard.clients svg { color: #00d4ff; }
+.analyticsStatCard.invoices svg { color: #9b86ff; }
+.analyticsStatCard.pending svg { color: #ffd166; }
+
+
+.analyticsStatCard h2 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+
+.analyticsStatCard span {
+  display: block;
+  margin-top: 7px;
+  color: #aab0c5;
+  font-size: 14px;
+}
+
+
+/* GRID */
+
+
+.analyticsGrid {
+  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+
+.analyticsWidget {
+  min-height: 230px;
+  padding: 22px;
+  border-radius: 30px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.13), rgba(255,255,255,0.055));
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow:
+    0 24px 70px rgba(0,0,0,0.26),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  overflow: hidden;
+  transition: 0.18s ease;
+}
+
+
+.analyticsWidget:hover {
+  transform: translateY(-3px);
+  border-color: rgba(124, 92, 255, 0.5);
+}
+
+
+.analyticsWidget.large {
+  grid-column: span 2;
+  min-height: 320px;
+}
+
+
+.widgetTop,
+.widgetMiniTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+
+.widgetTop span {
+  color: #aab0c5;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+
+.widgetTop h3 {
+  margin: 5px 0 0;
+  font-size: 22px;
+}
+
+
+.widgetTop button {
+  min-height: 38px;
+  padding: 0 13px;
+  border-radius: 13px;
+  border: 1px solid rgba(124, 92, 255, 0.38);
+  background: rgba(124, 92, 255, 0.16);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+
+.widgetMiniTop {
+  justify-content: flex-start;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+
+.widgetMiniTop svg {
+  width: 18px;
+  height: 18px;
+  color: #00d4ff;
+}
+
+
+/* CHART */
+
+
+.chartBars {
+  height: 230px;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  padding: 18px 6px 4px;
+}
+
+
+.chartItem {
+  height: 100%;
+  min-width: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+.chartBar {
+  width: 100%;
+  max-width: 42px;
+  border-radius: 14px 14px 6px 6px;
+  background: linear-gradient(180deg, #00ff9d, #00d4ff, #7c5cff);
+  box-shadow: 0 0 24px rgba(0, 212, 255, 0.28);
+}
+
+
+.chartItem span {
+  margin-top: 9px;
+  color: #aab0c5;
+  font-size: 12px;
+}
+
+
+/* METRICS */
+
+
+.metricBox {
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.075);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+
+.metricBox strong {
+  display: block;
+  font-size: 26px;
+  color: #ffffff;
+  letter-spacing: -0.04em;
+}
+
+
+.metricBox span {
+  display: block;
+  margin-top: 5px;
+  color: #aab0c5;
+  font-size: 13px;
+}
+
+
+.financeStats,
+.infraBox,
+.funnelBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.financeStats div,
+.infraBox div,
+.funnelBox div {
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.075);
+  color: #cfd4e8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.green { color: #00ff9d !important; }
+.red { color: #ff7070 !important; }
+.blue { color: #00d4ff !important; }
+
+
+.scoreCircle {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto 0;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle, rgba(0,255,157,0.16), transparent 58%),
+    conic-gradient(from 180deg, #00ff9d, #00d4ff, #7c5cff, #00ff9d);
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 900;
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.28);
+}
+
+
+/* SEARCH + CLIENTS */
+
+
+.analyticsToolbar {
+  margin-bottom: 18px;
+}
+
+
+.analyticsSearch {
+  width: min(560px, 100%);
+  height: 56px;
+  padding: 0 16px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.055));
+  border: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.analyticsSearch svg {
+  width: 18px;
+  height: 18px;
+  color: #9b86ff;
+}
+
+
+.analyticsSearch input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+
+.clientsSection {
+  padding: 22px;
+  border-radius: 30px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.13), rgba(255,255,255,0.055));
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+}
+
+
+.sectionTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+
+.sectionTop h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+
+.sectionTop span {
+  color: #aab0c5;
+  font-size: 13px;
+}
+
+
+.clientsTable {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.clientRow {
+  min-height: 76px;
+  padding: 14px 16px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.075);
+  border: 1px solid rgba(255,255,255,0.11);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+
+.clientLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.clientAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #7c5cff, #00d4ff);
+  color: #ffffff;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+
+.clientRow h4 {
+  margin: 0;
+  font-size: 15px;
+}
+
+
+.clientRow span {
+  display: block;
+  margin-top: 4px;
+  color: #aab0c5;
+  font-size: 12px;
+}
+
+
+.clientRevenue {
+  font-size: 18px;
+  font-weight: 900;
+  color: #00ff9d;
+}
+
+
+.emptyAnalytics {
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.075);
+  color: #cfd4e8;
+}
+
+
+/* SCROLL SAFE */
+
+
+html,
+body,
+.dashboardShell,
+.dashboardMain,
+.analyticsPage {
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+.dashboardMain {
+  overflow: visible;
+}
+
+
+/* RESPONSIVE */
+
+
+@media (max-width: 1180px) {
+  .analyticsStats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  .analyticsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  .analyticsWidget.large {
+    grid-column: span 2;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .analyticsPage {
+    padding: 24px 16px 80px;
+  }
+
+
+  .analyticsTopbar {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  .analyticsActions,
+  .analyticsActions button,
+  .analyticsAiBar {
+    width: 100%;
+  }
+
+
+  .analyticsAiBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  .analyticsStats,
+  .analyticsGrid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .analyticsWidget.large {
+    grid-column: span 1;
+  }
+
+
+  .chartBars {
+    overflow-x: auto;
+  }
+
+
+  .clientRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

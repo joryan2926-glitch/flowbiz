@@ -1,0 +1,151 @@
+.crmClientTable {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.crmClientTableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 4px;
+}
+
+
+.crmClientTableHeader h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+
+.crmClientTableHeader span {
+  color: #aab0c5;
+  font-size: 13px;
+}
+
+
+.crmClientRow {
+  width: 100%;
+  min-height: 92px;
+  padding: 16px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.085);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  display: grid;
+  grid-template-columns: 48px 1.1fr 1.8fr 0.9fr 0.9fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+
+.clientAvatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #7c5cff, #00d4ff);
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+
+.crmClientRow strong {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+.crmClientRow span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #cfd4e8;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+.crmClientRow svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+
+.clientPlan span {
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(0, 255, 157, 0.12);
+  border: 1px solid rgba(0, 255, 157, 0.25);
+  color: #c9ffe8;
+}
+
+
+.clientActions {
+  display: flex;
+  gap: 7px;
+  justify-content: flex-end;
+}
+
+
+.clientActions button {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.09);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+.clientActions button:hover {
+  background: rgba(124, 92, 255, 0.25);
+  border-color: rgba(124, 92, 255, 0.45);
+}
+
+
+.emptyClients {
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #cfd4e8;
+}
+
+
+@media (max-width: 1050px) {
+  .crmClientRow {
+    grid-template-columns: 48px 1fr 1fr;
+  }
+
+
+  .clientActions {
+    justify-content: flex-start;
+  }
+}
+
+
+@media (max-width: 680px) {
+  .crmClientRow {
+    grid-template-columns: 1fr;
+  }
+
+
+  .clientAvatar {
+    display: none;
+  }
+}

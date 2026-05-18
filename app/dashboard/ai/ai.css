@@ -1,0 +1,550 @@
+/* ======================================================
+FLOWBIZ AI
+ULTRA PREMIUM UI
+====================================================== */
+
+.aiPage{
+
+  min-height:100vh;
+
+  display:grid;
+
+  grid-template-columns:
+    320px 1fr;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(110,89,255,.18),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,212,255,.10),
+      transparent 30%
+    ),
+
+    #070b14;
+
+  color:white;
+}
+
+/* ======================================================
+SIDEBAR
+====================================================== */
+
+.aiSidebar{
+
+  position:relative;
+
+  padding:32px 24px;
+
+  border-right:
+    1px solid
+    rgba(255,255,255,.08);
+
+  background:
+    rgba(255,255,255,.03);
+
+  backdrop-filter:
+    blur(18px);
+}
+
+.aiSidebarTop{
+
+  margin-bottom:34px;
+}
+
+/* ======================================================
+LOGO
+====================================================== */
+
+.aiLogo{
+
+  width:72px;
+
+  height:72px;
+
+  border-radius:24px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  margin-bottom:22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff
+    );
+
+  box-shadow:
+    0 14px 36px
+    rgba(110,89,255,.28);
+}
+
+.aiLogo svg{
+
+  width:32px;
+
+  height:32px;
+}
+
+/* ======================================================
+TEXT
+====================================================== */
+
+.aiSidebar h2{
+
+  font-size:30px;
+
+  font-weight:800;
+
+  margin-bottom:10px;
+
+  letter-spacing:-1px;
+}
+
+.aiSidebar p{
+
+  color:
+    rgba(255,255,255,.65);
+
+  line-height:1.7;
+
+  font-size:14px;
+}
+
+/* ======================================================
+TOOLS
+====================================================== */
+
+.aiTools{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:14px;
+}
+
+.aiTool{
+
+  height:58px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  padding:0 18px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid
+    rgba(255,255,255,.06);
+
+  color:
+    rgba(255,255,255,.78);
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.aiTool:hover{
+
+  transform:
+    translateX(4px);
+
+  border-color:
+    rgba(110,89,255,.25);
+
+  background:
+    rgba(110,89,255,.12);
+}
+
+.aiTool.active{
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(110,89,255,.22),
+      rgba(0,212,255,.12)
+    );
+
+  border-color:
+    rgba(110,89,255,.28);
+
+  color:white;
+}
+
+/* ======================================================
+CHAT
+====================================================== */
+
+.aiChat{
+
+  display:flex;
+
+  flex-direction:column;
+
+  min-height:100vh;
+}
+
+/* ======================================================
+HEADER
+====================================================== */
+
+.aiChatHeader{
+
+  padding:28px 32px;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.08);
+
+  background:
+    rgba(255,255,255,.02);
+
+  backdrop-filter:
+    blur(18px);
+}
+
+.aiBadge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  margin-bottom:18px;
+
+  background:
+    rgba(255,255,255,.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+.aiChatHeader h1{
+
+  font-size:38px;
+
+  font-weight:800;
+
+  letter-spacing:-1px;
+}
+
+/* ======================================================
+MESSAGES
+====================================================== */
+
+.aiMessages{
+
+  flex:1;
+
+  padding:32px;
+
+  overflow-y:auto;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:22px;
+}
+
+/* ======================================================
+MESSAGE
+====================================================== */
+
+.aiMessage{
+
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:16px;
+
+  max-width:900px;
+}
+
+.aiMessage.user{
+
+  align-self:flex-end;
+
+  flex-direction:row-reverse;
+}
+
+/* ======================================================
+ICON
+====================================================== */
+
+.aiMessageIcon{
+
+  width:52px;
+
+  height:52px;
+
+  border-radius:18px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  flex-shrink:0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff
+    );
+}
+
+/* ======================================================
+CONTENT
+====================================================== */
+
+.aiMessageContent{
+
+  padding:20px 22px;
+
+  border-radius:24px;
+
+  line-height:1.8;
+
+  font-size:15px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  backdrop-filter:
+    blur(12px);
+}
+
+.aiMessage.user
+.aiMessageContent{
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(110,89,255,.18),
+      rgba(0,212,255,.10)
+    );
+
+  border-color:
+    rgba(110,89,255,.22);
+}
+
+/* ======================================================
+INPUT
+====================================================== */
+
+.aiInputContainer{
+
+  padding:24px 32px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.08);
+
+  background:
+    rgba(255,255,255,.02);
+
+  backdrop-filter:
+    blur(18px);
+}
+
+.aiInput{
+
+  height:68px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  padding:0 14px 0 22px;
+
+  border-radius:24px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+}
+
+.aiInput input{
+
+  flex:1;
+
+  background:none;
+
+  border:none;
+
+  outline:none;
+
+  color:white;
+
+  font-size:15px;
+}
+
+.aiInput input::placeholder{
+
+  color:
+    rgba(255,255,255,.45);
+}
+
+/* ======================================================
+SEND BUTTON
+====================================================== */
+
+.aiInput button{
+
+  width:52px;
+
+  height:52px;
+
+  border:none;
+
+  border-radius:18px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff
+    );
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.aiInput button:hover{
+
+  transform:
+    scale(1.06);
+
+  box-shadow:
+    0 12px 28px
+    rgba(110,89,255,.35);
+}
+
+/* ======================================================
+SCROLLBAR
+====================================================== */
+
+.aiMessages::-webkit-scrollbar{
+
+  width:8px;
+}
+
+.aiMessages::-webkit-scrollbar-thumb{
+
+  background:
+    rgba(255,255,255,.12);
+
+  border-radius:999px;
+}
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+@media(max-width:1100px){
+
+  .aiPage{
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .aiSidebar{
+
+    display:none;
+  }
+}
+
+@media(max-width:768px){
+
+  .aiChatHeader{
+
+    padding:24px 20px;
+  }
+
+  .aiMessages{
+
+    padding:20px;
+  }
+
+  .aiInputContainer{
+
+    padding:20px;
+  }
+
+  .aiChatHeader h1{
+
+    font-size:32px;
+  }
+
+  .aiMessage{
+
+    max-width:100%;
+  }
+
+  .aiInput{
+
+    height:62px;
+  }
+
+  .aiInput button{
+
+    width:48px;
+
+    height:48px;
+  }
+}

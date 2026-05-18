@@ -1,0 +1,204 @@
+/* =========================================================
+ULTRA PREMIUM DEPTH
+========================================================= */
+
+.logsPage{
+  isolation:isolate;
+}
+
+.logsPage *{
+  backface-visibility:hidden;
+}
+
+/* =========================================================
+GPU RENDER
+========================================================= */
+
+.logCard,
+.logIcon,
+.logStatus{
+  transform:
+    translateZ(0);
+}
+
+/* =========================================================
+PREMIUM CARD OVERLAY
+========================================================= */
+
+.logCard::before{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.04),
+      transparent 20%
+    );
+}
+
+/* =========================================================
+PREMIUM TITLE
+========================================================= */
+
+.logsTopbar h1{
+  text-shadow:
+    0 0 32px rgba(129,140,248,.14);
+}
+
+/* =========================================================
+PREMIUM LINE
+========================================================= */
+
+.logsTopbar::before{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-1px;
+  width:120px;
+  height:2px;
+  border-radius:999px;
+  background:
+    linear-gradient(
+      90deg,
+      #6366f1,
+      transparent
+    );
+}
+
+/* =========================================================
+PREMIUM HOVER
+========================================================= */
+
+.logCard:hover{
+  box-shadow:
+    0 28px 90px rgba(99,102,241,.14),
+    0 24px 70px rgba(0,0,0,.28);
+}
+
+/* =========================================================
+LOG ICON PREMIUM
+========================================================= */
+
+.logIcon{
+  overflow:hidden;
+}
+
+.logIcon::after{
+  content:"";
+  position:absolute;
+  top:-50%;
+  left:-50%;
+  width:200%;
+  height:200%;
+  background:
+    conic-gradient(
+      from 180deg,
+      transparent,
+      rgba(129,140,248,.08),
+      transparent
+    );
+  animation:
+    rotateGlow 10s linear infinite;
+}
+
+@keyframes rotateGlow{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* =========================================================
+ICON GLOW
+========================================================= */
+
+.logIcon svg{
+  position:relative;
+  z-index:2;
+  filter:
+    drop-shadow(
+      0 0 14px rgba(129,140,248,.24)
+    );
+}
+
+/* =========================================================
+PREMIUM STATUS
+========================================================= */
+
+.logStatus{
+  letter-spacing:.02em;
+}
+
+/* =========================================================
+STATUS LIGHT
+========================================================= */
+
+.logStatus.succeeded,
+.logStatus.paid,
+.logStatus.active{
+  box-shadow:
+    0 0 18px rgba(74,222,128,.12);
+}
+
+.logStatus.pending,
+.logStatus.processing{
+  box-shadow:
+    0 0 18px rgba(251,191,36,.12);
+}
+
+.logStatus.failed,
+.logStatus.canceled{
+  box-shadow:
+    0 0 18px rgba(239,68,68,.12);
+}
+
+/* =========================================================
+AMOUNT PREMIUM
+========================================================= */
+
+.logRight strong{
+  text-shadow:
+    0 0 16px rgba(129,140,248,.08);
+}
+
+/* =========================================================
+PREMIUM BADGE
+========================================================= */
+
+.logsBadge{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.04),
+    0 10px 30px rgba(99,102,241,.08);
+}
+
+/* =========================================================
+SMOOTH TRANSITIONS
+========================================================= */
+
+.logCard,
+.logIcon,
+.logStatus,
+.logRight strong{
+  transition:
+    all .28s ease;
+}
+
+/* =========================================================
+PREMIUM MOBILE
+========================================================= */
+
+@media(max-width:640px){
+
+  .logRight{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  .logStatus{
+    width:100%;
+    text-align:center;
+  }
+}

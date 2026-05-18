@@ -1,0 +1,784 @@
+/* =========================================================
+FLOWBIZ AUTOMATIONS
+ULTRA PREMIUM FINAL DESIGN
+========================================================= */
+
+.automationsPage{
+  position:relative;
+  overflow:hidden;
+  min-height:100vh;
+  padding:32px;
+  background:
+    radial-gradient(circle at top left,
+    rgba(99,102,241,.16),
+    transparent 22%),
+    radial-gradient(circle at bottom right,
+    rgba(168,85,247,.16),
+    transparent 22%),
+    linear-gradient(
+      180deg,
+      #050816,
+      #070b1d
+    );
+}
+
+/* =========================================================
+BACKGROUND
+========================================================= */
+
+.automationsPage::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    );
+  background-size:34px 34px;
+  opacity:.14;
+}
+
+/* =========================================================
+GLOWS
+========================================================= */
+
+.automationsGlowOne{
+  position:absolute;
+  top:-220px;
+  left:-180px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(99,102,241,.18);
+  filter:blur(120px);
+}
+
+.automationsGlowTwo{
+  position:absolute;
+  right:-220px;
+  bottom:-220px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(168,85,247,.18);
+  filter:blur(120px);
+}
+
+/* =========================================================
+TOPBAR
+========================================================= */
+
+.automationsTopbar{
+  position:relative;
+  z-index:2;
+  margin-bottom:42px;
+}
+
+.automationsBadge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:
+    rgba(255,255,255,.06);
+  border:
+    1px solid rgba(255,255,255,.08);
+  color:#a5b4fc;
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.automationsTopbar h1{
+  margin-top:22px;
+  background:
+    linear-gradient(
+      90deg,
+      #fff,
+      #c4b5fd,
+      #818cf8
+    );
+  background-clip:text;
+  color:transparent;
+  font-size:2.9rem;
+  font-weight:800;
+  letter-spacing:-.05em;
+}
+
+.automationsTopbar p{
+  margin-top:14px;
+  max-width:720px;
+  color:#9ca3af;
+  line-height:1.7;
+}
+
+/* =========================================================
+GRID
+========================================================= */
+
+.automationsGrid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(360px,1fr));
+  gap:24px;
+}
+
+/* =========================================================
+CARD
+========================================================= */
+
+.automationCard{
+  position:relative;
+  overflow:hidden;
+  padding:28px;
+  border-radius:30px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.055),
+      rgba(255,255,255,.02)
+    );
+  border:
+    1px solid rgba(255,255,255,.08);
+  backdrop-filter:
+    blur(24px);
+  transition:
+    transform .28s ease,
+    border-color .28s ease,
+    box-shadow .28s ease;
+}
+
+.automationCard:hover{
+  transform:
+    translateY(-5px);
+  border-color:
+    rgba(129,140,248,.16);
+  box-shadow:
+    0 34px 90px rgba(99,102,241,.16);
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.automationHeader{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.automationIcon{
+  width:68px;
+  height:68px;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  border-radius:22px;
+  background:
+    rgba(99,102,241,.14);
+  border:
+    1px solid rgba(129,140,248,.18);
+}
+
+.automationIcon svg{
+  width:28px;
+  height:28px;
+  color:#818cf8;
+}
+
+.automationHeader strong{
+  display:block;
+  color:white;
+  font-size:1rem;
+  font-weight:800;
+}
+
+.automationHeader span{
+  display:block;
+  margin-top:6px;
+  color:#94a3b8;
+}
+
+/* =========================================================
+ACTION
+========================================================= */
+
+.automationAction{
+  margin-top:28px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:18px 20px;
+  border-radius:20px;
+  background:
+    rgba(255,255,255,.04);
+  border:
+    1px solid rgba(255,255,255,.05);
+}
+
+.automationAction svg{
+  width:20px;
+  height:20px;
+  color:#818cf8;
+}
+
+.automationAction span{
+  color:#d1d5db;
+  font-size:.92rem;
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.automationFooter{
+  margin-top:30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+/* =========================================================
+STATUS
+========================================================= */
+
+.statusBadge{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 16px;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:700;
+}
+
+.statusBadge.active{
+  background:
+    rgba(34,197,94,.12);
+  border:
+    1px solid rgba(34,197,94,.18);
+  color:#4ade80;
+}
+
+.statusBadge.inactive{
+  background:
+    rgba(148,163,184,.12);
+  border:
+    1px solid rgba(148,163,184,.18);
+  color:#cbd5e1;
+}
+
+.statusBadge svg{
+  width:18px;
+  height:18px;
+}
+
+/* =========================================================
+TOGGLE
+========================================================= */
+
+.toggleButton{
+  position:relative;
+  width:68px;
+  height:38px;
+  border:none;
+  cursor:pointer;
+  border-radius:999px;
+  background:
+    rgba(255,255,255,.08);
+  transition:
+    background .28s ease;
+}
+
+.toggleButton.enabled{
+  background:
+    linear-gradient(
+      135deg,
+      #22c55e,
+      #16a34a
+    );
+}
+
+.toggleCircle{
+  position:absolute;
+  top:4px;
+  left:4px;
+  width:30px;
+  height:30px;
+  border-radius:999px;
+  background:white;
+  transition:
+    transform .28s ease;
+}
+
+.toggleButton.enabled .toggleCircle{
+  transform:
+    translateX(30px);
+}
+
+/* =========================================================
+LOADER
+========================================================= */
+
+.automationsLoader{
+  width:100%;
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  background:#050816;
+}
+
+.automationsLoader svg{
+  width:52px;
+  height:52px;
+  color:#818cf8;
+}
+
+/* =========================================================
+SPIN
+========================================================= */
+
+.spin{
+  animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:640px){
+
+  .automationsPage{
+    padding:18px;
+  }
+
+  .automationsTopbar h1{
+    font-size:2rem;
+  }
+
+  .automationCard{
+    padding:22px;
+    border-radius:24px;
+  }
+
+  .automationFooter{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+/* =========================================================
+FLOWBIZ AUTOMATIONS
+ULTRA PREMIUM OPTIMIZATION
+========================================================= */
+
+/* =========================================================
+3D ENGINE
+========================================================= */
+
+.automationsPage{
+  perspective:1800px;
+  transform-style:preserve-3d;
+}
+
+/* =========================================================
+CARD GPU
+========================================================= */
+
+.automationCard,
+.automationIcon,
+.toggleButton{
+  transform:
+    translateZ(0);
+  will-change:
+    transform;
+  backface-visibility:hidden;
+}
+
+/* =========================================================
+CARD PREMIUM
+========================================================= */
+
+.automationCard{
+  position:relative;
+  isolation:isolate;
+  transform-style:preserve-3d;
+  box-shadow:
+    0 24px 70px rgba(0,0,0,.22);
+}
+
+.automationCard::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.05),
+      transparent 22%
+    );
+  pointer-events:none;
+}
+
+.automationCard::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background:
+    linear-gradient(
+      180deg,
+      #6366f1,
+      #8b5cf6
+    );
+  box-shadow:
+    0 0 24px rgba(129,140,248,.22);
+}
+
+.automationCard:hover{
+  transform:
+    translateY(-8px)
+    rotateX(2deg);
+  box-shadow:
+    0 50px 140px rgba(99,102,241,.18),
+    0 30px 90px rgba(0,0,0,.34);
+}
+
+/* =========================================================
+ICON PREMIUM
+========================================================= */
+
+.automationIcon{
+  position:relative;
+  overflow:hidden;
+  box-shadow:
+    0 18px 40px rgba(99,102,241,.14);
+}
+
+.automationIcon::before{
+  content:"";
+  position:absolute;
+  inset:-20%;
+  background:
+    conic-gradient(
+      from 180deg,
+      transparent,
+      rgba(129,140,248,.16),
+      transparent
+    );
+  animation:
+    rotateAutomationGlow 10s linear infinite;
+}
+
+@keyframes rotateAutomationGlow{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+.automationIcon svg{
+  position:relative;
+  z-index:2;
+  filter:
+    drop-shadow(
+      0 0 14px rgba(129,140,248,.22)
+    );
+}
+
+.automationCard:hover .automationIcon{
+  transform:
+    translateZ(26px)
+    scale(1.04);
+}
+
+/* =========================================================
+HEADER PREMIUM
+========================================================= */
+
+.automationHeader strong{
+  transition:
+    text-shadow .28s ease,
+    transform .28s ease;
+}
+
+.automationCard:hover .automationHeader strong{
+  text-shadow:
+    0 0 18px rgba(129,140,248,.14);
+  transform:
+    translateX(2px);
+}
+
+/* =========================================================
+ACTION PREMIUM
+========================================================= */
+
+.automationAction{
+  position:relative;
+  overflow:hidden;
+  backdrop-filter:
+    blur(18px);
+  transition:
+    transform .28s ease,
+    border-color .28s ease,
+    background .28s ease;
+}
+
+.automationAction::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:80%;
+  height:100%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.12),
+      transparent
+    );
+  transition:.8s;
+}
+
+.automationCard:hover .automationAction::before{
+  left:140%;
+}
+
+.automationCard:hover .automationAction{
+  transform:
+    translateY(-2px);
+  border-color:
+    rgba(129,140,248,.14);
+}
+
+/* =========================================================
+STATUS PREMIUM
+========================================================= */
+
+.statusBadge{
+  backdrop-filter:blur(14px);
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease;
+}
+
+.statusBadge.active{
+  box-shadow:
+    0 18px 40px rgba(34,197,94,.16);
+}
+
+.statusBadge.inactive{
+  box-shadow:
+    0 18px 40px rgba(148,163,184,.12);
+}
+
+.automationCard:hover .statusBadge{
+  transform:
+    translateY(-2px);
+}
+
+/* =========================================================
+TOGGLE PREMIUM
+========================================================= */
+
+.toggleButton{
+  overflow:hidden;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.toggleButton::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:80%;
+  height:100%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.16),
+      transparent
+    );
+  transition:.8s;
+}
+
+.toggleButton:hover::before{
+  left:140%;
+}
+
+.toggleButton.enabled{
+  box-shadow:
+    0 20px 50px rgba(34,197,94,.22);
+}
+
+.toggleCircle{
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.18);
+}
+
+/* =========================================================
+FLOATING EFFECT
+========================================================= */
+
+.automationCard{
+  animation:
+    automationFloating 8s ease-in-out infinite;
+}
+
+.automationCard:nth-child(2){
+  animation-delay:1s;
+}
+
+.automationCard:nth-child(3){
+  animation-delay:2s;
+}
+
+.automationCard:nth-child(4){
+  animation-delay:3s;
+}
+
+@keyframes automationFloating{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-4px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* =========================================================
+GRID ENHANCEMENT
+========================================================= */
+
+.automationsGrid{
+  align-items:start;
+}
+
+/* =========================================================
+BADGE PREMIUM
+========================================================= */
+
+.automationsBadge{
+  position:relative;
+  overflow:hidden;
+  backdrop-filter:blur(18px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.04),
+    0 10px 30px rgba(99,102,241,.08);
+}
+
+.automationsBadge::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:80%;
+  height:100%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.14),
+      transparent
+    );
+  animation:
+    automationBadgeShine 5s linear infinite;
+}
+
+@keyframes automationBadgeShine{
+
+  0%{
+    left:-120%;
+  }
+
+  100%{
+    left:140%;
+  }
+}
+
+/* =========================================================
+TITLE PREMIUM
+========================================================= */
+
+.automationsTopbar h1{
+  text-shadow:
+    0 0 34px rgba(129,140,248,.14);
+}
+
+/* =========================================================
+SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:
+    rgba(255,255,255,.03);
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius:999px;
+  background:
+    linear-gradient(
+      180deg,
+      #6366f1,
+      #8b5cf6
+    );
+}
+
+/* =========================================================
+RESPONSIVE PREMIUM
+========================================================= */
+
+@media(max-width:768px){
+
+  .automationCard:hover{
+    transform:
+      translateY(-4px);
+  }
+
+  .automationCard{
+    animation:none;
+  }
+
+  .automationCard:hover .automationIcon{
+    transform:
+      scale(1.03);
+  }
+}

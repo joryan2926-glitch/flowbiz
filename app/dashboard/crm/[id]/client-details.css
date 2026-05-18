@@ -1,0 +1,448 @@
+/* =========================================================
+FLOWBIZ CLIENT DETAILS
+ULTRA PREMIUM FINAL DESIGN
+========================================================= */
+
+.clientDetailsPage{
+  position:relative;
+  overflow:hidden;
+  min-height:100vh;
+  padding:32px;
+  background:
+    radial-gradient(circle at top left,
+    rgba(99,102,241,.16),
+    transparent 22%),
+    radial-gradient(circle at bottom right,
+    rgba(168,85,247,.16),
+    transparent 22%),
+    linear-gradient(
+      180deg,
+      #050816,
+      #070b1d
+    );
+}
+
+/* =========================================================
+GLOWS
+========================================================= */
+
+.clientGlowOne{
+  position:absolute;
+  top:-220px;
+  left:-180px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(99,102,241,.18);
+  filter:blur(120px);
+}
+
+.clientGlowTwo{
+  position:absolute;
+  right:-220px;
+  bottom:-220px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(168,85,247,.18);
+  filter:blur(120px);
+}
+
+/* =========================================================
+LOADER
+========================================================= */
+
+.clientLoader{
+  width:100%;
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  background:#050816;
+  color:white;
+}
+
+.spin{
+  animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* =========================================================
+HERO
+========================================================= */
+
+.clientHero{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  padding:32px;
+  border-radius:34px;
+  background:
+    rgba(255,255,255,.04);
+  border:
+    1px solid rgba(255,255,255,.06);
+  backdrop-filter:
+    blur(24px);
+}
+
+.clientAvatar{
+  width:120px;
+  height:120px;
+  flex-shrink:0;
+  border-radius:999px;
+  display:grid;
+  place-items:center;
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+  color:white;
+  font-size:3rem;
+  font-weight:800;
+}
+
+.clientHeroInfos{
+  flex:1;
+}
+
+.heroBadge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:
+    rgba(255,255,255,.05);
+  color:#a5b4fc;
+  font-size:.8rem;
+  font-weight:700;
+}
+
+.clientHeroInfos h1{
+  margin-top:20px;
+  color:white;
+  font-size:3rem;
+  font-weight:800;
+}
+
+.clientMeta{
+  margin-top:22px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.clientMeta div{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#cbd5e1;
+}
+
+.clientMeta svg{
+  width:18px;
+  height:18px;
+  color:#818cf8;
+}
+
+/* =========================================================
+VALUE CARD
+========================================================= */
+
+.clientValueCard{
+  min-width:260px;
+  padding:28px;
+  border-radius:28px;
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+  color:white;
+}
+
+.clientValueCard span{
+  display:block;
+  opacity:.8;
+}
+
+.clientValueCard strong{
+  display:block;
+  margin-top:14px;
+  font-size:2.6rem;
+  font-weight:800;
+}
+
+.clientValueCard small{
+  display:inline-block;
+  margin-top:14px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:
+    rgba(255,255,255,.14);
+  text-transform:capitalize;
+}
+
+/* =========================================================
+GRID
+========================================================= */
+
+.clientGrid{
+  position:relative;
+  z-index:2;
+  margin-top:34px;
+  display:grid;
+  grid-template-columns:
+    1.4fr .9fr;
+  gap:24px;
+}
+
+/* =========================================================
+CARD
+========================================================= */
+
+.detailsCard{
+  margin-bottom:24px;
+  padding:28px;
+  border-radius:30px;
+  background:
+    rgba(255,255,255,.04);
+  border:
+    1px solid rgba(255,255,255,.06);
+  backdrop-filter:
+    blur(24px);
+}
+
+.cardHeader{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:white;
+  font-size:1.1rem;
+  font-weight:700;
+}
+
+.cardHeader svg{
+  color:#818cf8;
+}
+
+/* =========================================================
+TIMELINE
+========================================================= */
+
+.timelineList{
+  margin-top:28px;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.timelineItem{
+  display:flex;
+  gap:18px;
+}
+
+.timelineDot{
+  margin-top:4px;
+  color:#818cf8;
+}
+
+.timelineItem strong{
+  display:block;
+  color:white;
+}
+
+.timelineItem p{
+  margin-top:8px;
+  color:#d1d5db;
+  line-height:1.7;
+}
+
+.timelineItem span{
+  display:block;
+  margin-top:10px;
+  color:#64748b;
+  font-size:.85rem;
+}
+
+/* =========================================================
+NOTES
+========================================================= */
+
+.notesList{
+  margin-top:24px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.noteCard{
+  padding:20px;
+  border-radius:22px;
+  background:
+    rgba(255,255,255,.03);
+  border:
+    1px solid rgba(255,255,255,.05);
+}
+
+.noteCard p{
+  color:#d1d5db;
+  line-height:1.7;
+}
+
+.noteCard span{
+  display:block;
+  margin-top:14px;
+  color:#64748b;
+  font-size:.8rem;
+}
+
+/* =========================================================
+MEETINGS
+========================================================= */
+
+.meetingsList{
+  margin-top:24px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.meetingCard{
+  padding:20px;
+  border-radius:22px;
+  background:
+    rgba(255,255,255,.03);
+  border:
+    1px solid rgba(255,255,255,.05);
+}
+
+.meetingCard strong{
+  display:block;
+  color:white;
+}
+
+.meetingCard span{
+  display:block;
+  margin-top:10px;
+  color:#94a3b8;
+}
+
+/* =========================================================
+FILES
+========================================================= */
+
+.filesList{
+  margin-top:24px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.fileCard{
+  padding:18px;
+  border-radius:18px;
+  text-decoration:none;
+  background:
+    rgba(255,255,255,.03);
+  border:
+    1px solid rgba(255,255,255,.05);
+  color:#cbd5e1;
+  transition:.28s;
+}
+
+.fileCard:hover{
+  transform:
+    translateY(-3px);
+  border-color:
+    rgba(129,140,248,.16);
+}
+
+/* =========================================================
+AI CARD
+========================================================= */
+
+.aiCard{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(99,102,241,.16),
+      rgba(139,92,246,.08)
+    );
+}
+
+.aiInsight{
+  margin-top:24px;
+}
+
+.aiInsight strong{
+  display:block;
+  color:white;
+}
+
+.aiInsight span{
+  display:block;
+  margin-top:10px;
+  color:#22c55e;
+  font-size:2rem;
+  font-weight:800;
+}
+
+.aiInsight p{
+  margin-top:12px;
+  color:#d1d5db;
+  line-height:1.8;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:1200px){
+
+  .clientGrid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:768px){
+
+  .clientDetailsPage{
+    padding:18px;
+  }
+
+  .clientHero{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .clientHeroInfos h1{
+    font-size:2rem;
+  }
+
+  .clientValueCard{
+    width:100%;
+  }
+
+  .clientMeta{
+    flex-direction:column;
+  }
+}

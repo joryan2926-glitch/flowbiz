@@ -1,0 +1,99 @@
+// ======================================================
+// app/api/ai/create-agent/route.ts
+// FLOWBIZ CREATE AI AGENT
+// ======================================================
+
+import {
+  NextResponse,
+} from "next/server";
+
+import {
+  createClient,
+} from "@supabase/supabase-js";
+
+/* ======================================================
+SUPABASE
+====================================================== */
+
+const supabase =
+  createClient(
+
+    process.env
+      .NEXT_PUBLIC_SUPABASE_URL!,
+
+    process.env
+      .SUPABASE_SERVICE_ROLE_KEY!
+  );
+
+/* ======================================================
+POST
+====================================================== */
+
+export async function POST(
+  request:Request
+){
+
+  try{
+
+    const body =
+      await request.json();
+
+    const {
+
+      name,
+      role,
+      objective,
+
+    } = body;
+
+    const {
+
+      data,
+
+      error,
+
+    } =
+
+      await supabase
+
+        .from(
+          "ai_agents"
+        )
+
+        .insert({
+
+          name,
+          role,
+          objective,
+        })
+
+        .select()
+
+        .single();
+
+    if(error){
+
+      throw error;
+    }
+
+    return NextResponse.json({
+
+      success:true,
+
+      agent:data,
+    });
+
+  }catch(error:any){
+
+    return NextResponse.json(
+
+      {
+        error:error.message,
+      },
+
+      {
+        status:500,
+      }
+    );
+  }
+}

@@ -1,0 +1,527 @@
+/* ======================================================
+FLOWBIZ SETTINGS
+ULTRA PREMIUM UI
+====================================================== */
+
+.settingsPage{
+
+  min-height:100vh;
+
+  padding:32px;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(110,89,255,.18),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,212,255,.12),
+      transparent 30%
+    ),
+
+    #070b14;
+
+  color:white;
+}
+
+/* ======================================================
+HEADER
+====================================================== */
+
+.settingsHeader{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:24px;
+
+  margin-bottom:32px;
+}
+
+.settingsBadge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  margin-bottom:20px;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  backdrop-filter:
+    blur(12px);
+}
+
+.settingsHeader h1{
+
+  font-size:44px;
+
+  font-weight:800;
+
+  margin-bottom:12px;
+
+  letter-spacing:-1px;
+}
+
+.settingsHeader p{
+
+  max-width:720px;
+
+  color:
+    rgba(255,255,255,.65);
+
+  line-height:1.7;
+
+  font-size:15px;
+}
+
+/* ======================================================
+BUTTON
+====================================================== */
+
+.settingsSaveButton{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:10px;
+
+  height:58px;
+
+  padding:0 24px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff
+    );
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.settingsSaveButton:hover{
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 14px 36px
+    rgba(110,89,255,.35);
+}
+
+/* ======================================================
+GRID
+====================================================== */
+
+.settingsGrid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(420px,1fr)
+    );
+
+  gap:24px;
+}
+
+/* ======================================================
+CARD
+====================================================== */
+
+.settingsCard{
+
+  padding:28px;
+
+  border-radius:28px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  backdrop-filter:
+    blur(16px);
+
+  transition:.25s;
+}
+
+.settingsCard:hover{
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(110,89,255,.28);
+
+  box-shadow:
+    0 16px 40px
+    rgba(0,0,0,.25);
+}
+
+/* ======================================================
+TITLE
+====================================================== */
+
+.settingsCardTitle{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  font-size:18px;
+
+  font-weight:700;
+
+  margin-bottom:24px;
+}
+
+/* ======================================================
+INPUTS
+====================================================== */
+
+.settingsInputs{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+}
+
+.settingsInput label{
+
+  display:block;
+
+  margin-bottom:10px;
+
+  color:
+    rgba(255,255,255,.7);
+
+  font-size:14px;
+
+  font-weight:600;
+}
+
+.settingsInput div{
+
+  height:58px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  padding:0 18px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+}
+
+.settingsInput input{
+
+  flex:1;
+
+  background:none;
+
+  border:none;
+
+  outline:none;
+
+  color:white;
+
+  font-size:15px;
+}
+
+.settingsInput input::placeholder{
+
+  color:
+    rgba(255,255,255,.45);
+}
+
+/* ======================================================
+OPTIONS
+====================================================== */
+
+.settingsOptions{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+}
+
+.settingsOption{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:18px;
+
+  padding:18px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid
+    rgba(255,255,255,.06);
+}
+
+.settingsOption div{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  font-weight:600;
+}
+
+.settingsOption input{
+
+  width:22px;
+
+  height:22px;
+
+  accent-color:#6e59ff;
+
+  cursor:pointer;
+}
+
+/* ======================================================
+INTEGRATIONS
+====================================================== */
+
+.settingsIntegrations{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+}
+
+.settingsIntegration{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:16px;
+
+  padding:18px;
+
+  border-radius:20px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid
+    rgba(255,255,255,.06);
+}
+
+.settingsIntegration strong{
+
+  display:block;
+
+  margin-bottom:6px;
+
+  font-size:15px;
+}
+
+.settingsIntegration span{
+
+  color:
+    rgba(255,255,255,.65);
+
+  font-size:13px;
+}
+
+/* ======================================================
+TEAM
+====================================================== */
+
+.settingsTeam{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+}
+
+.settingsMember{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:16px;
+
+  padding:18px;
+
+  border-radius:20px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid
+    rgba(255,255,255,.06);
+}
+
+.settingsAvatar{
+
+  width:56px;
+
+  height:56px;
+
+  border-radius:18px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #8f7dff
+    );
+
+  font-weight:800;
+
+  font-size:18px;
+
+  flex-shrink:0;
+}
+
+.settingsAvatar.blue{
+
+  background:
+    linear-gradient(
+      135deg,
+      #00bfff,
+      #00d4ff
+    );
+}
+
+.settingsMember strong{
+
+  display:block;
+
+  margin-bottom:6px;
+
+  font-size:15px;
+}
+
+.settingsMember span{
+
+  color:
+    rgba(255,255,255,.65);
+
+  font-size:13px;
+}
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+@media(max-width:992px){
+
+  .settingsGrid{
+
+    grid-template-columns:
+      1fr;
+  }
+}
+
+@media(max-width:768px){
+
+  .settingsPage{
+
+    padding:20px;
+  }
+
+  .settingsHeader{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+
+  .settingsHeader h1{
+
+    font-size:34px;
+  }
+
+  .settingsCard{
+
+    padding:22px;
+  }
+
+  .settingsSaveButton{
+
+    width:100%;
+  }
+}

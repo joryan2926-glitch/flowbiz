@@ -1,0 +1,423 @@
+/* =========================================================
+FLOWBIZ TEAM CRM
+ULTRA PREMIUM FINAL DESIGN
+========================================================= */
+
+.teamPage{
+  position:relative;
+  overflow:hidden;
+  min-height:100vh;
+  padding:32px;
+  background:
+    radial-gradient(circle at top left,
+    rgba(99,102,241,.16),
+    transparent 22%),
+    radial-gradient(circle at bottom right,
+    rgba(168,85,247,.16),
+    transparent 22%),
+    linear-gradient(
+      180deg,
+      #050816,
+      #070b1d
+    );
+}
+
+/* =========================================================
+GLOWS
+========================================================= */
+
+.teamGlowOne{
+  position:absolute;
+  top:-220px;
+  left:-180px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(99,102,241,.18);
+  filter:blur(120px);
+}
+
+.teamGlowTwo{
+  position:absolute;
+  right:-220px;
+  bottom:-220px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(168,85,247,.18);
+  filter:blur(120px);
+}
+
+/* =========================================================
+TOPBAR
+========================================================= */
+
+.teamTopbar{
+  position:relative;
+  z-index:2;
+}
+
+.teamBadge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 18px;
+  border-radius:999px;
+  background:
+    rgba(255,255,255,.05);
+  border:
+    1px solid rgba(255,255,255,.06);
+  color:#a5b4fc;
+  font-size:.8rem;
+  font-weight:700;
+}
+
+.teamTopbar h1{
+  margin-top:24px;
+  font-size:3rem;
+  font-weight:800;
+  background:
+    linear-gradient(
+      90deg,
+      #fff,
+      #c4b5fd,
+      #818cf8
+    );
+  background-clip:text;
+  color:transparent;
+}
+
+.teamTopbar p{
+  margin-top:14px;
+  color:#94a3b8;
+}
+
+/* =========================================================
+STATS
+========================================================= */
+
+.teamStats{
+  position:relative;
+  z-index:2;
+  margin-top:38px;
+  display:grid;
+  grid-template-columns:
+    repeat(4,1fr);
+  gap:24px;
+}
+
+.teamStatCard{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:26px;
+  border-radius:28px;
+  background:
+    rgba(255,255,255,.04);
+  border:
+    1px solid rgba(255,255,255,.06);
+  backdrop-filter:
+    blur(24px);
+}
+
+.teamStatIcon{
+  width:72px;
+  height:72px;
+  display:grid;
+  place-items:center;
+  border-radius:22px;
+  background:
+    rgba(99,102,241,.16);
+  color:#818cf8;
+}
+
+.teamStatIcon.manager{
+  background:
+    rgba(251,191,36,.14);
+  color:#fbbf24;
+}
+
+.teamStatIcon.sales{
+  background:
+    rgba(34,197,94,.14);
+  color:#22c55e;
+}
+
+.teamStatIcon.performance{
+  background:
+    rgba(168,85,247,.14);
+  color:#a855f7;
+}
+
+.teamStatCard span{
+  display:block;
+  color:#94a3b8;
+}
+
+.teamStatCard strong{
+  display:block;
+  margin-top:10px;
+  color:white;
+  font-size:2rem;
+}
+
+/* =========================================================
+CREATE
+========================================================= */
+
+.teamCreate{
+  position:relative;
+  z-index:2;
+  margin-top:34px;
+  display:grid;
+  grid-template-columns:
+    repeat(4,1fr);
+  gap:18px;
+}
+
+.teamCreate input,
+.teamCreate select{
+  height:58px;
+  border:none;
+  outline:none;
+  padding:0 18px;
+  border-radius:18px;
+  background:
+    rgba(255,255,255,.05);
+  border:
+    1px solid rgba(255,255,255,.06);
+  color:white;
+}
+
+.teamCreate option{
+  background:#050816;
+}
+
+.teamCreate button{
+  height:58px;
+  border:none;
+  cursor:pointer;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+  color:white;
+  font-weight:700;
+}
+
+/* =========================================================
+GRID
+========================================================= */
+
+.teamGrid{
+  position:relative;
+  z-index:2;
+  margin-top:38px;
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(360px,1fr));
+  gap:24px;
+}
+
+/* =========================================================
+CARD
+========================================================= */
+
+.memberCard{
+  padding:30px;
+  border-radius:30px;
+  background:
+    rgba(255,255,255,.04);
+  border:
+    1px solid rgba(255,255,255,.06);
+  backdrop-filter:
+    blur(24px);
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.memberHeader{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.memberAvatar{
+  width:72px;
+  height:72px;
+  border-radius:22px;
+  display:grid;
+  place-items:center;
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+  color:white;
+  font-size:1.8rem;
+  font-weight:800;
+}
+
+.memberHeader strong{
+  display:block;
+  color:white;
+  font-size:1rem;
+}
+
+.memberHeader span{
+  display:block;
+  margin-top:8px;
+  color:#94a3b8;
+}
+
+/* =========================================================
+ROLE
+========================================================= */
+
+.memberRole{
+  display:inline-flex;
+  margin-top:22px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:
+    rgba(99,102,241,.14);
+  color:#818cf8;
+  font-size:.8rem;
+  font-weight:700;
+  text-transform:capitalize;
+}
+
+/* =========================================================
+PERMISSIONS
+========================================================= */
+
+.permissionsList{
+  margin-top:24px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.permissionsList div{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#d1d5db;
+}
+
+.permissionsList svg{
+  color:#818cf8;
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.memberFooter{
+  margin-top:28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.memberStatus{
+  padding:10px 16px;
+  border-radius:999px;
+  background:
+    rgba(34,197,94,.14);
+  color:#22c55e;
+  font-size:.8rem;
+  font-weight:700;
+}
+
+.memberPerformance{
+  color:#22c55e;
+  font-size:1.2rem;
+  font-weight:800;
+}
+
+/* =========================================================
+LOADER
+========================================================= */
+
+.teamLoader{
+  width:100%;
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  background:#050816;
+}
+
+.spin{
+  animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:1200px){
+
+  .teamStats{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .teamCreate{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+
+  .teamPage{
+    padding:18px;
+  }
+
+  .teamTopbar h1{
+    font-size:2rem;
+  }
+
+  .teamStats{
+    grid-template-columns:1fr;
+  }
+
+  .teamCreate{
+    grid-template-columns:1fr;
+  }
+
+  .teamGrid{
+    grid-template-columns:1fr;
+  }
+
+  .memberFooter{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:16px;
+  }
+}

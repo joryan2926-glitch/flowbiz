@@ -1,0 +1,435 @@
+/* =========================================================
+FLOWBIZ FAILED PAYMENTS
+ULTRA PREMIUM DESIGN
+========================================================= */
+
+.failedPage{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:100vh;
+  padding:32px;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(239,68,68,.12),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(99,102,241,.14),
+      transparent 22%
+    ),
+    linear-gradient(
+      180deg,
+      #050816,
+      #070b1d
+    );
+}
+
+/* =========================================================
+BACKGROUND
+========================================================= */
+
+.failedPage::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    );
+  background-size:34px 34px;
+  opacity:.16;
+}
+
+/* =========================================================
+GLOWS
+========================================================= */
+
+.failedGlowOne{
+  position:absolute;
+  top:-220px;
+  left:-180px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(239,68,68,.16);
+  filter:blur(120px);
+}
+
+.failedGlowTwo{
+  position:absolute;
+  right:-220px;
+  bottom:-220px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(99,102,241,.18);
+  filter:blur(120px);
+}
+
+/* =========================================================
+TOPBAR
+========================================================= */
+
+.failedTopbar{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:24px;
+  margin-bottom:36px;
+}
+
+.failedBadge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:
+    rgba(255,255,255,.06);
+  border:
+    1px solid rgba(255,255,255,.08);
+  color:#fca5a5;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.failedTopbar h1{
+  margin-top:20px;
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #fca5a5
+    );
+  background-clip:text;
+  color:transparent;
+  font-size:2.8rem;
+  font-weight:800;
+  letter-spacing:-.05em;
+}
+
+.failedTopbar p{
+  margin-top:12px;
+  color:#9ca3af;
+  line-height:1.7;
+  max-width:720px;
+}
+
+/* =========================================================
+REFRESH BUTTON
+========================================================= */
+
+.refreshBtn{
+  height:52px;
+  padding:0 18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border:none;
+  border-radius:18px;
+  cursor:pointer;
+  background:
+    rgba(255,255,255,.05);
+  border:
+    1px solid rgba(255,255,255,.08);
+  color:#e5e7eb;
+  font-weight:700;
+  transition:.28s ease;
+}
+
+.refreshBtn:hover{
+  transform:
+    translateY(-2px);
+  border-color:
+    rgba(239,68,68,.18);
+}
+
+/* =========================================================
+STATS
+========================================================= */
+
+.failedStats{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  margin-bottom:28px;
+}
+
+.failedStatCard{
+  position:relative;
+  overflow:hidden;
+  padding:26px;
+  border-radius:30px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.025)
+    );
+  border:
+    1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(24px);
+}
+
+.failedStatCard strong{
+  display:block;
+  margin-top:18px;
+  font-size:2rem;
+  font-weight:800;
+  color:white;
+}
+
+.failedStatCard span{
+  display:block;
+  margin-top:10px;
+  color:#94a3b8;
+}
+
+/* =========================================================
+ICON
+========================================================= */
+
+.failedStatIcon{
+  width:60px;
+  height:60px;
+  display:grid;
+  place-items:center;
+  border-radius:20px;
+  background:
+    rgba(239,68,68,.12);
+  border:
+    1px solid rgba(239,68,68,.18);
+}
+
+.failedStatIcon svg{
+  width:26px;
+  height:26px;
+  color:#f87171;
+}
+
+.failedStatIcon.revenue{
+  background:
+    rgba(251,191,36,.12);
+  border:
+    1px solid rgba(251,191,36,.18);
+}
+
+.failedStatIcon.revenue svg{
+  color:#facc15;
+}
+
+.failedStatIcon.activity{
+  background:
+    rgba(99,102,241,.12);
+  border:
+    1px solid rgba(99,102,241,.18);
+}
+
+.failedStatIcon.activity svg{
+  color:#818cf8;
+}
+
+/* =========================================================
+LIST
+========================================================= */
+
+.failedList{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* =========================================================
+CARD
+========================================================= */
+
+.failedCard{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:24px;
+  border-radius:30px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.025)
+    );
+  border:
+    1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(24px);
+  transition:.28s ease;
+}
+
+.failedCard:hover{
+  transform:
+    translateY(-4px);
+  border-color:
+    rgba(239,68,68,.18);
+}
+
+/* =========================================================
+LEFT
+========================================================= */
+
+.failedLeft{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.failedIcon{
+  width:60px;
+  height:60px;
+  display:grid;
+  place-items:center;
+  border-radius:20px;
+  background:
+    rgba(239,68,68,.12);
+  border:
+    1px solid rgba(239,68,68,.18);
+}
+
+.failedIcon svg{
+  width:26px;
+  height:26px;
+  color:#f87171;
+}
+
+.failedContent strong{
+  display:block;
+  font-size:1.3rem;
+  font-weight:800;
+  color:white;
+}
+
+.failedContent p{
+  margin-top:8px;
+  color:#cbd5e1;
+}
+
+.failedContent span{
+  display:block;
+  margin-top:10px;
+  color:#64748b;
+  font-size:.82rem;
+}
+
+/* =========================================================
+STATUS
+========================================================= */
+
+.failedStatus{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 16px;
+  border-radius:999px;
+  background:
+    rgba(239,68,68,.12);
+  border:
+    1px solid rgba(239,68,68,.18);
+  color:#f87171;
+  font-size:.84rem;
+  font-weight:700;
+}
+
+/* =========================================================
+LOADER
+========================================================= */
+
+.failedLoader{
+  width:100%;
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  background:#050816;
+}
+
+.failedLoader svg{
+  width:52px;
+  height:52px;
+  color:#818cf8;
+}
+
+/* =========================================================
+SPIN
+========================================================= */
+
+.spin{
+  animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:980px){
+
+  .failedTopbar{
+    flex-direction:column;
+  }
+
+  .failedCard{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+
+@media(max-width:640px){
+
+  .failedPage{
+    padding:18px;
+  }
+
+  .failedTopbar h1{
+    font-size:2rem;
+  }
+
+  .failedStatCard,
+  .failedCard{
+    padding:22px;
+    border-radius:24px;
+  }
+
+  .failedIcon,
+  .failedStatIcon{
+    width:54px;
+    height:54px;
+    border-radius:18px;
+  }
+
+  .failedIcon svg,
+  .failedStatIcon svg{
+    width:22px;
+    height:22px;
+  }
+}

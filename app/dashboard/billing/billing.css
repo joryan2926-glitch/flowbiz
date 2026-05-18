@@ -1,0 +1,703 @@
+/* ======================================================
+FLOWBIZ BILLING
+ULTRA PREMIUM UI
+====================================================== */
+
+.billingPage{
+
+  min-height:100vh;
+
+  padding:32px;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(110,89,255,.18),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,212,255,.12),
+      transparent 30%
+    ),
+
+    #070b14;
+
+  color:white;
+}
+
+/* ======================================================
+HEADER
+====================================================== */
+
+.billingHeader{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:24px;
+
+  margin-bottom:32px;
+}
+
+.billingBadge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  margin-bottom:20px;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  backdrop-filter:
+    blur(12px);
+}
+
+.billingHeader h1{
+
+  font-size:44px;
+
+  font-weight:800;
+
+  margin-bottom:12px;
+
+  letter-spacing:-1px;
+}
+
+.billingHeader p{
+
+  max-width:720px;
+
+  color:
+    rgba(255,255,255,.65);
+
+  line-height:1.7;
+
+  font-size:15px;
+}
+
+/* ======================================================
+BUTTON
+====================================================== */
+
+.billingUpgradeButton{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:10px;
+
+  height:58px;
+
+  padding:0 24px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff
+    );
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.billingUpgradeButton:hover{
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 14px 36px
+    rgba(110,89,255,.35);
+}
+
+/* ======================================================
+GRID
+====================================================== */
+
+.billingGrid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(380px,1fr)
+    );
+
+  gap:24px;
+
+  margin-bottom:28px;
+}
+
+/* ======================================================
+CARD
+====================================================== */
+
+.billingCard,
+.billingUsage,
+.billingInvoices{
+
+  padding:28px;
+
+  border-radius:28px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  backdrop-filter:
+    blur(16px);
+
+  transition:.25s;
+}
+
+.billingCard:hover,
+.billingUsage:hover,
+.billingInvoices:hover{
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(110,89,255,.28);
+
+  box-shadow:
+    0 16px 40px
+    rgba(0,0,0,.25);
+}
+
+/* ======================================================
+TITLE
+====================================================== */
+
+.billingCardTitle{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  font-size:18px;
+
+  font-weight:700;
+
+  margin-bottom:24px;
+}
+
+/* ======================================================
+PLAN
+====================================================== */
+
+.billingPlan{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:18px;
+
+  padding:22px;
+
+  border-radius:22px;
+
+  margin-bottom:24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(110,89,255,.18),
+      rgba(0,212,255,.10)
+    );
+
+  border:
+    1px solid
+    rgba(110,89,255,.25);
+}
+
+.billingPlan h2{
+
+  font-size:24px;
+
+  font-weight:800;
+
+  margin-bottom:8px;
+}
+
+.billingPlan span{
+
+  color:
+    rgba(255,255,255,.72);
+
+  font-size:15px;
+}
+
+.billingPlanBadge{
+
+  padding:10px 16px;
+
+  border-radius:14px;
+
+  background:
+    rgba(0,217,126,.14);
+
+  color:#00d97e;
+
+  font-weight:700;
+
+  font-size:14px;
+}
+
+/* ======================================================
+FEATURES
+====================================================== */
+
+.billingFeatures{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:16px;
+}
+
+.billingFeatures div{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  color:
+    rgba(255,255,255,.82);
+
+  font-weight:500;
+}
+
+/* ======================================================
+PAYMENT CARD
+====================================================== */
+
+.billingPaymentCard{
+
+  position:relative;
+
+  overflow:hidden;
+
+  padding:28px;
+
+  border-radius:24px;
+
+  margin-bottom:22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff
+    );
+}
+
+.billingPaymentTop{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  margin-bottom:36px;
+
+  font-weight:700;
+
+  letter-spacing:2px;
+}
+
+.billingPaymentCard h3{
+
+  font-size:28px;
+
+  font-weight:800;
+
+  margin-bottom:10px;
+
+  letter-spacing:2px;
+}
+
+.billingPaymentCard span{
+
+  font-size:14px;
+
+  opacity:.85;
+}
+
+/* ======================================================
+ADD CARD
+====================================================== */
+
+.billingAddCard{
+
+  width:100%;
+
+  height:56px;
+
+  border:none;
+
+  border-radius:18px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:10px;
+
+  background:
+    rgba(255,255,255,.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.2s;
+}
+
+.billingAddCard:hover{
+
+  background:
+    rgba(110,89,255,.18);
+
+  border-color:
+    rgba(110,89,255,.25);
+}
+
+/* ======================================================
+USAGE
+====================================================== */
+
+.billingUsage{
+
+  margin-bottom:28px;
+}
+
+.billingUsageGrid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px,1fr)
+    );
+
+  gap:20px;
+}
+
+.billingUsageCard{
+
+  padding:24px;
+
+  border-radius:22px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid
+    rgba(255,255,255,.06);
+
+  text-align:center;
+}
+
+.billingUsageCard strong{
+
+  display:block;
+
+  font-size:34px;
+
+  font-weight:800;
+
+  margin-bottom:10px;
+}
+
+.billingUsageCard span{
+
+  color:
+    rgba(255,255,255,.65);
+
+  font-size:14px;
+}
+
+/* ======================================================
+INVOICES
+====================================================== */
+
+.billingInvoicesList{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+}
+
+.billingInvoiceCard{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  padding:22px;
+
+  border-radius:22px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid
+    rgba(255,255,255,.06);
+
+  transition:.25s;
+}
+
+.billingInvoiceCard:hover{
+
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(110,89,255,.25);
+}
+
+/* ======================================================
+LEFT
+====================================================== */
+
+.billingInvoiceLeft{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:18px;
+}
+
+.billingInvoiceIcon{
+
+  width:62px;
+
+  height:62px;
+
+  border-radius:18px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff
+    );
+
+  flex-shrink:0;
+}
+
+.billingInvoiceLeft h3{
+
+  font-size:17px;
+
+  font-weight:700;
+
+  margin-bottom:8px;
+}
+
+.billingInvoiceLeft span{
+
+  color:
+    rgba(255,255,255,.65);
+
+  font-size:14px;
+}
+
+/* ======================================================
+RIGHT
+====================================================== */
+
+.billingInvoiceRight{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:18px;
+}
+
+.billingInvoiceRight strong{
+
+  font-size:18px;
+
+  font-weight:800;
+}
+
+.billingInvoiceRight button{
+
+  width:46px;
+
+  height:46px;
+
+  border:none;
+
+  border-radius:14px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,.06);
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:.2s;
+}
+
+.billingInvoiceRight button:hover{
+
+  background:
+    rgba(110,89,255,.18);
+
+  border-color:
+    rgba(110,89,255,.25);
+}
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+@media(max-width:992px){
+
+  .billingGrid{
+
+    grid-template-columns:
+      1fr;
+  }
+}
+
+@media(max-width:768px){
+
+  .billingPage{
+
+    padding:20px;
+  }
+
+  .billingHeader{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+
+  .billingHeader h1{
+
+    font-size:34px;
+  }
+
+  .billingCard,
+  .billingUsage,
+  .billingInvoices{
+
+    padding:22px;
+  }
+
+  .billingUpgradeButton{
+
+    width:100%;
+  }
+
+  .billingInvoiceCard{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+
+  .billingInvoiceRight{
+
+    width:100%;
+
+    justify-content:space-between;
+  }
+
+  .billingPlan{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+}

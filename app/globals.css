@@ -1,1233 +1,666 @@
+/* =========================================================
+GLOBAL CSS FINAL
+FLOWBIZ OS
+SAFE VERSION
+N'IMPACTE PAS LES AUTRES PAGES
+========================================================= */
 
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+:root{
+
+
+  --flow-bg:#050816;
+  --flow-bg-secondary:#0b1023;
+
+
+  --flow-card:
+    rgba(15,18,40,0.72);
+
+
+  --flow-card-strong:
+    rgba(18,22,48,0.92);
+
+
+  --flow-border:
+    rgba(255,255,255,0.08);
+
+
+  --flow-text:#f4f7ff;
+
+
+  --flow-text-soft:
+    rgba(255,255,255,0.72);
+
+
+  --flow-purple:#7c5cff;
+  --flow-blue:#38bdf8;
+  --flow-pink:#ff4fd8;
+  --flow-green:#34d399;
+  --flow-orange:#fb923c;
+
+
+  --flow-shadow:
+    0 10px 40px rgba(0,0,0,0.35);
+
+
+  --flow-radius:24px;
+
+
+  --flow-transition:
+    0.25s ease;
+
+
+  --flow-blur:blur(18px);
 }
+
+
+/* =========================================================
+RESET SAFE
+========================================================= */
+
 
 html,
-body {
-  width: 100%;
-  min-height: 100%;
-  background: #050816;
-  color: white;
-  font-family: Inter, Arial, Helvetica, sans-serif;
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-height:100%;
+  background:var(--flow-bg);
+  color:var(--flow-text);
+  font-family:
+    Inter,
+    system-ui,
+    sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-}
-
-a {
-  color: inherit;
-}
-
-button,
-input,
-textarea,
-select {
-  font-family: inherit;
-}
-
-/* =========================
-   SIDEBAR PREMIUM CORRIGÉE
-========================= */
-
-.sidebar {
-  width: 92px;
-  min-width: 92px;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1000;
-  padding: 18px 12px;
-  background:
-    radial-gradient(circle at 50% 0%, rgba(96, 165, 250, 0.18), transparent 35%),
-    rgba(7, 10, 22, 0.92);
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(24px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.sidebarTop {
-  position: relative;
-  z-index: 2;
-}
-
-.sidebarGlow {
-  position: absolute;
-  width: 160px;
-  height: 160px;
-  top: -60px;
-  left: -40px;
-  background: radial-gradient(circle, rgba(96, 165, 250, 0.35), transparent 70%);
-  filter: blur(20px);
-  animation: sidebarGlow 5s ease-in-out infinite;
-}
-
-.sidebarLogo {
-  width: 62px;
-  height: 62px;
-  margin: 0 auto 22px;
-  border-radius: 20px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
-  box-shadow: 0 0 32px rgba(124, 58, 237, 0.45);
-  text-decoration: none;
-}
-
-.sidebarLogo img,
-.logoImage {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-  border-radius: 12px;
-  animation: logoFloat 4s ease-in-out infinite;
-}
-
-.sidebarLogo div,
-.sidebarLogo h2,
-.sidebarLogo p {
-  display: none;
-}
-
-.sidebarMenu,
-.sidebarNav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.sidebarItem,
-.sidebarLink {
-  width: 62px;
-  height: 54px;
-  border-radius: 18px;
-  display: grid;
-  place-items: center;
-  color: rgba(255, 255, 255, 0.68);
-  text-decoration: none;
-  transition: 0.25s ease;
-  position: relative;
-}
-
-.sidebarItem span,
-.sidebarLink span {
-  display: none;
-}
-
-.sidebarItem:hover,
-.sidebarLink:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: white;
-  transform: translateY(-3px);
-}
-
-.sidebarItem.active,
-.sidebarLink.active {
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
-  color: white;
-  box-shadow: 0 0 28px rgba(124, 58, 237, 0.38);
-}
-
-.sidebarBottom {
-  display: grid;
-  gap: 12px;
-  position: relative;
-  z-index: 2;
-}
-
-.sidebarAiButton {
-  width: 62px;
-  height: 54px;
-  border: none;
-  border-radius: 18px;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  color: white;
-  background: linear-gradient(135deg, #06b6d4, #7c3aed);
-  box-shadow: 0 0 28px rgba(6, 182, 212, 0.28);
-}
-
-.sidebarAiButton span {
-  display: none;
-}
-
-.sidebarCard {
-  display: none;
-}
-
-/* =========================
-   STRUCTURE COMMUNE PAGES
-========================= */
-
-.mainContent {
-  margin-left: 92px;
-  width: calc(100% - 92px);
-  min-height: 100vh;
-  padding: 28px 34px;
-  background:
-    radial-gradient(circle at 20% 0%, rgba(37, 99, 235, 0.15), transparent 30%),
-    radial-gradient(circle at 100% 20%, rgba(147, 51, 234, 0.16), transparent 32%),
-    #050816;
-}
-
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 22px;
-  margin-bottom: 24px;
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  padding: 14px 0 18px;
-  background: rgba(5, 8, 22, 0.82);
-  backdrop-filter: blur(18px);
-}
-
-.topbar h2 {
-  font-size: 36px;
-  font-weight: 900;
-  letter-spacing: -0.05em;
-  background: linear-gradient(90deg, #ffffff, #93c5fd, #a78bfa);
-  background-clip: text;
-  color: transparent;
-}
-
-.topbar p {
-  color: #94a3b8;
-  margin-top: 6px;
-}
-
-.topActions {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.searchBar {
-  width: 360px;
-  height: 48px;
-  padding: 0 16px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.045);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.searchBar input {
-  width: 100%;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: white;
-}
-
-.searchBar input::placeholder {
-  color: #94a3b8;
-}
-
-.notifBtn,
-.iaTopBtn {
-  height: 48px;
-  border: none;
-  color: white;
-  border-radius: 16px;
-  cursor: pointer;
-}
-
-.notifBtn {
-  width: 48px;
-  position: relative;
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.notifBtn span {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  width: 21px;
-  height: 21px;
-  border-radius: 50%;
-  background: #ec4899;
-  font-size: 12px;
-  display: grid;
-  place-items: center;
-}
-
-.iaTopBtn {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  padding: 0 18px;
-  font-weight: 900;
-  background: linear-gradient(90deg, #2563eb, #9333ea);
-}
-
-/* =========================
-   CARDS / BUTTONS COMMUNS
-========================= */
-
-.card,
-.statCard,
-.heroCard,
-.filterBar,
-.onboardingCard {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025));
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(18px);
-  border-radius: 28px;
-  box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  transition: 0.28s ease;
-}
-
-.card,
-.statCard {
-  padding: 24px;
-}
-
-.card:hover,
-.statCard:hover {
-  transform: translateY(-5px);
-  border-color: rgba(56, 189, 248, 0.35);
-  box-shadow:
-    0 0 45px rgba(56, 189, 248, 0.12),
-    0 0 70px rgba(147, 51, 234, 0.16);
-}
-
-.sectionHeader,
-.statTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.card p,
-.statCard p {
-  color: #94a3b8;
-  line-height: 1.55;
-}
-
-.statCard h2,
-.statCard strong {
-  font-size: 38px;
-  display: block;
-  margin: 16px 0 8px;
-}
-
-.statIcon {
-  width: 46px;
-  height: 46px;
-  border-radius: 15px;
-  display: grid;
-  place-items: center;
-}
-
-.statIcon.blue { background: rgba(37, 99, 235, 0.18); }
-.statIcon.purple { background: rgba(147, 51, 234, 0.18); }
-.statIcon.green { background: rgba(34, 197, 94, 0.18); }
-.statIcon.pink { background: rgba(236, 72, 153, 0.18); }
-
-.miniLine {
-  height: 5px;
-  margin-top: 18px;
-  border-radius: 999px;
-  animation: lineGrow 2s infinite alternate ease-in-out;
-}
-
-.miniLine.blue { background: linear-gradient(90deg, #2563eb, #38bdf8); }
-.miniLine.purple { background: linear-gradient(90deg, #7c3aed, #ec4899); }
-.miniLine.green { background: linear-gradient(90deg, #22c55e, #14b8a6); }
-.miniLine.pink { background: linear-gradient(90deg, #ec4899, #f97316); }
-
-.primaryBtn,
-.secondaryBtn,
-.greenBtn,
-.smallBtn,
-.fullBtn {
-  border: none;
-  cursor: pointer;
-  padding: 14px 20px;
-  border-radius: 16px;
-  font-weight: 900;
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  text-decoration: none;
-  transition: 0.25s ease;
-}
-
-.primaryBtn {
-  background: white;
-  color: #050816;
-}
 
-.secondaryBtn {
-  background: rgba(255, 255, 255, 0.15);
-  color: white;
+*{
+  box-sizing:border-box;
 }
 
-.greenBtn,
-.fullBtn {
-  background: #22c55e;
-  color: white;
-}
-
-.primaryBtn:hover,
-.secondaryBtn:hover,
-.greenBtn:hover,
-.smallBtn:hover,
-.fullBtn:hover {
-  transform: translateY(-4px);
-}
-
-/* =========================
-   HERO COMMUN
-========================= */
-
-.heroCard {
-  padding: 42px;
-  margin-bottom: 24px;
-  border-radius: 34px;
-  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
-  display: grid;
-  grid-template-columns: 1fr 290px;
-  gap: 24px;
-  box-shadow: 0 35px 110px rgba(79, 70, 229, 0.35);
-}
-
-.heroGlow {
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  right: -120px;
-  top: -120px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.18);
-  filter: blur(90px);
-  animation: softFloat 6s infinite ease-in-out;
-}
-
-.heroLogo {
-  position: absolute;
-  right: 32px;
-  top: 28px;
-  width: 58px;
-  height: 58px;
-  object-fit: contain;
-  padding: 8px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 0 45px rgba(147, 51, 234, 0.45);
-  animation: logoFloat 4s ease-in-out infinite;
-}
-
-.watermarkLogo {
-  position: absolute;
-  right: 42px;
-  bottom: 24px;
-  width: 150px;
-  opacity: 0.08;
-  animation: watermarkPulse 7s ease-in-out infinite;
-}
-
-.heroContent,
-.heroSignal {
-  position: relative;
-  z-index: 2;
-}
-
-.heroContent span {
-  font-weight: 900;
-  color: #dbeafe;
-}
-
-.heroContent h1 {
-  font-size: clamp(40px, 4.6vw, 66px);
-  line-height: 0.95;
-  letter-spacing: -0.06em;
-  margin: 14px 0;
-}
-
-.heroContent p {
-  color: rgba(255, 255, 255, 0.82);
-  max-width: 740px;
-  line-height: 1.65;
-}
-
-.heroButtons {
-  display: flex;
-  gap: 14px;
-  margin-top: 26px;
-  flex-wrap: wrap;
-}
-
-.heroSignal {
-  align-self: center;
-  padding: 24px;
-  border-radius: 26px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(18px);
-  animation: softFloat 4s ease-in-out infinite;
-}
-
-/* =========================
-   IA FLOTTANTE / DRAWER
-========================= */
-
-.floating-ai,
-.floatingAI {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  z-index: 2000;
-  border: none;
-  cursor: pointer;
-  padding: 14px 18px;
-  border-radius: 999px;
-  color: white;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899);
-  box-shadow:
-    0 0 35px rgba(147, 51, 234, 0.55),
-    0 18px 50px rgba(0, 0, 0, 0.35);
-  animation: floatingPulse 3s ease-in-out infinite;
-}
-
-.floating-ai:hover,
-.floatingAI:hover {
-  transform: translateY(-4px) scale(1.03);
-}
-
-.aiDrawer {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 460px;
-  height: 100vh;
-  z-index: 2500;
-  padding: 30px;
-  background: rgba(5, 9, 22, 0.97);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(24px);
-  animation: slideIn 0.35s ease both;
-}
-
-.closeAi {
-  position: absolute;
-  right: 22px;
-  top: 20px;
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.08);
-  color: white;
-  cursor: pointer;
-}
-
-.drawerHead {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.drawerHead img {
-  width: 52px;
-  height: 52px;
-  object-fit: contain;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 6px;
-}
-
-.drawerList {
-  display: grid;
-  gap: 14px;
-}
-
-.drawerList div {
-  padding: 18px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.045);
-}
-
-.drawerList a,
-.drawerList button {
-  display: inline-flex;
-  margin-top: 12px;
-  border: none;
-  background: white;
-  color: #050816;
-  padding: 10px 14px;
-  border-radius: 13px;
-  font-weight: 900;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* =========================
-   MODAL COMMUNE
-========================= */
-
-.modalOverlay {
-  position: fixed;
-  inset: 0;
-  z-index: 3000;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(12px);
-  display: grid;
-  place-items: center;
-}
-
-.actionModal,
-.clientModal {
-  position: relative;
-  width: min(520px, 92vw);
-  padding: 34px;
-  border-radius: 32px;
-  background:
-    radial-gradient(circle at 20% 0%, rgba(56, 189, 248, 0.15), transparent 35%),
-    rgba(5, 9, 22, 0.98);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.55);
-  animation: modalPop 0.28s ease both;
-}
-
-.modalIcon {
-  width: 62px;
-  height: 62px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
-  display: grid;
-  place-items: center;
-  margin-bottom: 18px;
-}
-
-.modalFields {
-  display: grid;
-  gap: 12px;
-  margin: 24px 0;
-}
-
-.modalFields input {
-  height: 48px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  padding: 0 14px;
-  color: white;
-  outline: none;
-}
-
-.modalActions {
-  display: flex;
-  gap: 12px;
-}
-
-.modalActions button,
-.modalActions a {
-  flex: 1;
-  height: 48px;
-  border: none;
-  border-radius: 15px;
-  font-weight: 900;
-  cursor: pointer;
-  text-decoration: none;
-  display: grid;
-  place-items: center;
-}
-
-.modalActions button {
-  background: rgba(255, 255, 255, 0.08);
-  color: white;
-}
-
-.modalActions a {
-  background: white;
-  color: #050816;
-}
-
-/* =========================
-   ANIMATIONS
-========================= */
 
-@keyframes sidebarGlow {
-  0%, 100% { opacity: 0.35; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.15); }
-}
-
-@keyframes softFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
-}
-
-@keyframes logoFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-7px) rotate(3deg); }
-}
-
-@keyframes watermarkPulse {
-  0%, 100% { opacity: 0.06; transform: scale(1); }
-  50% { opacity: 0.13; transform: scale(1.04); }
-}
-
-@keyframes lineGrow {
-  from { width: 40%; }
-  to { width: 100%; }
-}
-
-@keyframes floatingPulse {
-  0%, 100% {
-    box-shadow:
-      0 0 28px rgba(147, 51, 234, 0.45),
-      0 18px 50px rgba(0, 0, 0, 0.35);
-  }
-  50% {
-    box-shadow:
-      0 0 55px rgba(236, 72, 153, 0.65),
-      0 20px 60px rgba(0, 0, 0, 0.42);
-  }
-}
-
-@keyframes modalPop {
-  from { opacity: 0; transform: scale(0.94) translateY(16px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
-}
-
-@keyframes slideIn {
-  from { transform: translateX(100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
+/* IMPORTANT :
+PAS DE RESET AGRESSIF
+PAS DE overflow:hidden GLOBAL
+PAS DE display:flex SUR BODY
+*/
 
-/* =========================
-   RESPONSIVE
-========================= */
 
-@media (max-width: 1100px) {
-  .sidebar {
-    width: 74px;
-    min-width: 74px;
-  }
+/* =========================================================
+APP ROOT
+========================================================= */
 
-  .mainContent {
-    margin-left: 74px;
-    width: calc(100% - 74px);
-    padding: 22px;
-  }
 
-  .sidebarLogo,
-  .sidebarItem,
-  .sidebarLink,
-  .sidebarAiButton {
-    width: 50px;
-  }
+.flowbizApp{
 
-  .topbar,
-  .topActions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
-  .searchBar {
-    width: 100%;
-  }
-
-  .heroCard {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 760px) {
-  .statsGrid,
-  .crmGrid,
-  .dashboardGrid,
-  .quickFocusGrid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .heroContent h1 {
-    font-size: 36px;
-  }
-
-  .aiDrawer {
-    width: 100%;
-  }
-}
-/* ===== FLOWBIZ FUTURISTIC LOGO SYSTEM ===== */
+  position:relative;
 
-.flowbizOrb {
-  position: absolute;
-  right: -80px;
-  top: -80px;
 
-  width: 260px;
-  height: 260px;
+  min-height:100vh;
 
-  border-radius: 50%;
 
   background:
     radial-gradient(
-      circle,
-      rgba(59,130,246,.35),
-      rgba(168,85,247,.18),
-      transparent 70%
+      circle at top left,
+      rgba(124,92,255,0.16),
+      transparent 30%
+    ),
+
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(56,189,248,0.12),
+      transparent 25%
+    ),
+
+
+    var(--flow-bg);
+
+
+  overflow-x:hidden;
+}
+
+
+/* =========================================================
+LAYOUT SAFE
+========================================================= */
+
+
+.dashboardLayout{
+
+
+  display:flex;
+
+
+  width:100%;
+
+
+  min-height:100vh;
+}
+
+
+/* =========================================================
+SIDEBAR SAFE
+========================================================= */
+
+
+.dashboardSidebar{
+
+
+  width:270px;
+
+
+  flex-shrink:0;
+
+
+  position:sticky;
+
+
+  top:0;
+
+
+  height:100vh;
+
+
+  z-index:40;
+
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8,12,28,0.95),
+      rgba(4,6,16,0.98)
     );
 
-  filter: blur(40px);
 
-  animation:
-    orbFloat 8s ease-in-out infinite,
-    orbPulse 5s ease-in-out infinite;
+  border-right:
+    1px solid rgba(255,255,255,0.06);
 
-  pointer-events: none;
+
+  backdrop-filter:blur(18px);
 }
 
-.flowbizLogoFloat {
-  position: absolute;
 
-  width: 78px;
-  height: 78px;
+/* =========================================================
+MAIN SAFE
+========================================================= */
 
-  object-fit: contain;
 
-  border-radius: 24px;
+.dashboardMain{
 
-  background:
-    rgba(255,255,255,.08);
 
-  padding: 10px;
+  flex:1;
 
-  backdrop-filter: blur(20px);
 
-  box-shadow:
-    0 0 45px rgba(59,130,246,.35),
-    0 0 90px rgba(168,85,247,.18);
+  width:100%;
 
-  animation:
-    logoLevitation 5s ease-in-out infinite,
-    logoGlow 4s ease-in-out infinite;
 
-  z-index: 3;
+  min-width:0;
+
+
+  padding:32px;
+
+
+  position:relative;
 }
 
-.flowbizLogoFloat.hero {
-  right: 30px;
-  top: 30px;
-}
 
-.flowbizWatermark {
-  position: absolute;
+/* =========================================================
+GLOBAL CARD
+========================================================= */
 
-  right: -60px;
-  bottom: -60px;
 
-  width: 240px;
+.flowCard{
 
-  opacity: .05;
 
-  filter: blur(.4px);
+  background:var(--flow-card);
 
-  animation:
-    watermarkRotate 22s linear infinite,
-    watermarkPulse 8s ease-in-out infinite;
-
-  pointer-events: none;
-}
-
-.flowbizParticles {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.flowbizParticles span {
-  position: absolute;
-
-  width: 6px;
-  height: 6px;
-
-  border-radius: 50%;
-
-  background:
-    rgba(255,255,255,.8);
-
-  box-shadow:
-    0 0 12px rgba(59,130,246,.8);
-
-  animation:
-    particleFloat linear infinite;
-}
-
-.flowbizParticles span:nth-child(1) {
-  left: 12%;
-  top: 70%;
-  animation-duration: 10s;
-}
-
-.flowbizParticles span:nth-child(2) {
-  left: 24%;
-  top: 85%;
-  animation-duration: 13s;
-}
-
-.flowbizParticles span:nth-child(3) {
-  left: 46%;
-  top: 75%;
-  animation-duration: 11s;
-}
-
-.flowbizParticles span:nth-child(4) {
-  left: 65%;
-  top: 90%;
-  animation-duration: 14s;
-}
-
-.flowbizParticles span:nth-child(5) {
-  left: 82%;
-  top: 78%;
-  animation-duration: 12s;
-}
-
-.flowbizRing {
-  position: absolute;
-
-  width: 160px;
-  height: 160px;
-
-  border-radius: 50%;
 
   border:
-    1px solid rgba(255,255,255,.12);
+    1px solid var(--flow-border);
 
-  animation:
-    ringRotate 14s linear infinite;
 
-  pointer-events: none;
+  border-radius:var(--flow-radius);
+
+
+  box-shadow:var(--flow-shadow);
+
+
+  backdrop-filter:var(--flow-blur);
+
+
+  transition:
+    transform var(--flow-transition),
+    border-color var(--flow-transition),
+    background var(--flow-transition);
 }
 
-.flowbizRing.one {
-  right: -10px;
-  top: -10px;
+
+.flowCard:hover{
+
+
+  transform:translateY(-3px);
+
+
+  border-color:
+    rgba(124,92,255,0.22);
 }
 
-.flowbizRing.two {
-  right: 20px;
-  top: 20px;
 
-  width: 120px;
-  height: 120px;
+/* =========================================================
+BUTTONS
+========================================================= */
 
-  animation-direction: reverse;
-  animation-duration: 10s;
-}
 
-/* ===== ANIMATIONS ===== */
+.flowPrimaryBtn{
 
-@keyframes logoLevitation {
-  0%,100% {
-    transform:
-      translateY(0)
-      rotate(0deg);
-  }
 
-  50% {
-    transform:
-      translateY(-12px)
-      rotate(4deg);
-  }
-}
+  border:none;
 
-@keyframes logoGlow {
-  0%,100% {
-    box-shadow:
-      0 0 35px rgba(59,130,246,.25),
-      0 0 80px rgba(168,85,247,.12);
-  }
 
-  50% {
-    box-shadow:
-      0 0 55px rgba(59,130,246,.55),
-      0 0 120px rgba(236,72,153,.24);
-  }
-}
+  outline:none;
 
-@keyframes orbFloat {
-  0%,100% {
-    transform: translateY(0);
-  }
 
-  50% {
-    transform: translateY(-25px);
-  }
-}
+  cursor:pointer;
 
-@keyframes orbPulse {
-  0%,100% {
-    opacity: .7;
-    transform: scale(1);
-  }
 
-  50% {
-    opacity: 1;
-    transform: scale(1.08);
-  }
-}
+  display:flex;
 
-@keyframes watermarkRotate {
-  from {
-    transform: rotate(0deg);
-  }
 
-  to {
-    transform: rotate(360deg);
-  }
-}
+  align-items:center;
 
-@keyframes watermarkPulse {
-  0%,100% {
-    opacity: .04;
-  }
 
-  50% {
-    opacity: .08;
-  }
-}
+  justify-content:center;
 
-@keyframes particleFloat {
-  from {
-    transform:
-      translateY(0)
-      scale(1);
 
-    opacity: 0;
-  }
+  gap:10px;
 
-  20% {
-    opacity: 1;
-  }
 
-  to {
-    transform:
-      translateY(-700px)
-      scale(.2);
+  padding:
+    14px 20px;
 
-    opacity: 0;
-  }
-}
 
-@keyframes ringRotate {
-  from {
-    transform: rotate(0deg);
-  }
+  border-radius:16px;
 
-  to {
-    transform: rotate(360deg);
-  }
-}
-/* =========================
-   FIX SIDEBAR FINAL
-========================= */
 
-.sidebar {
-  width: 86px !important;
-  min-width: 86px !important;
-  max-width: 86px !important;
-  height: 100vh !important;
+  color:white;
 
-  position: fixed !important;
-  left: 0 !important;
-  top: 0 !important;
 
-  padding: 18px 10px !important;
+  font-weight:600;
 
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: space-between !important;
 
   background:
-    radial-gradient(circle at 50% 0%, rgba(96,165,250,.22), transparent 35%),
-    rgba(5,8,22,.96) !important;
+    linear-gradient(
+      135deg,
+      var(--flow-purple),
+      #5d3df5
+    );
 
-  border-right: 1px solid rgba(255,255,255,.08) !important;
-  backdrop-filter: blur(24px) !important;
 
-  overflow: hidden !important;
-  z-index: 9999 !important;
+  transition:
+    transform .2s ease,
+    opacity .2s ease,
+    box-shadow .2s ease;
+
+
+  box-shadow:
+    0 10px 24px rgba(124,92,255,0.25);
 }
 
-.sidebarTop,
-.sidebarBottom,
-.sidebarMenu,
-.sidebarNav {
-  width: 100% !important;
-  display: flex !important;
-  align-items: center !important;
+
+.flowPrimaryBtn:hover{
+
+
+  transform:translateY(-2px);
+
+
+  opacity:0.95;
 }
 
-.sidebarTop,
-.sidebarBottom {
-  flex-direction: column !important;
+
+.flowSecondaryBtn{
+
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+
+  background:
+    rgba(255,255,255,0.04);
+
+
+  color:white;
+
+
+  border-radius:16px;
+
+
+  padding:
+    14px 18px;
+
+
+  cursor:pointer;
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  gap:10px;
+
+
+  transition:all .2s ease;
 }
 
-.sidebarMenu,
-.sidebarNav {
-  flex-direction: column !important;
-  gap: 10px !important;
+
+.flowSecondaryBtn:hover{
+
+
+  background:
+    rgba(124,92,255,0.12);
+
+
+  border-color:
+    rgba(124,92,255,0.25);
 }
 
-.sidebarLogo {
-  width: 58px !important;
-  height: 58px !important;
-  min-width: 58px !important;
 
-  margin: 0 auto 20px auto !important;
+/* =========================================================
+INPUTS SAFE
+========================================================= */
 
-  display: grid !important;
-  place-items: center !important;
 
-  border-radius: 19px !important;
-  overflow: hidden !important;
+.flowInput,
+.flowTextarea,
+.flowSelect{
 
-  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899) !important;
-  box-shadow: 0 0 32px rgba(124,58,237,.45) !important;
 
-  text-decoration: none !important;
+  width:100%;
+
+
+  border:none;
+
+
+  outline:none;
+
+
+  color:white;
+
+
+  padding:
+    15px 18px;
+
+
+  border-radius:16px;
+
+
+  background:
+    rgba(255,255,255,0.05);
+
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+
+  transition:
+    border-color .2s ease,
+    background .2s ease;
 }
 
-.sidebarLogo img,
-.logoImage {
-  width: 36px !important;
-  height: 36px !important;
-  object-fit: contain !important;
-  border-radius: 10px !important;
+
+.flowInput:focus,
+.flowTextarea:focus,
+.flowSelect:focus{
+
+
+  border-color:
+    rgba(124,92,255,0.4);
+
+
+  background:
+    rgba(255,255,255,0.08);
 }
 
-.sidebarLogo div,
-.sidebarLogo h2,
-.sidebarLogo p {
-  display: none !important;
+
+.flowInput::placeholder,
+.flowTextarea::placeholder{
+
+
+  color:
+    rgba(255,255,255,0.42);
 }
 
-.sidebarItem,
-.sidebarLink {
-  width: 58px !important;
-  height: 52px !important;
 
-  display: grid !important;
-  place-items: center !important;
+/* =========================================================
+TABLE SAFE
+========================================================= */
 
-  border-radius: 17px !important;
 
-  color: rgba(255,255,255,.65) !important;
-  background: transparent !important;
-  text-decoration: none !important;
+.flowTableWrapper{
 
-  transition: .25s ease !important;
+
+  width:100%;
+
+
+  overflow-x:auto;
+
+
+  border-radius:24px;
 }
 
-.sidebarItem svg,
-.sidebarLink svg {
-  width: 20px !important;
-  height: 20px !important;
+
+.flowTable{
+
+
+  width:100%;
+
+
+  border-collapse:collapse;
 }
 
-.sidebarItem span,
-.sidebarLink span {
-  display: none !important;
+
+.flowTable th{
+
+
+  text-align:left;
+
+
+  padding:
+    18px 20px;
+
+
+  color:
+    rgba(255,255,255,0.58);
+
+
+  font-size:13px;
+
+
+  font-weight:600;
+
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.06);
 }
 
-.sidebarItem:hover,
-.sidebarLink:hover {
-  background: rgba(255,255,255,.08) !important;
-  color: white !important;
-  transform: translateY(-3px) !important;
+
+.flowTable td{
+
+
+  padding:
+    18px 20px;
+
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.04);
 }
 
-.sidebarItem.active,
-.sidebarLink.active {
-  background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
-  color: white !important;
-  box-shadow: 0 0 28px rgba(124,58,237,.42) !important;
+
+.flowTable tr:hover{
+
+
+  background:
+    rgba(255,255,255,0.03);
 }
 
-.sidebarAiButton {
-  width: 58px !important;
-  height: 52px !important;
 
-  border: none !important;
-  border-radius: 17px !important;
+/* =========================================================
+SCROLLBAR SAFE
+========================================================= */
 
-  display: grid !important;
-  place-items: center !important;
 
-  background: linear-gradient(135deg, #06b6d4, #7c3aed) !important;
-  color: white !important;
+.flowbizApp *{
 
-  cursor: pointer !important;
-  box-shadow: 0 0 24px rgba(6,182,212,.3) !important;
+
+  scrollbar-width:thin;
+
+
+  scrollbar-color:
+    rgba(124,92,255,0.5)
+    transparent;
 }
 
-.sidebarAiButton span,
-.sidebarAiButton strong,
-.sidebarAiButton p {
-  display: none !important;
+
+/* =========================================================
+HEADINGS
+========================================================= */
+
+
+.flowTitle{
+
+
+  margin:0;
+
+
+  font-size:clamp(
+    32px,
+    4vw,
+    54px
+  );
+
+
+  font-weight:800;
+
+
+  line-height:1.05;
 }
 
-.sidebarCard {
-  display: none !important;
+
+.flowTitle span{
+
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      var(--flow-purple)
+    );
+
+
+  -webkit-background-clip:text;
+
+
+  background-clip:text;
+
+
+  color:transparent;
 }
 
-.sidebarGlow {
-  display: none !important;
+
+.flowSubtitle{
+
+
+  margin-top:10px;
+
+
+  color:var(--flow-text-soft);
+
+
+  line-height:1.6;
 }
 
-/* CONTENU BIEN DÉCALÉ */
-.mainContent {
-  margin-left: 86px !important;
-  width: calc(100% - 86px) !important;
-  padding-left: 34px !important;
-}
 
-/* SUR PETIT ÉCRAN */
-@media (max-width: 900px) {
-  .sidebar {
-    width: 72px !important;
-    min-width: 72px !important;
-    max-width: 72px !important;
+/* =========================================================
+ANIMATIONS
+========================================================= */
+
+
+@keyframes flowFade{
+
+
+  from{
+    opacity:0;
+    transform:translateY(10px);
   }
 
-  .sidebarLogo,
-  .sidebarItem,
-  .sidebarLink,
-  .sidebarAiButton {
-    width: 50px !important;
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+.flowFade{
+
+
+  animation:
+    flowFade .4s ease;
+}
+
+
+/* =========================================================
+RESPONSIVE SAFE
+========================================================= */
+
+
+@media(max-width:1100px){
+
+
+  .dashboardSidebar{
+    width:88px;
   }
 
-  .mainContent {
-    margin-left: 72px !important;
-    width: calc(100% - 72px) !important;
-    padding-left: 22px !important;
+
+  .dashboardMain{
+    padding:24px;
+  }
+}
+
+
+@media(max-width:768px){
+
+
+  .dashboardLayout{
+    flex-direction:column;
+  }
+
+
+  .dashboardSidebar{
+
+
+    width:100%;
+
+
+    height:auto;
+
+
+    position:relative;
+  }
+
+
+  .dashboardMain{
+    padding:18px;
+  }
+
+
+  .flowPrimaryBtn,
+  .flowSecondaryBtn{
+
+
+    width:100%;
   }
 }

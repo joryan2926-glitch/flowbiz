@@ -1,0 +1,120 @@
+.fbButton{
+  height:48px;
+  padding:0 22px;
+  border:none;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  cursor:pointer;
+  font-weight:600;
+  transition:.25s;
+  font-size:15px;
+}
+
+.fbButton.full{
+  width:100%;
+}
+
+.fbButton.primary{
+  background:linear-gradient(
+    135deg,
+    #6c5cff,
+    #00c2ff
+  );
+  color:white;
+  box-shadow:
+    0 10px 30px rgba(108,92,255,.35);
+}
+
+.fbButton.primary:hover{
+  transform:translateY(-2px);
+  box-shadow:
+    0 15px 40px rgba(108,92,255,.45);
+}
+
+.fbButton.secondary{
+  background:rgba(255,255,255,.08);
+  color:white;
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.fbButton.ghost{
+  background:transparent;
+  color:#aaa;
+}
+
+.fbCard{
+  background:rgba(20,20,30,.82);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:24px;
+  backdrop-filter:blur(20px);
+  padding:24px;
+  box-shadow:
+    0 10px 40px rgba(0,0,0,.35);
+}
+
+.fbInput{
+  width:100%;
+  height:52px;
+  border:none;
+  outline:none;
+  border-radius:16px;
+  background:rgba(255,255,255,.06);
+  color:white;
+  padding:0 18px;
+  font-size:15px;
+  border:1px solid transparent;
+  transition:.25s;
+}
+
+.fbInput:focus{
+  border-color:#6c5cff;
+  box-shadow:
+    0 0 0 4px rgba(108,92,255,.15);
+}
+
+.fbBadge{
+  padding:8px 14px;
+  border-radius:999px;
+  background:rgba(108,92,255,.15);
+  color:#a79bff;
+  font-size:13px;
+  font-weight:600;
+}
+
+.fbLoader{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.fbAvatar{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:linear-gradient(
+    135deg,
+    #6c5cff,
+    #00c2ff
+  );
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:700;
+}
+
+.spin{
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}

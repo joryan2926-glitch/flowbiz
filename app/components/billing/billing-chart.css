@@ -1,0 +1,330 @@
+/* =========================================================
+FLOWBIZ BILLING CHART
+PREMIUM FINAL DESIGN
+========================================================= */
+
+.billingChart{
+  display:flex;
+  align-items:flex-end;
+  gap:18px;
+  height:260px;
+}
+
+.chartColumn{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  height:100%;
+}
+
+.chartBar{
+  width:100%;
+  border-radius:16px 16px 6px 6px;
+  background:
+    linear-gradient(
+      180deg,
+      #8b5cf6,
+      #6366f1
+    );
+  box-shadow:
+    0 18px 40px rgba(99,102,241,.22);
+  animation:
+    chartPulse 5s ease-in-out infinite;
+  transition:
+    height .6s ease;
+}
+
+.chartBar:hover{
+  transform:
+    translateY(-4px);
+  box-shadow:
+    0 24px 60px rgba(99,102,241,.3);
+}
+
+.chartColumn span{
+  color:#94a3b8;
+  font-size:.82rem;
+  font-weight:600;
+}
+
+@keyframes chartPulse{
+
+  0%{
+    opacity:.82;
+  }
+
+  50%{
+    opacity:1;
+  }
+
+  100%{
+    opacity:.82;
+  }
+}
+/* =========================================================
+FLOWBIZ BILLING CHART
+ULTRA PREMIUM FINAL OPTIMIZATION
+========================================================= */
+
+/* =========================================================
+GPU + PERFORMANCE
+========================================================= */
+
+.billingChart,
+.chartColumn,
+.chartBar{
+  transform:
+    translateZ(0);
+  will-change:
+    transform,
+    height,
+    opacity;
+  backface-visibility:hidden;
+}
+
+/* =========================================================
+CHART CONTAINER
+========================================================= */
+
+.billingChart{
+  position:relative;
+  overflow:hidden;
+  align-items:flex-end;
+  padding:18px 8px 6px;
+  border-radius:28px;
+}
+
+/* =========================================================
+PREMIUM OVERLAY
+========================================================= */
+
+.billingChart::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.03),
+      transparent 24%
+    );
+  pointer-events:none;
+}
+
+/* =========================================================
+GRID LIGHT
+========================================================= */
+
+.billingChart::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    );
+  background-size:
+    100% 42px;
+  opacity:.6;
+  pointer-events:none;
+}
+
+/* =========================================================
+COLUMN
+========================================================= */
+
+.chartColumn{
+  position:relative;
+  justify-content:flex-end;
+}
+
+/* =========================================================
+BAR
+========================================================= */
+
+.chartBar{
+  position:relative;
+  overflow:hidden;
+  min-height:18px;
+  border-radius:18px 18px 8px 8px;
+  background:
+    linear-gradient(
+      180deg,
+      #a78bfa 0%,
+      #8b5cf6 32%,
+      #6366f1 100%
+    );
+  box-shadow:
+    0 14px 34px rgba(99,102,241,.18),
+    0 6px 18px rgba(99,102,241,.14);
+  transition:
+    height .6s cubic-bezier(.22,1,.36,1),
+    transform .28s ease,
+    box-shadow .28s ease;
+}
+
+/* =========================================================
+BAR LIGHT
+========================================================= */
+
+.chartBar::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.18),
+      transparent 30%
+    );
+  pointer-events:none;
+}
+
+/* =========================================================
+BAR SHINE
+========================================================= */
+
+.chartBar::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:80%;
+  height:100%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.16),
+      transparent
+    );
+  animation:
+    chartPremiumShine 6s linear infinite;
+}
+
+@keyframes chartPremiumShine{
+
+  0%{
+    left:-120%;
+  }
+
+  100%{
+    left:140%;
+  }
+}
+
+/* =========================================================
+BAR HOVER
+========================================================= */
+
+.chartBar:hover{
+  transform:
+    translateY(-6px)
+    scale(1.03);
+  box-shadow:
+    0 22px 52px rgba(99,102,241,.28),
+    0 10px 28px rgba(99,102,241,.18);
+}
+
+/* =========================================================
+COLUMN LABEL
+========================================================= */
+
+.chartColumn span{
+  margin-top:12px;
+  color:#94a3b8;
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  transition:
+    color .25s ease,
+    transform .25s ease;
+}
+
+.chartColumn:hover span{
+  color:#c4b5fd;
+  transform:
+    translateY(2px);
+}
+
+/* =========================================================
+FLOAT ANIMATION
+========================================================= */
+
+.chartBar{
+  animation:
+    premiumFloatBars 6s ease-in-out infinite;
+}
+
+.chartColumn:nth-child(2) .chartBar{
+  animation-delay:.3s;
+}
+
+.chartColumn:nth-child(3) .chartBar{
+  animation-delay:.6s;
+}
+
+.chartColumn:nth-child(4) .chartBar{
+  animation-delay:.9s;
+}
+
+.chartColumn:nth-child(5) .chartBar{
+  animation-delay:1.2s;
+}
+
+.chartColumn:nth-child(6) .chartBar{
+  animation-delay:1.5s;
+}
+
+.chartColumn:nth-child(7) .chartBar{
+  animation-delay:1.8s;
+}
+
+@keyframes premiumFloatBars{
+
+  0%{
+    opacity:.86;
+  }
+
+  50%{
+    opacity:1;
+  }
+
+  100%{
+    opacity:.86;
+  }
+}
+
+/* =========================================================
+ACTIVE GLOW
+========================================================= */
+
+.chartColumn:hover .chartBar{
+  filter:
+    brightness(1.08);
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media(max-width:640px){
+
+  .billingChart{
+    gap:10px;
+    height:210px;
+    padding:14px 4px 2px;
+  }
+
+  .chartBar{
+    border-radius:12px 12px 4px 4px;
+  }
+
+  .chartColumn span{
+    font-size:.7rem;
+  }
+}

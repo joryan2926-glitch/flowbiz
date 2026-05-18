@@ -1,0 +1,327 @@
+/* ======================================================
+FLOWBIZ PIPELINE
+ULTRA PREMIUM UI
+====================================================== */
+
+.pipelinePage{
+
+  min-height:100vh;
+
+  padding:32px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(110,89,255,0.18),
+      transparent 30%),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,212,255,0.12),
+      transparent 30%),
+
+    #070b14;
+
+  color:white;
+
+  overflow-x:auto;
+}
+
+/* ======================================================
+HEADER
+====================================================== */
+
+.pipelineHeader{
+
+  margin-bottom:32px;
+}
+
+.pipelineBadge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  margin-bottom:18px;
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+.pipelineHeader h1{
+
+  font-size:44px;
+
+  font-weight:800;
+
+  margin-bottom:12px;
+}
+
+.pipelineHeader p{
+
+  color:
+    rgba(255,255,255,0.65);
+
+  line-height:1.7;
+}
+
+/* ======================================================
+BOARD
+====================================================== */
+
+.pipelineBoard{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,340px);
+
+  gap:24px;
+
+  align-items:flex-start;
+}
+
+/* ======================================================
+COLUMN
+====================================================== */
+
+.pipelineColumn{
+
+  min-height:720px;
+
+  padding:22px;
+
+  border-radius:28px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+}
+
+/* ======================================================
+TOP
+====================================================== */
+
+.pipelineColumnTop{
+
+  margin-bottom:22px;
+}
+
+.pipelineColumnTop div{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  margin-bottom:14px;
+}
+
+.pipelineColumnTop h3{
+
+  font-size:20px;
+
+  font-weight:700;
+}
+
+.pipelineColumnTop span{
+
+  width:34px;
+
+  height:34px;
+
+  border-radius:12px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  font-size:13px;
+}
+
+.pipelineColumnTop strong{
+
+  font-size:26px;
+
+  font-weight:800;
+}
+
+/* ======================================================
+DEALS
+====================================================== */
+
+.pipelineDeals{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+}
+
+/* ======================================================
+CARD
+====================================================== */
+
+.dealCard{
+
+  padding:22px;
+
+  border-radius:22px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  cursor:grab;
+
+  transition:0.25s;
+}
+
+.dealCard:hover{
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(110,89,255,0.28);
+}
+
+.dealCard h4{
+
+  font-size:20px;
+
+  margin-bottom:18px;
+}
+
+/* ======================================================
+INFOS
+====================================================== */
+
+.dealInfo{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin-bottom:12px;
+
+  color:
+    rgba(255,255,255,0.72);
+
+  font-size:14px;
+}
+
+/* ======================================================
+VALUE
+====================================================== */
+
+.dealValue{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin-top:18px;
+
+  padding-top:18px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  font-size:18px;
+
+  font-weight:700;
+
+  color:#00d4ff;
+}
+
+/* ======================================================
+LOADER
+====================================================== */
+
+.pipelineLoader{
+
+  width:100%;
+
+  min-height:100vh;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:#070b14;
+}
+
+.spin{
+
+  animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+@media(max-width:768px){
+
+  .pipelinePage{
+
+    padding:20px;
+  }
+
+  .pipelineHeader h1{
+
+    font-size:34px;
+  }
+
+  .pipelineBoard{
+
+    grid-template-columns:
+      repeat(4,300px);
+  }
+}

@@ -1,0 +1,51 @@
+.successPage{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#050816;
+  color:white;
+  padding:40px;
+}
+
+.successCard{
+  width:100%;
+  max-width:500px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:30px;
+  padding:60px;
+  text-align:center;
+  backdrop-filter:blur(20px);
+}
+
+.successCard svg{
+  width:90px;
+  height:90px;
+  color:#22c55e;
+  margin-bottom:20px;
+}
+
+.successCard h1{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.successCard p{
+  color:#9ca3af;
+  line-height:1.7;
+  margin-bottom:40px;
+}
+
+.successCard a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:56px;
+  padding:0 28px;
+  border-radius:16px;
+  background:#6c5cff;
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+}

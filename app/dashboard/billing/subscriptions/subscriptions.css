@@ -1,0 +1,963 @@
+/* =========================================================
+FLOWBIZ SUBSCRIPTIONS
+ULTRA PREMIUM DESIGN
+========================================================= */
+
+/* =========================================================
+PAGE
+========================================================= */
+
+.subscriptionsPage{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:100vh;
+  padding:32px;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(99,102,241,.16),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(168,85,247,.16),
+      transparent 22%
+    ),
+    linear-gradient(
+      180deg,
+      #050816,
+      #070b1d
+    );
+}
+
+/* =========================================================
+BACKGROUND FX
+========================================================= */
+
+.subscriptionsPage::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    );
+  background-size:34px 34px;
+  opacity:.16;
+  pointer-events:none;
+}
+
+.subscriptionsPage::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.02),
+      transparent 22%
+    );
+  pointer-events:none;
+}
+
+/* =========================================================
+GLOWS
+========================================================= */
+
+.subscriptionsGlowOne{
+  position:absolute;
+  top:-220px;
+  left:-180px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(99,102,241,.18);
+  filter:blur(120px);
+  pointer-events:none;
+}
+
+.subscriptionsGlowTwo{
+  position:absolute;
+  right:-220px;
+  bottom:-220px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(168,85,247,.18);
+  filter:blur(120px);
+  pointer-events:none;
+}
+
+/* =========================================================
+TOPBAR
+========================================================= */
+
+.subscriptionsTopbar{
+  position:relative;
+  z-index:2;
+  margin-bottom:44px;
+  padding-bottom:24px;
+  border-bottom:
+    1px solid rgba(255,255,255,.05);
+}
+
+.subscriptionsTopbar::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-1px;
+  width:180px;
+  height:1px;
+  background:
+    linear-gradient(
+      90deg,
+      #6366f1,
+      transparent
+    );
+}
+
+/* =========================================================
+BADGE
+========================================================= */
+
+.subscriptionsBadge{
+  position:relative;
+  overflow:hidden;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:
+    rgba(255,255,255,.06);
+  border:
+    1px solid rgba(255,255,255,.08);
+  color:#a5b4fc;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  backdrop-filter:blur(16px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.04),
+    0 10px 30px rgba(99,102,241,.08);
+}
+
+.subscriptionsBadge::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:80%;
+  height:100%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.14),
+      transparent
+    );
+  animation:
+    badgeShine 5s linear infinite;
+}
+
+@keyframes badgeShine{
+
+  0%{
+    left:-120%;
+  }
+
+  100%{
+    left:140%;
+  }
+}
+
+/* =========================================================
+TITLE
+========================================================= */
+
+.subscriptionsTopbar h1{
+  margin-top:22px;
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #c4b5fd,
+      #818cf8
+    );
+  background-clip:text;
+  color:transparent;
+  font-size:2.9rem;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.05em;
+  text-shadow:
+    0 0 30px rgba(129,140,248,.12);
+}
+
+.subscriptionsTopbar p{
+  margin-top:14px;
+  max-width:720px;
+  color:#9ca3af;
+  line-height:1.7;
+}
+
+/* =========================================================
+GRID
+========================================================= */
+
+.plansGrid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+  gap:28px;
+}
+
+/* =========================================================
+PLAN CARD
+========================================================= */
+
+.planCard{
+  position:relative;
+  overflow:hidden;
+  padding:34px;
+  border-radius:34px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.025)
+    );
+  border:
+    1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(26px);
+  transition:
+    transform .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.04),
+    0 28px 80px rgba(0,0,0,.24);
+}
+
+.planCard::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.04),
+      transparent 20%
+    );
+  pointer-events:none;
+}
+
+.planCard::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background:
+    linear-gradient(
+      180deg,
+      #6366f1,
+      #8b5cf6
+    );
+}
+
+.planCard:hover{
+  transform:
+    translateY(-6px);
+  border-color:
+    rgba(129,140,248,.18);
+  box-shadow:
+    0 36px 100px rgba(99,102,241,.18),
+    0 24px 70px rgba(0,0,0,.30);
+}
+
+/* =========================================================
+ICON
+========================================================= */
+
+.planIcon{
+  position:relative;
+  overflow:hidden;
+  width:72px;
+  height:72px;
+  display:grid;
+  place-items:center;
+  border-radius:24px;
+  background:
+    rgba(99,102,241,.12);
+  border:
+    1px solid rgba(129,140,248,.18);
+  box-shadow:
+    0 18px 40px rgba(99,102,241,.12);
+}
+
+.planIcon::before{
+  content:"";
+  position:absolute;
+  inset:-20%;
+  background:
+    conic-gradient(
+      from 180deg,
+      transparent,
+      rgba(129,140,248,.12),
+      transparent
+    );
+  animation:
+    rotateGlow 10s linear infinite;
+}
+
+@keyframes rotateGlow{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+.planIcon svg{
+  position:relative;
+  z-index:2;
+  width:32px;
+  height:32px;
+  color:#818cf8;
+  filter:
+    drop-shadow(
+      0 0 14px rgba(129,140,248,.24)
+    );
+}
+
+/* =========================================================
+TEXT
+========================================================= */
+
+.planCard strong{
+  display:block;
+  margin-top:26px;
+  color:white;
+  font-size:1.25rem;
+  font-weight:700;
+  letter-spacing:-.02em;
+}
+
+.planCard h2{
+  margin-top:14px;
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #c4b5fd
+    );
+  background-clip:text;
+  color:transparent;
+  font-size:3rem;
+  font-weight:800;
+  letter-spacing:-.06em;
+  text-shadow:
+    0 0 20px rgba(129,140,248,.08);
+}
+
+.planCard p{
+  margin-top:14px;
+  color:#9ca3af;
+  line-height:1.7;
+}
+
+/* =========================================================
+BUTTON
+========================================================= */
+
+.planButton{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  height:60px;
+  margin-top:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  border:none;
+  border-radius:22px;
+  cursor:pointer;
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+  color:white;
+  font-size:1rem;
+  font-weight:700;
+  letter-spacing:-.01em;
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    opacity .28s ease;
+  box-shadow:
+    0 24px 60px rgba(99,102,241,.24);
+}
+
+.planButton::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:80%;
+  height:100%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.18),
+      transparent
+    );
+  transition:.8s;
+}
+
+.planButton:hover::before{
+  left:140%;
+}
+
+.planButton:hover{
+  transform:
+    translateY(-3px);
+  box-shadow:
+    0 34px 90px rgba(99,102,241,.36);
+}
+
+.planButton:disabled{
+  opacity:.7;
+  cursor:not-allowed;
+}
+
+.planButton svg{
+  width:22px;
+  height:22px;
+}
+
+/* =========================================================
+SPIN
+========================================================= */
+
+.spin{
+  animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* =========================================================
+FLOAT ANIMATION
+========================================================= */
+
+.planCard{
+  animation:
+    floatingCard 8s ease-in-out infinite;
+}
+
+.planCard:nth-child(2){
+  animation-delay:1s;
+}
+
+.planCard:nth-child(3){
+  animation-delay:2s;
+}
+
+@keyframes floatingCard{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-4px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* =========================================================
+GPU
+========================================================= */
+
+.planCard,
+.planButton,
+.planIcon{
+  transform:
+    translateZ(0);
+  will-change:
+    transform;
+  backface-visibility:hidden;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:980px){
+
+  .plansGrid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:640px){
+
+  .subscriptionsPage{
+    padding:18px;
+  }
+
+  .subscriptionsTopbar h1{
+    font-size:2rem;
+  }
+
+  .planCard{
+    padding:26px;
+    border-radius:26px;
+  }
+
+  .planIcon{
+    width:62px;
+    height:62px;
+    border-radius:20px;
+  }
+
+  .planIcon svg{
+    width:28px;
+    height:28px;
+  }
+
+  .planCard h2{
+    font-size:2.3rem;
+  }
+
+  .planButton{
+    height:56px;
+    border-radius:18px;
+  }
+}
+
+/* =========================================================
+FLOWBIZ SUBSCRIPTIONS
+PREMIUM OPTIMIZATION
+ADD THIS BELOW YOUR CSS
+========================================================= */
+
+/* =========================================================
+PREMIUM DEPTH
+========================================================= */
+
+.subscriptionsPage{
+  perspective:1800px;
+}
+
+/* =========================================================
+NOISE OVERLAY
+========================================================= */
+
+.subscriptionsPage::after{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.018),
+      transparent 24%
+    );
+  mix-blend-mode:screen;
+}
+
+/* =========================================================
+TOPBAR PREMIUM
+========================================================= */
+
+.subscriptionsTopbar{
+  backdrop-filter:blur(10px);
+}
+
+.subscriptionsTopbar::before{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-1px;
+  width:120px;
+  height:2px;
+  border-radius:999px;
+  background:
+    linear-gradient(
+      90deg,
+      #6366f1,
+      transparent
+    );
+}
+
+/* =========================================================
+TITLE FX
+========================================================= */
+
+.subscriptionsTopbar h1{
+  position:relative;
+}
+
+.subscriptionsTopbar h1::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.08),
+      transparent
+    );
+  filter:blur(18px);
+  z-index:-1;
+}
+
+/* =========================================================
+GRID OPTIMIZATION
+========================================================= */
+
+.plansGrid{
+  align-items:stretch;
+}
+
+/* =========================================================
+PLAN CARD PREMIUM
+========================================================= */
+
+.planCard{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  transform-style:preserve-3d;
+}
+
+.planCard::before{
+  opacity:.9;
+}
+
+.planCard::after{
+  opacity:.9;
+}
+
+/* =========================================================
+PREMIUM HOVER
+========================================================= */
+
+.planCard:hover{
+  transform:
+    translateY(-8px)
+    scale(1.01);
+}
+
+/* =========================================================
+LIGHT REFLECTION
+========================================================= */
+
+.planCard .lightReflection{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      120deg,
+      transparent 20%,
+      rgba(255,255,255,.06),
+      transparent 80%
+    );
+  opacity:0;
+  transition:opacity .4s ease;
+  pointer-events:none;
+}
+
+.planCard:hover .lightReflection{
+  opacity:1;
+}
+
+/* =========================================================
+POPULAR PLAN
+========================================================= */
+
+.planCard.popular{
+  border:
+    1px solid rgba(129,140,248,.24);
+  box-shadow:
+    0 40px 120px rgba(99,102,241,.24),
+    0 24px 70px rgba(0,0,0,.32);
+}
+
+.planCard.popular::after{
+  width:5px;
+}
+
+.planCard.popular .planButton{
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #6366f1
+    );
+}
+
+/* =========================================================
+POPULAR BADGE
+========================================================= */
+
+.popularBadge{
+  position:absolute;
+  top:18px;
+  right:18px;
+  padding:8px 14px;
+  border-radius:999px;
+  background:
+    rgba(129,140,248,.14);
+  border:
+    1px solid rgba(129,140,248,.18);
+  color:#c4b5fd;
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  box-shadow:
+    0 10px 24px rgba(99,102,241,.12);
+}
+
+/* =========================================================
+ICON FX
+========================================================= */
+
+.planIcon{
+  transform:
+    translateZ(20px);
+}
+
+.planCard:hover .planIcon{
+  transform:
+    translateZ(24px)
+    scale(1.04);
+}
+
+.planIcon::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.08),
+      transparent 70%
+    );
+}
+
+/* =========================================================
+PRICE PREMIUM
+========================================================= */
+
+.planCard h2{
+  line-height:1;
+}
+
+.planCard h2 span{
+  font-size:1rem;
+  color:#94a3b8;
+  margin-left:4px;
+}
+
+/* =========================================================
+FEATURES
+========================================================= */
+
+.planFeatures{
+  margin-top:22px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.planFeature{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#d1d5db;
+  font-size:.94rem;
+}
+
+.planFeature svg{
+  width:18px;
+  height:18px;
+  color:#818cf8;
+  flex-shrink:0;
+}
+
+/* =========================================================
+BUTTON PREMIUM
+========================================================= */
+
+.planButton{
+  margin-top:auto;
+  min-height:60px;
+}
+
+.planButton:active{
+  transform:
+    scale(.985);
+}
+
+.planButton svg{
+  filter:
+    drop-shadow(
+      0 0 8px rgba(255,255,255,.14)
+    );
+}
+
+/* =========================================================
+BUTTON GLOW
+========================================================= */
+
+.planButton::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius:inherit;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(129,140,248,.18),
+      transparent
+    );
+  opacity:0;
+  transition:opacity .28s ease;
+  z-index:-1;
+}
+
+.planButton:hover::after{
+  opacity:1;
+}
+
+/* =========================================================
+ACTIVE PLAN
+========================================================= */
+
+.planCard.activePlan{
+  border:
+    1px solid rgba(74,222,128,.22);
+}
+
+.planCard.activePlan::after{
+  background:
+    linear-gradient(
+      180deg,
+      #4ade80,
+      #22c55e
+    );
+}
+
+/* =========================================================
+ACTIVE LABEL
+========================================================= */
+
+.activeLabel{
+  position:absolute;
+  top:18px;
+  right:18px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border-radius:999px;
+  background:
+    rgba(74,222,128,.12);
+  border:
+    1px solid rgba(74,222,128,.18);
+  color:#4ade80;
+  font-size:.74rem;
+  font-weight:700;
+}
+
+/* =========================================================
+SHADOW FX
+========================================================= */
+
+.planCard:hover .planButton{
+  box-shadow:
+    0 40px 120px rgba(99,102,241,.36);
+}
+
+/* =========================================================
+GPU PERFORMANCE
+========================================================= */
+
+.planCard,
+.planIcon,
+.planButton{
+  contain:layout style paint;
+}
+
+/* =========================================================
+SMOOTH ANIMATIONS
+========================================================= */
+
+.planCard,
+.planButton,
+.planIcon,
+.popularBadge,
+.activeLabel{
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    border-color .28s ease,
+    opacity .28s ease,
+    background .28s ease;
+}
+
+/* =========================================================
+MOBILE OPTIMIZATION
+========================================================= */
+
+@media(max-width:640px){
+
+  .planCard:hover{
+    transform:
+      translateY(-4px);
+  }
+
+  .planFeatures{
+    gap:12px;
+  }
+
+  .planFeature{
+    font-size:.88rem;
+  }
+
+  .popularBadge,
+  .activeLabel{
+    top:14px;
+    right:14px;
+    font-size:.68rem;
+  }
+}

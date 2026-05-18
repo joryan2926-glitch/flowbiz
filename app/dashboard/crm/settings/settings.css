@@ -1,0 +1,335 @@
+/* ======================================================
+FLOWBIZ SETTINGS
+ULTRA PREMIUM UI
+====================================================== */
+
+.settingsPage{
+
+  min-height:100vh;
+
+  padding:32px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(110,89,255,0.18),
+      transparent 30%),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,212,255,0.12),
+      transparent 30%),
+
+    #070b14;
+
+  color:white;
+}
+
+/* ======================================================
+HEADER
+====================================================== */
+
+.settingsHeader{
+
+  margin-bottom:32px;
+}
+
+.settingsBadge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  margin-bottom:18px;
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+.settingsHeader h1{
+
+  font-size:44px;
+
+  font-weight:800;
+
+  margin-bottom:12px;
+}
+
+.settingsHeader p{
+
+  color:
+    rgba(255,255,255,0.65);
+
+  line-height:1.7;
+}
+
+/* ======================================================
+FORM
+====================================================== */
+
+.settingsForm{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:24px;
+
+  margin-bottom:28px;
+}
+
+/* ======================================================
+CARD
+====================================================== */
+
+.settingsCard{
+
+  padding:28px;
+
+  border-radius:28px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+}
+
+.settingsCard h2{
+
+  font-size:24px;
+
+  margin-bottom:24px;
+}
+
+/* ======================================================
+INPUTS
+====================================================== */
+
+.inputGroup{
+
+  margin-bottom:22px;
+}
+
+.inputGroup label{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin-bottom:12px;
+
+  color:
+    rgba(255,255,255,0.72);
+}
+
+.inputGroup input,
+.inputGroup textarea,
+.inputGroup select{
+
+  width:100%;
+
+  border:none;
+
+  outline:none;
+
+  border-radius:16px;
+
+  padding:18px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  color:white;
+}
+
+.inputGroup textarea{
+
+  min-height:120px;
+
+  resize:none;
+}
+
+.inputGroup option{
+
+  background:#101522;
+}
+
+/* ======================================================
+TOGGLE
+====================================================== */
+
+.toggleRow{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  padding:18px;
+
+  border-radius:18px;
+
+  margin-bottom:16px;
+
+  background:
+    rgba(255,255,255,0.05);
+}
+
+.toggleRow div{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+}
+
+.toggleButton{
+
+  width:90px;
+
+  height:44px;
+
+  border:none;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+}
+
+.toggleButton.active{
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff);
+}
+
+/* ======================================================
+SAVE
+====================================================== */
+
+.saveButton{
+
+  height:58px;
+
+  padding:0 26px;
+
+  border:none;
+
+  border-radius:18px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff);
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+}
+
+/* ======================================================
+LOADER
+====================================================== */
+
+.settingsLoader{
+
+  width:100%;
+
+  min-height:100vh;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:#070b14;
+}
+
+.spin{
+
+  animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+@media(max-width:1000px){
+
+  .settingsForm{
+
+    grid-template-columns:
+      1fr;
+  }
+}
+
+@media(max-width:768px){
+
+  .settingsPage{
+
+    padding:20px;
+  }
+
+  .settingsHeader h1{
+
+    font-size:34px;
+  }
+}

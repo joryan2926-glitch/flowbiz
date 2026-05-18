@@ -1,0 +1,1175 @@
+/* ========================================
+AGENDA PAGE
+======================================== */
+
+.agendaPage{
+  min-height:100vh;
+  padding:32px;
+  background:
+    radial-gradient(circle at top left,
+      rgba(91,140,255,.18),
+      transparent 25%),
+    radial-gradient(circle at bottom right,
+      rgba(0,212,255,.14),
+      transparent 25%),
+    #070b17;
+  color:#ffffff;
+  overflow-x:hidden;
+}
+
+/* ========================================
+LOADER
+======================================== */
+
+.agendaLoader{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#070b17;
+}
+
+.spin{
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* ========================================
+TOPBAR
+======================================== */
+
+.agendaTopbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:24px;
+  margin-bottom:28px;
+  flex-wrap:wrap;
+}
+
+.agendaBadge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:18px;
+  color:#7ed7ff;
+}
+
+.agendaTopbar h1{
+  font-size:52px;
+  line-height:1;
+  font-weight:900;
+  margin-bottom:12px;
+  letter-spacing:-2px;
+  background:linear-gradient(
+    90deg,
+    #ffffff,
+    #7ed7ff,
+    #8d7dff
+  );
+  background-clip:text;
+  color:transparent;
+}
+
+.agendaTopbar p{
+  max-width:700px;
+  color:#9aa4c7;
+  font-size:16px;
+  line-height:1.7;
+}
+
+.agendaActions{
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+
+.notifBtn{
+  width:56px;
+  height:56px;
+  border:none;
+  border-radius:18px;
+  background:rgba(255,255,255,.06);
+  color:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  position:relative;
+  transition:.25s;
+}
+
+.notifBtn:hover{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,.12);
+}
+
+.notifDot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#ff4d6d;
+  position:absolute;
+  top:14px;
+  right:14px;
+}
+
+.addEventBtn{
+  height:56px;
+  border:none;
+  padding:0 24px;
+  border-radius:18px;
+  background:linear-gradient(
+    135deg,
+    #5b8cff,
+    #00d4ff
+  );
+  color:white;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+  transition:.25s;
+  box-shadow:
+    0 10px 30px rgba(0,212,255,.25);
+}
+
+.addEventBtn:hover{
+  transform:translateY(-2px);
+}
+
+/* ========================================
+SEARCH
+======================================== */
+
+.agendaToolbar{
+  margin-bottom:26px;
+}
+
+.agendaSearch{
+  height:64px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:0 20px;
+  border-radius:22px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.06);
+  backdrop-filter:blur(14px);
+}
+
+.agendaSearch svg{
+  color:#7ed7ff;
+}
+
+.agendaSearch input{
+  flex:1;
+  border:none;
+  background:transparent;
+  color:white;
+  font-size:15px;
+  outline:none;
+}
+
+.agendaSearch input::placeholder{
+  color:#7c86ab;
+}
+
+/* ========================================
+KPI
+======================================== */
+
+.agendaStats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-bottom:30px;
+}
+
+.agendaStat{
+  min-height:160px;
+  border-radius:28px;
+  padding:24px;
+  position:relative;
+  overflow:hidden;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.06);
+  backdrop-filter:blur(14px);
+  transition:.25s;
+}
+
+.agendaStat:hover{
+  transform:translateY(-4px);
+}
+
+.agendaStat svg{
+  width:34px;
+  height:34px;
+  margin-bottom:18px;
+}
+
+.agendaStat h2{
+  font-size:42px;
+  margin-bottom:8px;
+  font-weight:900;
+}
+
+.agendaStat span{
+  color:#b9c1dc;
+  font-size:15px;
+}
+
+.agendaStat.blue{
+  box-shadow:
+    inset 0 0 0 1px rgba(91,140,255,.2),
+    0 20px 40px rgba(91,140,255,.14);
+}
+
+.agendaStat.blue h2,
+.agendaStat.blue svg{
+  color:#5b8cff;
+}
+
+.agendaStat.green{
+  box-shadow:
+    inset 0 0 0 1px rgba(0,255,163,.18),
+    0 20px 40px rgba(0,255,163,.12);
+}
+
+.agendaStat.green h2,
+.agendaStat.green svg{
+  color:#00ffa3;
+}
+
+.agendaStat.orange{
+  box-shadow:
+    inset 0 0 0 1px rgba(255,184,77,.18),
+    0 20px 40px rgba(255,184,77,.12);
+}
+
+.agendaStat.orange h2,
+.agendaStat.orange svg{
+  color:#ffb84d;
+}
+
+.agendaStat.purple{
+  box-shadow:
+    inset 0 0 0 1px rgba(157,110,255,.18),
+    0 20px 40px rgba(157,110,255,.12);
+}
+
+.agendaStat.purple h2,
+.agendaStat.purple svg{
+  color:#9d6eff;
+}
+
+/* ========================================
+WIDGETS
+======================================== */
+
+.widgetsGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+  margin-bottom:34px;
+}
+
+.widgetCard{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:28px;
+  padding:24px;
+  backdrop-filter:blur(14px);
+  transition:.25s;
+  overflow:hidden;
+  position:relative;
+}
+
+.widgetCard:hover{
+  transform:translateY(-4px);
+}
+
+.widgetCard.large{
+  grid-column:span 2;
+}
+
+.widgetTop{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  margin-bottom:24px;
+}
+
+.widgetTop span{
+  color:#7ed7ff;
+  font-size:13px;
+  font-weight:700;
+}
+
+.widgetTop h3{
+  margin-top:8px;
+  font-size:28px;
+  font-weight:800;
+}
+
+.widgetTop button{
+  border:none;
+  padding:12px 18px;
+  border-radius:14px;
+  background:linear-gradient(
+    135deg,
+    #5b8cff,
+    #00d4ff
+  );
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.widgetMiniTop{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:20px;
+  font-weight:700;
+  color:#ffffff;
+}
+
+.widgetMiniTop svg{
+  color:#7ed7ff;
+}
+
+.chartBox{
+  height:220px;
+  border-radius:20px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(91,140,255,.15),
+      rgba(0,212,255,.04)
+    );
+  position:relative;
+  overflow:hidden;
+}
+
+.chartLine{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      135deg,
+      transparent 10%,
+      rgba(91,140,255,.7) 50%,
+      rgba(0,212,255,.8) 100%
+    );
+  clip-path:polygon(
+    0% 80%,
+    10% 70%,
+    20% 74%,
+    30% 50%,
+    40% 60%,
+    50% 34%,
+    60% 44%,
+    70% 20%,
+    80% 28%,
+    90% 12%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+  );
+}
+
+.simpleWidget{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.simpleWidget strong{
+  font-size:34px;
+  font-weight:900;
+  color:#ffffff;
+}
+
+.simpleWidget span{
+  color:#98a2c6;
+}
+
+.activityList{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  padding-left:18px;
+}
+
+.activityList li{
+  color:#c5cde7;
+  line-height:1.5;
+}
+
+.nextMeetingCard h3{
+  font-size:24px;
+  margin-bottom:8px;
+}
+
+.nextMeetingCard p{
+  color:#9aa4c7;
+  margin-bottom:10px;
+}
+
+.nextMeetingCard span{
+  color:#7ed7ff;
+  display:block;
+  margin-bottom:18px;
+}
+
+.nextMeetingCard button{
+  height:48px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(
+    135deg,
+    #5b8cff,
+    #00d4ff
+  );
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* ========================================
+SHORTCUTS
+======================================== */
+
+.shortcutGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.shortcutGrid button{
+  height:58px;
+  border:none;
+  border-radius:18px;
+  background:rgba(255,255,255,.07);
+  color:white;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.shortcutGrid button:hover{
+  background:linear-gradient(
+    135deg,
+    #5b8cff,
+    #00d4ff
+  );
+}
+
+/* ========================================
+EVENTS
+======================================== */
+
+.eventsGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+  gap:24px;
+}
+
+.eventCard{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:28px;
+  padding:24px;
+  backdrop-filter:blur(14px);
+  transition:.25s;
+}
+
+.eventCard:hover{
+  transform:translateY(-5px);
+}
+
+.eventTop{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:20px;
+}
+
+.eventTop h3{
+  font-size:24px;
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.eventTop span{
+  color:#9aa4c7;
+}
+
+.eventStatus{
+  padding:10px 16px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+  height:fit-content;
+}
+
+.eventStatus.Planifié{
+  background:rgba(91,140,255,.18);
+  color:#5b8cff;
+}
+
+.eventStatus.Terminé{
+  background:rgba(0,255,163,.16);
+  color:#00ffa3;
+}
+
+.eventStatus.Annulé{
+  background:rgba(255,77,109,.16);
+  color:#ff4d6d;
+}
+
+.eventInfos{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-bottom:20px;
+}
+
+.eventInfos div{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#c9d0ea;
+  font-size:14px;
+}
+
+.eventInfos svg{
+  color:#7ed7ff;
+}
+
+.eventDescription{
+  color:#9ea8ca;
+  line-height:1.7;
+  margin-bottom:20px;
+}
+
+/* ========================================
+TASKS
+======================================== */
+
+.tasksBox,
+.participantsBox{
+  margin-bottom:20px;
+}
+
+.tasksBox h4,
+.participantsBox h4{
+  margin-bottom:14px;
+  font-size:15px;
+  color:#7ed7ff;
+}
+
+.taskItem,
+.participantItem{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  border-radius:14px;
+  background:rgba(255,255,255,.05);
+  margin-bottom:10px;
+  color:#d4daf1;
+}
+
+/* ========================================
+ACTIONS
+======================================== */
+
+.eventActions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.eventActions button{
+  width:46px;
+  height:46px;
+  border:none;
+  border-radius:14px;
+  background:rgba(255,255,255,.07);
+  color:white;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.eventActions button:hover{
+  background:linear-gradient(
+    135deg,
+    #5b8cff,
+    #00d4ff
+  );
+  transform:translateY(-2px);
+}
+
+/* ========================================
+EMPTY
+======================================== */
+
+.emptyState{
+  width:100%;
+  padding:90px 24px;
+  text-align:center;
+  border-radius:32px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.06);
+}
+
+.emptyState svg{
+  color:#7ed7ff;
+  margin-bottom:20px;
+}
+
+.emptyState h3{
+  font-size:32px;
+  margin-bottom:12px;
+}
+
+.emptyState p{
+  color:#98a2c6;
+}
+
+/* ========================================
+MODAL
+======================================== */
+
+.modalOverlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  z-index:999;
+}
+
+.modalCard{
+  width:100%;
+  max-width:850px;
+  max-height:92vh;
+  overflow:auto;
+  border-radius:32px;
+  background:#0d1324;
+  border:1px solid rgba(255,255,255,.08);
+  padding:30px;
+}
+
+.modalTop{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:26px;
+}
+
+.modalTop h2{
+  font-size:34px;
+  font-weight:900;
+}
+
+.modalTop button{
+  width:48px;
+  height:48px;
+  border:none;
+  border-radius:14px;
+  background:rgba(255,255,255,.08);
+  color:white;
+  cursor:pointer;
+}
+
+.modalForm{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.modalForm input,
+.modalForm textarea,
+.modalForm select{
+  width:100%;
+  border:none;
+  border-radius:18px;
+  padding:18px;
+  background:rgba(255,255,255,.06);
+  color:white;
+  outline:none;
+  font-size:15px;
+}
+
+.modalForm textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.modalForm input::placeholder,
+.modalForm textarea::placeholder{
+  color:#8891b5;
+}
+
+.doubleGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.taskCreator,
+.participantCreator{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:12px;
+}
+
+.participantCreator{
+  grid-template-columns:1fr 1fr auto;
+}
+
+.taskCreator button,
+.participantCreator button{
+  border:none;
+  padding:0 20px;
+  border-radius:16px;
+  background:linear-gradient(
+    135deg,
+    #5b8cff,
+    #00d4ff
+  );
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.toggleGrid{
+  display:flex;
+  gap:28px;
+  flex-wrap:wrap;
+}
+
+.toggleGrid label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#d0d7ef;
+}
+
+.saveEventBtn{
+  height:62px;
+  border:none;
+  border-radius:20px;
+  background:linear-gradient(
+    135deg,
+    #5b8cff,
+    #00d4ff
+  );
+  color:white;
+  font-weight:800;
+  font-size:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+/* ========================================
+RESPONSIVE
+======================================== */
+
+@media(max-width:1200px){
+
+  .widgetCard.large{
+    grid-column:span 1;
+  }
+}
+
+@media(max-width:768px){
+
+  .agendaPage{
+    padding:18px;
+  }
+
+  .agendaTopbar h1{
+    font-size:38px;
+  }
+
+  .doubleGrid{
+    grid-template-columns:1fr;
+  }
+
+  .participantCreator{
+    grid-template-columns:1fr;
+  }
+
+  .taskCreator{
+    grid-template-columns:1fr;
+  }
+
+  .agendaActions{
+    width:100%;
+  }
+
+  .addEventBtn{
+    width:100%;
+    justify-content:center;
+  }
+}
+/* ========================================
+MODAL OVERLAY
+======================================== */
+
+.modalOverlay{
+  position:fixed;
+  inset:0;
+  z-index:999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+
+  background:
+    rgba(3,7,18,.82);
+
+  backdrop-filter:blur(12px);
+
+  overflow-y:auto;
+}
+
+/* ========================================
+MODAL CARD
+======================================== */
+
+.modalCard{
+  width:100%;
+  max-width:980px;
+
+  border-radius:34px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(17,25,45,.96),
+      rgba(9,14,28,.98)
+    );
+
+  border:1px solid rgba(255,255,255,.08);
+
+  padding:34px;
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.55),
+    0 0 0 1px rgba(255,255,255,.03);
+
+  animation:modalEnter .28s ease;
+}
+
+/* ========================================
+MODAL ANIMATION
+======================================== */
+
+@keyframes modalEnter{
+
+  from{
+    opacity:0;
+    transform:
+      translateY(20px)
+      scale(.97);
+  }
+
+  to{
+    opacity:1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+/* ========================================
+MODAL TOP
+======================================== */
+
+.modalTop{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  margin-bottom:28px;
+}
+
+.modalTop h2{
+  font-size:42px;
+  font-weight:900;
+  letter-spacing:-1.5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #7ed7ff,
+      #7c8dff
+    );
+
+  background-clip:text;
+  color:transparent;
+}
+
+.modalTop button{
+  width:52px;
+  height:52px;
+
+  border:none;
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.06);
+
+  color:#ffffff;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.modalTop button:hover{
+  background:
+    rgba(255,255,255,.12);
+
+  transform:rotate(90deg);
+}
+
+/* ========================================
+FORM
+======================================== */
+
+.modalForm{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* ========================================
+INPUTS
+======================================== */
+
+.modalForm input,
+.modalForm textarea,
+.modalForm select{
+
+  width:100%;
+
+  border:none;
+
+  border-radius:20px;
+
+  padding:18px 20px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  color:#ffffff;
+
+  font-size:15px;
+
+  outline:none;
+
+  transition:.25s;
+
+  border:
+    1px solid rgba(255,255,255,.05);
+}
+
+.modalForm textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+.modalForm input:focus,
+.modalForm textarea:focus,
+.modalForm select:focus{
+
+  border:
+    1px solid rgba(0,212,255,.55);
+
+  background:
+    rgba(255,255,255,.08);
+
+  box-shadow:
+    0 0 0 4px rgba(0,212,255,.08);
+}
+
+/* ========================================
+PLACEHOLDER
+======================================== */
+
+.modalForm input::placeholder,
+.modalForm textarea::placeholder{
+  color:#8e97bb;
+}
+
+/* ========================================
+DOUBLE GRID
+======================================== */
+
+.doubleGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+/* ========================================
+TASK CREATOR
+======================================== */
+
+.taskCreator,
+.participantCreator{
+
+  display:grid;
+  gap:14px;
+}
+
+.taskCreator{
+  grid-template-columns:1fr auto;
+}
+
+.participantCreator{
+  grid-template-columns:1fr 1fr auto;
+}
+
+.taskCreator button,
+.participantCreator button{
+
+  border:none;
+
+  border-radius:18px;
+
+  padding:0 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5b8cff,
+      #00d4ff
+    );
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.taskCreator button:hover,
+.participantCreator button:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(0,212,255,.22);
+}
+
+/* ========================================
+SAVE BUTTON
+======================================== */
+
+.saveEventBtn{
+
+  height:64px;
+
+  border:none;
+
+  border-radius:22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5b8cff,
+      #00d4ff
+    );
+
+  color:#ffffff;
+
+  font-size:16px;
+  font-weight:800;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  cursor:pointer;
+
+  margin-top:10px;
+
+  transition:.25s;
+
+  box-shadow:
+    0 14px 40px rgba(0,212,255,.24);
+}
+
+.saveEventBtn:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 20px 50px rgba(0,212,255,.35);
+}
+
+/* ========================================
+SCROLL
+======================================== */
+
+.modalCard{
+  max-height:92vh;
+  overflow-y:auto;
+}
+
+/* ========================================
+RESPONSIVE
+======================================== */
+
+@media(max-width:768px){
+
+  .modalCard{
+    padding:24px;
+    border-radius:26px;
+  }
+
+  .modalTop h2{
+    font-size:30px;
+  }
+
+  .doubleGrid{
+    grid-template-columns:1fr;
+  }
+
+  .taskCreator,
+  .participantCreator{
+    grid-template-columns:1fr;
+  }
+}

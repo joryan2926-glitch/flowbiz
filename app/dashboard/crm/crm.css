@@ -1,0 +1,1093 @@
+/* ======================================================
+FLOWBIZ CRM
+ULTRA PREMIUM SaaS UI
+FINAL VERSION
+====================================================== */
+
+
+.crmPage{
+
+
+  min-height:100vh;
+
+
+  padding:32px;
+
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(110,89,255,0.18),
+      transparent 28%
+    ),
+
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,212,255,0.12),
+      transparent 30%
+    ),
+
+
+    #070b14;
+
+
+  color:white;
+
+
+  overflow:hidden;
+}
+
+
+/* ======================================================
+TOPBAR
+====================================================== */
+
+
+.crmTopbar{
+
+
+  margin-bottom:34px;
+}
+
+
+.crmBadge{
+
+
+  display:inline-flex;
+
+
+  align-items:center;
+
+
+  gap:8px;
+
+
+  padding:8px 14px;
+
+
+  margin-bottom:18px;
+
+
+  border-radius:999px;
+
+
+  background:
+    rgba(255,255,255,0.06);
+
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+
+  font-size:13px;
+
+
+  font-weight:700;
+
+
+  letter-spacing:0.4px;
+}
+
+
+.crmTopbar h1{
+
+
+  font-size:48px;
+
+
+  font-weight:800;
+
+
+  line-height:1.1;
+
+
+  margin-bottom:14px;
+}
+
+
+.crmTopbar p{
+
+
+  max-width:720px;
+
+
+  line-height:1.8;
+
+
+  color:
+    rgba(255,255,255,0.66);
+
+
+  font-size:15px;
+}
+
+
+/* ======================================================
+STATS
+====================================================== */
+
+
+.crmStats{
+
+
+  display:grid;
+
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+
+  gap:22px;
+
+
+  margin-bottom:32px;
+}
+
+
+/* ======================================================
+STAT CARD
+====================================================== */
+
+
+.crmStatCard{
+
+
+  position:relative;
+
+
+  overflow:hidden;
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  gap:18px;
+
+
+  padding:24px;
+
+
+  border-radius:28px;
+
+
+  background:
+    rgba(255,255,255,0.05);
+
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+
+  backdrop-filter:
+    blur(20px);
+
+
+  transition:0.28s ease;
+}
+
+
+.crmStatCard::before{
+
+
+  content:"";
+
+
+  position:absolute;
+
+
+  inset:0;
+
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.06),
+      transparent
+    );
+
+
+  pointer-events:none;
+}
+
+
+.crmStatCard:hover{
+
+
+  transform:
+    translateY(-6px);
+
+
+  border-color:
+    rgba(110,89,255,0.32);
+}
+
+
+/* ======================================================
+ICON
+====================================================== */
+
+
+.crmStatIcon{
+
+
+  width:68px;
+
+
+  height:68px;
+
+
+  border-radius:22px;
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  justify-content:center;
+
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #8f7bff
+    );
+
+
+  flex-shrink:0;
+}
+
+
+.crmStatIcon svg{
+
+
+  width:28px;
+
+
+  height:28px;
+}
+
+
+.crmStatIcon.purple{
+
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c4dff,
+      #b388ff
+    );
+}
+
+
+.crmStatIcon.green{
+
+
+  background:
+    linear-gradient(
+      135deg,
+      #00c853,
+      #69f0ae
+    );
+}
+
+
+.crmStatIcon.orange{
+
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff9800,
+      #ffd180
+    );
+}
+
+
+/* ======================================================
+STAT TEXT
+====================================================== */
+
+
+.crmStatCard span{
+
+
+  display:block;
+
+
+  margin-bottom:8px;
+
+
+  color:
+    rgba(255,255,255,0.62);
+
+
+  font-size:14px;
+}
+
+
+.crmStatCard strong{
+
+
+  font-size:32px;
+
+
+  font-weight:800;
+
+
+  line-height:1;
+}
+
+
+/* ======================================================
+ACTIONS
+====================================================== */
+
+
+.crmActions{
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  gap:18px;
+
+
+  margin-bottom:30px;
+}
+
+
+/* ======================================================
+SEARCH
+====================================================== */
+
+
+.crmSearch{
+
+
+  flex:1;
+
+
+  height:60px;
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  gap:14px;
+
+
+  padding:0 18px;
+
+
+  border-radius:20px;
+
+
+  background:
+    rgba(255,255,255,0.05);
+
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+
+  backdrop-filter:
+    blur(20px);
+}
+
+
+.crmSearch input{
+
+
+  flex:1;
+
+
+  height:100%;
+
+
+  border:none;
+
+
+  outline:none;
+
+
+  background:none;
+
+
+  color:white;
+
+
+  font-size:15px;
+}
+
+
+.crmSearch input::placeholder{
+
+
+  color:
+    rgba(255,255,255,0.42);
+}
+
+
+/* ======================================================
+FILTER
+====================================================== */
+
+
+.crmFilterButton{
+
+
+  height:60px;
+
+
+  padding:0 24px;
+
+
+  border:none;
+
+
+  border-radius:20px;
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  gap:10px;
+
+
+  background:
+    rgba(255,255,255,0.06);
+
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+
+  color:white;
+
+
+  font-weight:700;
+
+
+  cursor:pointer;
+
+
+  transition:0.25s;
+}
+
+
+.crmFilterButton:hover{
+
+
+  background:
+    rgba(110,89,255,0.18);
+}
+
+
+/* ======================================================
+CREATE
+====================================================== */
+
+
+.crmCreate{
+
+
+  display:grid;
+
+
+  grid-template-columns:
+    repeat(5,1fr) 170px;
+
+
+  gap:18px;
+
+
+  margin-bottom:34px;
+}
+
+
+.crmCreate input{
+
+
+  height:60px;
+
+
+  padding:0 18px;
+
+
+  border:none;
+
+
+  outline:none;
+
+
+  border-radius:20px;
+
+
+  background:
+    rgba(255,255,255,0.05);
+
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+
+  color:white;
+
+
+  font-size:14px;
+
+
+  backdrop-filter:
+    blur(20px);
+}
+
+
+.crmCreate input::placeholder{
+
+
+  color:
+    rgba(255,255,255,0.42);
+}
+
+
+/* ======================================================
+BUTTON
+====================================================== */
+
+
+.crmCreate button{
+
+
+  height:60px;
+
+
+  border:none;
+
+
+  border-radius:20px;
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  justify-content:center;
+
+
+  gap:10px;
+
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff
+    );
+
+
+  color:white;
+
+
+  font-weight:700;
+
+
+  cursor:pointer;
+
+
+  transition:0.28s;
+}
+
+
+.crmCreate button:hover{
+
+
+  transform:
+    translateY(-3px);
+
+
+  box-shadow:
+    0 10px 40px
+    rgba(110,89,255,0.32);
+}
+
+
+/* ======================================================
+GRID
+====================================================== */
+
+
+.crmGrid{
+
+
+  display:grid;
+
+
+  grid-template-columns:
+    repeat(
+      auto-fill,
+      minmax(340px,1fr)
+    );
+
+
+  gap:24px;
+}
+
+
+/* ======================================================
+CARD
+====================================================== */
+
+
+.crmCard{
+
+
+  position:relative;
+
+
+  overflow:hidden;
+
+
+  padding:26px;
+
+
+  border-radius:30px;
+
+
+  background:
+    rgba(255,255,255,0.05);
+
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+
+  backdrop-filter:
+    blur(20px);
+
+
+  transition:0.3s ease;
+}
+
+
+.crmCard::before{
+
+
+  content:"";
+
+
+  position:absolute;
+
+
+  inset:0;
+
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.05),
+      transparent
+    );
+
+
+  pointer-events:none;
+}
+
+
+.crmCard:hover{
+
+
+  transform:
+    translateY(-6px);
+
+
+  border-color:
+    rgba(110,89,255,0.3);
+}
+
+
+/* ======================================================
+HEADER
+====================================================== */
+
+
+.crmCardHeader{
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  gap:16px;
+
+
+  margin-bottom:22px;
+}
+
+
+/* ======================================================
+AVATAR
+====================================================== */
+
+
+.crmAvatar{
+
+
+  width:64px;
+
+
+  height:64px;
+
+
+  border-radius:20px;
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  justify-content:center;
+
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff
+    );
+
+
+  font-size:24px;
+
+
+  font-weight:800;
+
+
+  flex-shrink:0;
+}
+
+
+/* ======================================================
+TEXT
+====================================================== */
+
+
+.crmCardHeader strong{
+
+
+  display:block;
+
+
+  margin-bottom:8px;
+
+
+  font-size:18px;
+
+
+  font-weight:700;
+}
+
+
+.crmCardHeader span{
+
+
+  color:
+    rgba(255,255,255,0.58);
+
+
+  font-size:14px;
+}
+
+
+/* ======================================================
+INFOS
+====================================================== */
+
+
+.crmInfos{
+
+
+  display:flex;
+
+
+  flex-direction:column;
+
+
+  gap:14px;
+
+
+  margin-bottom:24px;
+}
+
+
+.crmInfos div{
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  gap:12px;
+
+
+  padding:14px 16px;
+
+
+  border-radius:16px;
+
+
+  background:
+    rgba(255,255,255,0.05);
+
+
+  color:
+    rgba(255,255,255,0.72);
+
+
+  font-size:14px;
+}
+
+
+/* ======================================================
+FOOTER
+====================================================== */
+
+
+.crmFooter{
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  justify-content:space-between;
+
+
+  gap:14px;
+}
+
+
+/* ======================================================
+STAGE
+====================================================== */
+
+
+.crmStage{
+
+
+  padding:10px 16px;
+
+
+  border-radius:14px;
+
+
+  background:
+    rgba(110,89,255,0.16);
+
+
+  color:#9d8bff;
+
+
+  font-size:13px;
+
+
+  font-weight:700;
+
+
+  text-transform:capitalize;
+}
+
+
+/* ======================================================
+STATUS
+====================================================== */
+
+
+.crmStatus{
+
+
+  padding:10px 16px;
+
+
+  border-radius:14px;
+
+
+  background:
+    rgba(0,200,83,0.16);
+
+
+  color:#69f0ae;
+
+
+  font-size:13px;
+
+
+  font-weight:700;
+
+
+  text-transform:capitalize;
+}
+
+
+/* ======================================================
+LOADER
+====================================================== */
+
+
+.crmLoader{
+
+
+  width:100%;
+
+
+  min-height:100vh;
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  justify-content:center;
+
+
+  background:#070b14;
+}
+
+
+.spin{
+
+
+  animation:
+    spin 1s linear infinite;
+}
+
+
+@keyframes spin{
+
+
+  from{
+
+
+    transform:
+      rotate(0deg);
+  }
+
+
+  to{
+
+
+    transform:
+      rotate(360deg);
+  }
+}
+
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+
+@media(max-width:1400px){
+
+
+  .crmCreate{
+
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+}
+
+
+@media(max-width:1200px){
+
+
+  .crmStats{
+
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+}
+
+
+@media(max-width:768px){
+
+
+  .crmPage{
+
+
+    padding:20px;
+  }
+
+
+  .crmTopbar h1{
+
+
+    font-size:36px;
+  }
+
+
+  .crmStats{
+
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .crmActions{
+
+
+    flex-direction:column;
+  }
+
+
+  .crmCreate{
+
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .crmGrid{
+
+
+    grid-template-columns:
+      1fr;
+  }
+}

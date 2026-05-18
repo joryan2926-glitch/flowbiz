@@ -1,0 +1,508 @@
+/*
+========================================
+REGISTER PAGE
+========================================
+*/
+
+.registerPage{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  padding:40px 20px;
+  background:
+    radial-gradient(circle at top left,
+    rgba(108,92,255,.18),
+    transparent 30%),
+
+    radial-gradient(circle at bottom right,
+    rgba(0,194,255,.15),
+    transparent 30%),
+
+    #050816;
+}
+
+/*
+========================================
+GLOW EFFECTS
+========================================
+*/
+
+.registerGlowOne{
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  background:#6c5cff;
+  filter:blur(120px);
+  opacity:.18;
+  top:-120px;
+  left:-120px;
+  animation:floatGlow 10s infinite ease-in-out;
+}
+
+.registerGlowTwo{
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  background:#00c2ff;
+  filter:blur(120px);
+  opacity:.15;
+  bottom:-120px;
+  right:-120px;
+  animation:floatGlow 12s infinite ease-in-out;
+}
+
+@keyframes floatGlow{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-20px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/*
+========================================
+CARD
+========================================
+*/
+
+.registerCard{
+  position:relative;
+  z-index:2;
+
+  width:100%;
+  max-width:470px;
+
+  padding:42px;
+
+  border-radius:32px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18,25,45,.96),
+      rgba(8,12,25,.96)
+    );
+
+  border:1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(24px);
+
+  box-shadow:
+    0 20px 80px rgba(0,0,0,.55),
+    0 0 80px rgba(108,92,255,.12);
+
+  animation:cardAppear .7s ease;
+}
+
+@keyframes cardAppear{
+
+  from{
+    opacity:0;
+    transform:
+      translateY(25px)
+      scale(.96);
+  }
+
+  to{
+    opacity:1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+/*
+========================================
+LOGO
+========================================
+*/
+
+.registerLogoBox{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:22px;
+}
+
+.registerLogo{
+  width:88px;
+  height:88px;
+  object-fit:contain;
+
+  filter:
+    drop-shadow(
+      0 0 25px
+      rgba(108,92,255,.45)
+    );
+}
+
+/*
+========================================
+BADGE
+========================================
+*/
+
+.registerBadge{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+
+  width:max-content;
+
+  margin:0 auto 16px;
+
+  padding:10px 16px;
+
+  border-radius:999px;
+
+  background:
+    rgba(108,92,255,.12);
+
+  border:
+    1px solid
+    rgba(108,92,255,.25);
+
+  color:#b9b8ff;
+
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+/*
+========================================
+TEXT
+========================================
+*/
+
+.registerCard h1{
+  text-align:center;
+  color:white;
+  font-size:46px;
+  line-height:1;
+  margin-bottom:18px;
+  font-weight:800;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #b8dfff,
+      #6c5cff,
+      #00c2ff
+    );
+
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.registerDescription{
+  text-align:center;
+  color:#9ca3af;
+  line-height:1.7;
+  margin-bottom:34px;
+  font-size:15px;
+}
+
+/*
+========================================
+FORM
+========================================
+*/
+
+.registerForm{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/*
+========================================
+INPUTS
+========================================
+*/
+
+.inputBox{
+  position:relative;
+
+  display:flex;
+  align-items:center;
+
+  height:64px;
+
+  padding:0 18px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  transition:.25s;
+}
+
+.inputBox:hover{
+  border-color:
+    rgba(108,92,255,.4);
+}
+
+.inputBox:focus-within{
+  border-color:#6c5cff;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(108,92,255,.12);
+}
+
+.inputBox svg{
+  width:20px;
+  height:20px;
+  color:#9ca3af;
+  flex-shrink:0;
+}
+
+.inputBox input{
+  flex:1;
+  height:100%;
+  background:none;
+  border:none;
+  outline:none;
+
+  padding-left:14px;
+
+  color:white;
+  font-size:15px;
+}
+
+.inputBox input::placeholder{
+  color:#7c8597;
+}
+
+/*
+========================================
+PASSWORD BUTTON
+========================================
+*/
+
+.eyeBtn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  width:40px;
+  height:40px;
+
+  border:none;
+  outline:none;
+  cursor:pointer;
+
+  background:none;
+  color:#94a3b8;
+
+  transition:.2s;
+}
+
+.eyeBtn:hover{
+  color:white;
+}
+
+/*
+========================================
+BUTTON
+========================================
+*/
+
+.registerBtn{
+  margin-top:10px;
+
+  height:64px;
+
+  border:none;
+  outline:none;
+  cursor:pointer;
+
+  border-radius:18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+
+  font-size:16px;
+  font-weight:700;
+  color:white;
+
+  background:
+    linear-gradient(
+      90deg,
+      #6c5cff,
+      #00c2ff
+    );
+
+  transition:.25s;
+
+  box-shadow:
+    0 10px 40px
+    rgba(108,92,255,.28);
+}
+
+.registerBtn:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 18px 50px
+    rgba(108,92,255,.4);
+}
+
+.registerBtn:disabled{
+  opacity:.7;
+  cursor:not-allowed;
+}
+
+/*
+========================================
+FOOTER
+========================================
+*/
+
+.registerFooter{
+  margin-top:28px;
+
+  text-align:center;
+
+  color:#94a3b8;
+  font-size:14px;
+}
+
+.registerFooter span{
+  margin-left:6px;
+
+  color:#6c5cff;
+
+  cursor:pointer;
+
+  font-weight:700;
+
+  transition:.2s;
+}
+
+.registerFooter span:hover{
+  color:#00c2ff;
+}
+
+/*
+========================================
+ERROR
+========================================
+*/
+
+.errorBox{
+  margin-bottom:18px;
+
+  padding:14px 18px;
+
+  border-radius:14px;
+
+  background:
+    rgba(255,70,70,.08);
+
+  border:
+    1px solid
+    rgba(255,70,70,.22);
+
+  color:#ff7b7b;
+
+  font-size:14px;
+}
+
+/*
+========================================
+SUCCESS
+========================================
+*/
+
+.successBox{
+  margin-bottom:18px;
+
+  padding:14px 18px;
+
+  border-radius:14px;
+
+  background:
+    rgba(0,255,170,.08);
+
+  border:
+    1px solid
+    rgba(0,255,170,.18);
+
+  color:#5dffcb;
+
+  font-size:14px;
+}
+
+/*
+========================================
+SPIN
+========================================
+*/
+
+.spin{
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/*
+========================================
+RESPONSIVE
+========================================
+*/
+
+@media(max-width:768px){
+
+  .registerCard{
+    padding:28px;
+    border-radius:26px;
+  }
+
+  .registerCard h1{
+    font-size:38px;
+  }
+
+  .registerDescription{
+    font-size:14px;
+  }
+
+  .inputBox{
+    height:58px;
+  }
+
+  .registerBtn{
+    height:58px;
+  }
+}

@@ -1,0 +1,495 @@
+/* =========================================================
+FLOWBIZ ADD CARD
+ULTRA PREMIUM DESIGN
+========================================================= */
+
+/* =========================================================
+PAGE
+========================================================= */
+
+.addCardPage{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:100vh;
+  padding:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(99,102,241,.16),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(168,85,247,.16),
+      transparent 22%
+    ),
+    linear-gradient(
+      180deg,
+      #050816,
+      #070b1d
+    );
+}
+
+/* =========================================================
+BACKGROUND
+========================================================= */
+
+.addCardPage::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    );
+  background-size:34px 34px;
+  opacity:.16;
+  pointer-events:none;
+}
+
+.addCardPage::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.02),
+      transparent 20%
+    );
+  pointer-events:none;
+}
+
+/* =========================================================
+GLOWS
+========================================================= */
+
+.addCardGlowOne{
+  position:absolute;
+  top:-220px;
+  left:-180px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(99,102,241,.18);
+  filter:blur(120px);
+  pointer-events:none;
+}
+
+.addCardGlowTwo{
+  position:absolute;
+  right:-220px;
+  bottom:-220px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(168,85,247,.18);
+  filter:blur(120px);
+  pointer-events:none;
+}
+
+/* =========================================================
+CONTAINER
+========================================================= */
+
+.addCardContainer{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:620px;
+  padding:42px;
+  border-radius:36px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.025)
+    );
+  border:
+    1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(26px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.04),
+    0 34px 100px rgba(0,0,0,.28);
+  overflow:hidden;
+}
+
+.addCardContainer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.04),
+      transparent 20%
+    );
+  pointer-events:none;
+}
+
+.addCardContainer::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background:
+    linear-gradient(
+      180deg,
+      #6366f1,
+      #8b5cf6
+    );
+}
+
+/* =========================================================
+BADGE
+========================================================= */
+
+.addCardBadge{
+  position:relative;
+  overflow:hidden;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:
+    rgba(255,255,255,.06);
+  border:
+    1px solid rgba(255,255,255,.08);
+  color:#a5b4fc;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  backdrop-filter:blur(16px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.04),
+    0 10px 30px rgba(99,102,241,.08);
+}
+
+.addCardBadge::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:80%;
+  height:100%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.14),
+      transparent
+    );
+  animation:
+    badgeShine 5s linear infinite;
+}
+
+@keyframes badgeShine{
+
+  0%{
+    left:-120%;
+  }
+
+  100%{
+    left:140%;
+  }
+}
+
+/* =========================================================
+TITLE
+========================================================= */
+
+.addCardContainer h1{
+  margin-top:24px;
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #c4b5fd,
+      #818cf8
+    );
+  background-clip:text;
+  color:transparent;
+  font-size:2.8rem;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.05em;
+  text-shadow:
+    0 0 30px rgba(129,140,248,.12);
+}
+
+.addCardContainer p{
+  margin-top:14px;
+  color:#9ca3af;
+  line-height:1.7;
+  max-width:520px;
+}
+
+/* =========================================================
+FORM
+========================================================= */
+
+.cardForm{
+  margin-top:34px;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+/* =========================================================
+PAYMENT ELEMENT
+========================================================= */
+
+.cardElementWrapper{
+  position:relative;
+  overflow:hidden;
+  padding:24px;
+  border-radius:28px;
+  background:
+    rgba(255,255,255,.04);
+  border:
+    1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(18px);
+  transition:
+    border-color .28s ease,
+    transform .28s ease,
+    box-shadow .28s ease;
+}
+
+.cardElementWrapper::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.03),
+      transparent 30%
+    );
+  pointer-events:none;
+}
+
+.cardElementWrapper:hover{
+  transform:
+    translateY(-2px);
+  border-color:
+    rgba(129,140,248,.18);
+  box-shadow:
+    0 20px 60px rgba(99,102,241,.10);
+}
+
+/* =========================================================
+STRIPE ELEMENTS
+========================================================= */
+
+.StripeElement{
+  color:white !important;
+}
+
+/* =========================================================
+BUTTON
+========================================================= */
+
+.cardButton{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  border:none;
+  border-radius:22px;
+  cursor:pointer;
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+  color:white;
+  font-size:1rem;
+  font-weight:700;
+  letter-spacing:-.01em;
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    opacity .28s ease;
+  box-shadow:
+    0 24px 60px rgba(99,102,241,.24);
+}
+
+.cardButton::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:80%;
+  height:100%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.18),
+      transparent
+    );
+  transition:.8s;
+}
+
+.cardButton:hover::before{
+  left:140%;
+}
+
+.cardButton:hover{
+  transform:
+    translateY(-3px);
+  box-shadow:
+    0 30px 80px rgba(99,102,241,.34);
+}
+
+.cardButton:disabled{
+  opacity:.7;
+  cursor:not-allowed;
+}
+
+.cardButton svg{
+  width:22px;
+  height:22px;
+}
+
+/* =========================================================
+LOADER
+========================================================= */
+
+.addCardLoader{
+  width:100%;
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  background:
+    #050816;
+}
+
+.addCardLoader svg{
+  width:52px;
+  height:52px;
+  color:#818cf8;
+}
+
+/* =========================================================
+SPIN
+========================================================= */
+
+.spin{
+  animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* =========================================================
+FLOAT ANIMATION
+========================================================= */
+
+.addCardContainer{
+  animation:
+    cardFloat 8s ease-in-out infinite;
+}
+
+@keyframes cardFloat{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-4px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* =========================================================
+GPU RENDER
+========================================================= */
+
+.addCardContainer,
+.cardElementWrapper,
+.cardButton{
+  transform:
+    translateZ(0);
+  will-change:
+    transform;
+  backface-visibility:hidden;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:768px){
+
+  .addCardPage{
+    padding:20px;
+  }
+
+  .addCardContainer{
+    padding:28px;
+    border-radius:28px;
+  }
+
+  .addCardContainer h1{
+    font-size:2rem;
+  }
+
+  .cardElementWrapper{
+    padding:20px;
+    border-radius:22px;
+  }
+
+  .cardButton{
+    height:58px;
+    border-radius:18px;
+  }
+}
+
+@media(max-width:480px){
+
+  .addCardContainer{
+    padding:24px;
+  }
+
+  .addCardContainer h1{
+    font-size:1.7rem;
+  }
+
+  .addCardContainer p{
+    font-size:.92rem;
+  }
+
+  .cardButton{
+    font-size:.92rem;
+  }
+}

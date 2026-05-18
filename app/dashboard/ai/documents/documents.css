@@ -1,0 +1,786 @@
+/* =========================================================
+FLOWBIZ AI DOCUMENTS
+ULTRA PREMIUM FINAL DESIGN
+========================================================= */
+
+.documentsPage{
+  position:relative;
+  overflow:hidden;
+  min-height:100vh;
+  padding:32px;
+  background:
+    radial-gradient(circle at top left,
+    rgba(99,102,241,.16),
+    transparent 22%),
+    radial-gradient(circle at bottom right,
+    rgba(168,85,247,.16),
+    transparent 22%),
+    linear-gradient(
+      180deg,
+      #050816,
+      #070b1d
+    );
+}
+
+.documentsPage::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    );
+  background-size:34px 34px;
+  opacity:.14;
+}
+
+/* =========================================================
+GLOWS
+========================================================= */
+
+.documentsGlowOne{
+  position:absolute;
+  top:-220px;
+  left:-180px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(99,102,241,.18);
+  filter:blur(120px);
+}
+
+.documentsGlowTwo{
+  position:absolute;
+  right:-220px;
+  bottom:-220px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(168,85,247,.18);
+  filter:blur(120px);
+}
+
+/* =========================================================
+TOPBAR
+========================================================= */
+
+.documentsTopbar{
+  position:relative;
+  z-index:2;
+  margin-bottom:42px;
+}
+
+.documentsBadge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:
+    rgba(255,255,255,.06);
+  border:
+    1px solid rgba(255,255,255,.08);
+  color:#a5b4fc;
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.documentsTopbar h1{
+  margin-top:22px;
+  background:
+    linear-gradient(
+      90deg,
+      #fff,
+      #c4b5fd,
+      #818cf8
+    );
+  background-clip:text;
+  color:transparent;
+  font-size:2.9rem;
+  font-weight:800;
+}
+
+.documentsTopbar p{
+  margin-top:14px;
+  max-width:720px;
+  color:#9ca3af;
+  line-height:1.7;
+}
+
+/* =========================================================
+FORM
+========================================================= */
+
+.documentsForm{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  padding:30px;
+  border-radius:30px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.055),
+      rgba(255,255,255,.02)
+    );
+  border:
+    1px solid rgba(255,255,255,.08);
+  backdrop-filter:
+    blur(24px);
+}
+
+.documentsForm input,
+.documentsForm textarea{
+  width:100%;
+  border:none;
+  outline:none;
+  resize:none;
+  padding:20px;
+  border-radius:20px;
+  background:
+    rgba(255,255,255,.04);
+  border:
+    1px solid rgba(255,255,255,.05);
+  color:white;
+  font-size:.95rem;
+}
+
+.documentsForm textarea{
+  min-height:180px;
+}
+
+.documentsForm input::placeholder,
+.documentsForm textarea::placeholder{
+  color:#64748b;
+}
+
+/* =========================================================
+BUTTON
+========================================================= */
+
+.documentsForm button,
+.saveButton{
+  height:58px;
+  border:none;
+  cursor:pointer;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+  color:white;
+  font-size:.95rem;
+  font-weight:700;
+  box-shadow:
+    0 24px 60px rgba(99,102,241,.24);
+}
+
+.documentsForm button svg,
+.saveButton svg{
+  width:20px;
+  height:20px;
+}
+
+/* =========================================================
+RESULT
+========================================================= */
+
+.documentResult{
+  position:relative;
+  z-index:2;
+  margin-top:34px;
+  padding:32px;
+  border-radius:30px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.055),
+      rgba(255,255,255,.02)
+    );
+  border:
+    1px solid rgba(255,255,255,.08);
+  backdrop-filter:
+    blur(24px);
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.documentHeader{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.documentIcon{
+  width:72px;
+  height:72px;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  border-radius:22px;
+  background:
+    rgba(99,102,241,.14);
+  border:
+    1px solid rgba(129,140,248,.18);
+}
+
+.documentIcon svg{
+  width:30px;
+  height:30px;
+  color:#818cf8;
+}
+
+.documentHeader strong{
+  display:block;
+  color:white;
+  font-size:1.1rem;
+  font-weight:800;
+}
+
+.documentHeader span{
+  display:block;
+  margin-top:6px;
+  color:#94a3b8;
+}
+
+/* =========================================================
+CONTENT
+========================================================= */
+
+.documentContent{
+  margin-top:28px;
+  padding:24px;
+  border-radius:24px;
+  background:
+    rgba(255,255,255,.03);
+  border:
+    1px solid rgba(255,255,255,.05);
+  color:#d1d5db;
+  line-height:1.9;
+  white-space:pre-wrap;
+}
+
+/* =========================================================
+SAVE
+========================================================= */
+
+.saveButton{
+  width:100%;
+  margin-top:24px;
+}
+
+/* =========================================================
+LOADER
+========================================================= */
+
+.spin{
+  animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:768px){
+
+  .documentsPage{
+    padding:18px;
+  }
+
+  .documentsTopbar h1{
+    font-size:2rem;
+  }
+
+  .documentsForm,
+  .documentResult{
+    padding:24px;
+    border-radius:24px;
+  }
+
+  .documentHeader{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+/* =========================================================
+FLOWBIZ AI DOCUMENTS
+ULTRA PREMIUM CSS OPTIMIZATION
+========================================================= */
+
+/* =========================================================
+3D ENGINE
+========================================================= */
+
+.documentsPage{
+  perspective:1800px;
+  transform-style:preserve-3d;
+}
+
+/* =========================================================
+GPU
+========================================================= */
+
+.documentsForm,
+.documentResult,
+.documentIcon,
+.documentsForm button,
+.saveButton{
+  transform:
+    translateZ(0);
+  will-change:
+    transform;
+  backface-visibility:hidden;
+}
+
+/* =========================================================
+TOPBAR PREMIUM
+========================================================= */
+
+.documentsTopbar{
+  position:relative;
+}
+
+.documentsTopbar::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-14px;
+  width:160px;
+  height:2px;
+  border-radius:999px;
+  background:
+    linear-gradient(
+      90deg,
+      #6366f1,
+      transparent
+    );
+}
+
+/* =========================================================
+BADGE PREMIUM
+========================================================= */
+
+.documentsBadge{
+  position:relative;
+  overflow:hidden;
+  backdrop-filter:
+    blur(18px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.04),
+    0 10px 30px rgba(99,102,241,.08);
+}
+
+.documentsBadge::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:80%;
+  height:100%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.14),
+      transparent
+    );
+  animation:
+    documentsBadgeShine 5s linear infinite;
+}
+
+@keyframes documentsBadgeShine{
+
+  0%{
+    left:-120%;
+  }
+
+  100%{
+    left:140%;
+  }
+}
+
+/* =========================================================
+TITLE PREMIUM
+========================================================= */
+
+.documentsTopbar h1{
+  line-height:1;
+  letter-spacing:-.06em;
+  text-shadow:
+    0 0 34px rgba(129,140,248,.14);
+}
+
+/* =========================================================
+FORM PREMIUM
+========================================================= */
+
+.documentsForm{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  box-shadow:
+    0 24px 70px rgba(0,0,0,.22);
+}
+
+.documentsForm::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.04),
+      transparent 18%
+    );
+  pointer-events:none;
+}
+
+.documentsForm::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background:
+    linear-gradient(
+      180deg,
+      #6366f1,
+      #8b5cf6
+    );
+  box-shadow:
+    0 0 24px rgba(129,140,248,.22);
+}
+
+/* =========================================================
+INPUT PREMIUM
+========================================================= */
+
+.documentsForm input,
+.documentsForm textarea{
+  transition:
+    border-color .28s ease,
+    transform .28s ease,
+    background .28s ease,
+    box-shadow .28s ease;
+  backdrop-filter:
+    blur(12px);
+}
+
+.documentsForm input:focus,
+.documentsForm textarea:focus{
+  border-color:
+    rgba(129,140,248,.18);
+  background:
+    rgba(255,255,255,.05);
+  transform:
+    translateY(-2px);
+  box-shadow:
+    0 14px 40px rgba(99,102,241,.08);
+}
+
+/* =========================================================
+BUTTON PREMIUM
+========================================================= */
+
+.documentsForm button,
+.saveButton{
+  position:relative;
+  overflow:hidden;
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease;
+}
+
+.documentsForm button::before,
+.saveButton::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:80%;
+  height:100%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.18),
+      transparent
+    );
+  transition:.8s;
+}
+
+.documentsForm button:hover::before,
+.saveButton:hover::before{
+  left:140%;
+}
+
+.documentsForm button:hover,
+.saveButton:hover{
+  transform:
+    translateY(-3px);
+  box-shadow:
+    0 34px 90px rgba(99,102,241,.34);
+}
+
+/* =========================================================
+RESULT PREMIUM
+========================================================= */
+
+.documentResult{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  box-shadow:
+    0 24px 70px rgba(0,0,0,.22);
+  animation:
+    documentAppear .45s ease;
+}
+
+@keyframes documentAppear{
+
+  from{
+    opacity:0;
+    transform:
+      translateY(12px);
+  }
+
+  to{
+    opacity:1;
+    transform:
+      translateY(0);
+  }
+}
+
+.documentResult::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.04),
+      transparent 18%
+    );
+  pointer-events:none;
+}
+
+.documentResult::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background:
+    linear-gradient(
+      180deg,
+      #6366f1,
+      #8b5cf6
+    );
+  box-shadow:
+    0 0 24px rgba(129,140,248,.22);
+}
+
+/* =========================================================
+ICON PREMIUM
+========================================================= */
+
+.documentIcon{
+  position:relative;
+  overflow:hidden;
+  box-shadow:
+    0 18px 40px rgba(99,102,241,.14);
+}
+
+.documentIcon::before{
+  content:"";
+  position:absolute;
+  inset:-20%;
+  background:
+    conic-gradient(
+      from 180deg,
+      transparent,
+      rgba(129,140,248,.16),
+      transparent
+    );
+  animation:
+    rotateDocumentGlow 10s linear infinite;
+}
+
+@keyframes rotateDocumentGlow{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+.documentIcon svg{
+  position:relative;
+  z-index:2;
+  filter:
+    drop-shadow(
+      0 0 14px rgba(129,140,248,.22)
+    );
+}
+
+/* =========================================================
+HEADER PREMIUM
+========================================================= */
+
+.documentHeader strong{
+  transition:
+    transform .28s ease,
+    text-shadow .28s ease;
+}
+
+.documentResult:hover .documentHeader strong{
+  transform:
+    translateX(2px);
+  text-shadow:
+    0 0 18px rgba(129,140,248,.14);
+}
+
+/* =========================================================
+CONTENT PREMIUM
+========================================================= */
+
+.documentContent{
+  position:relative;
+  overflow:auto;
+  backdrop-filter:
+    blur(14px);
+  transition:
+    transform .28s ease,
+    border-color .28s ease,
+    background .28s ease;
+}
+
+.documentContent:hover{
+  transform:
+    translateY(-2px);
+  border-color:
+    rgba(129,140,248,.14);
+  background:
+    rgba(255,255,255,.04);
+}
+
+/* =========================================================
+FLOATING
+========================================================= */
+
+.documentsForm{
+  animation:
+    floatingForm 8s ease-in-out infinite;
+}
+
+.documentResult{
+  animation:
+    floatingResult 10s ease-in-out infinite;
+}
+
+@keyframes floatingForm{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-4px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+@keyframes floatingResult{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-5px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* =========================================================
+SCROLLBAR
+========================================================= */
+
+.documentContent::-webkit-scrollbar{
+  width:10px;
+}
+
+.documentContent::-webkit-scrollbar-track{
+  background:
+    rgba(255,255,255,.03);
+}
+
+.documentContent::-webkit-scrollbar-thumb{
+  border-radius:999px;
+  background:
+    linear-gradient(
+      180deg,
+      #6366f1,
+      #8b5cf6
+    );
+}
+
+/* =========================================================
+RESPONSIVE PREMIUM
+========================================================= */
+
+@media(max-width:768px){
+
+  .documentsForm,
+  .documentResult{
+    animation:none;
+  }
+
+  .documentsForm button:hover,
+  .saveButton:hover{
+    transform:
+      translateY(-2px);
+  }
+
+  .documentResult:hover .documentHeader strong{
+    transform:none;
+  }
+}

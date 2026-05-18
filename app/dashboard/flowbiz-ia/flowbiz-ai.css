@@ -1,0 +1,1990 @@
+/* =========================================================
+FLOWBIZ IA — FINAL PREMIUM CSS
+VERSION : PRODUCTION READY
+========================================================= */
+
+:root{
+
+  --flow-bg:
+    #070b14;
+
+  --flow-card:
+    rgba(16,20,35,.92);
+
+  --flow-card-2:
+    rgba(11,15,28,.95);
+
+  --flow-border:
+    rgba(255,255,255,.06);
+
+  --flow-text:
+    #ffffff;
+
+  --flow-muted:
+    rgba(255,255,255,.62);
+
+  --flow-blue:
+    #4f7cff;
+
+  --flow-cyan:
+    #00e5ff;
+
+  --flow-green:
+    #00d26a;
+
+  --flow-red:
+    #ff4d67;
+
+  --flow-orange:
+    #ff9f43;
+
+  --flow-purple:
+    #8b5cf6;
+
+  --flow-shadow:
+    0 12px 42px rgba(0,0,0,.34);
+
+  --flow-radius:
+    28px;
+}
+
+/* =========================================================
+GLOBAL
+========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--flow-bg);
+  color:var(--flow-text);
+  font-family:
+    Inter,
+    sans-serif;
+}
+
+/* =========================================================
+PAGE
+========================================================= */
+
+.flowbizAiPage{
+
+  position:relative;
+
+  min-height:100vh;
+
+  padding:32px;
+
+  overflow-x:hidden;
+
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0,229,255,.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(79,124,255,.10),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #05070f,
+      #090d18
+    );
+}
+
+/* =========================================================
+GLOWS
+========================================================= */
+
+.flowGlowOne,
+.flowGlowTwo{
+
+  position:absolute;
+
+  border-radius:999px;
+
+  filter:blur(120px);
+
+  pointer-events:none;
+
+  z-index:0;
+}
+
+.flowGlowOne{
+
+  top:-200px;
+  left:-100px;
+
+  width:420px;
+  height:420px;
+
+  background:
+    rgba(0,229,255,.10);
+}
+
+.flowGlowTwo{
+
+  right:-120px;
+  bottom:-180px;
+
+  width:520px;
+  height:520px;
+
+  background:
+    rgba(79,124,255,.10);
+}
+
+/* =========================================================
+TOPBAR
+========================================================= */
+
+.flowTopbar{
+
+  position:relative;
+  z-index:2;
+
+  width:100%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:24px;
+
+  padding:30px;
+
+  border-radius:var(--flow-radius);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20,24,40,.96),
+      rgba(12,16,30,.92)
+    );
+
+  border:
+    1px solid var(--flow-border);
+
+  box-shadow:
+    var(--flow-shadow);
+}
+
+.flowBadge{
+
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid rgba(255,255,255,.07);
+
+  font-size:13px;
+  font-weight:700;
+}
+
+.flowTopbar h1{
+
+  margin-top:14px;
+
+  font-size:44px;
+  font-weight:800;
+
+  line-height:1.1;
+}
+
+.flowTopbar p{
+
+  margin-top:14px;
+
+  max-width:760px;
+
+  color:var(--flow-muted);
+
+  line-height:1.7;
+}
+
+/* =========================================================
+TOP ACTIONS
+========================================================= */
+
+.flowActions{
+
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.flowActions button{
+
+  height:54px;
+
+  padding:0 22px;
+
+  border:none;
+
+  border-radius:18px;
+
+  cursor:pointer;
+
+  color:white;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  font-weight:700;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--flow-cyan),
+      var(--flow-blue)
+    );
+
+  transition:.25s;
+}
+
+.flowActions button:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 10px 28px rgba(0,229,255,.30);
+}
+
+/* =========================================================
+HERO
+========================================================= */
+
+.flowHero{
+
+  position:relative;
+  z-index:2;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+
+  padding:26px 30px;
+
+  border-radius:var(--flow-radius);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(17,21,38,.95),
+      rgba(11,15,27,.92)
+    );
+
+  border:
+    1px solid var(--flow-border);
+}
+
+.flowHeroLeft{
+
+  display:flex;
+  align-items:flex-start;
+  gap:18px;
+}
+
+.flowHeroLeft svg{
+
+  width:44px;
+  height:44px;
+
+  color:var(--flow-cyan);
+}
+
+.flowHero h3{
+
+  font-size:26px;
+  font-weight:800;
+}
+
+.flowHero p{
+
+  margin-top:10px;
+
+  color:var(--flow-muted);
+
+  line-height:1.7;
+}
+
+.activateBtn{
+
+  height:56px;
+
+  padding:0 28px;
+
+  border:none;
+
+  border-radius:18px;
+
+  cursor:pointer;
+
+  font-weight:700;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--flow-cyan),
+      var(--flow-blue)
+    );
+
+  transition:.25s;
+}
+
+.activateBtn:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 10px 28px rgba(0,229,255,.28);
+}
+
+/* =========================================================
+STATS
+========================================================= */
+
+.flowStats{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(240px,1fr)
+    );
+
+  gap:22px;
+}
+
+.flowStatCard{
+
+  position:relative;
+
+  overflow:hidden;
+
+  display:flex;
+  align-items:center;
+  gap:18px;
+
+  padding:28px;
+
+  border-radius:26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16,20,35,.96),
+      rgba(10,14,26,.94)
+    );
+
+  border:
+    1px solid var(--flow-border);
+
+  transition:.25s;
+}
+
+.flowStatCard:hover{
+
+  transform:translateY(-4px);
+
+  border-color:
+    rgba(0,229,255,.24);
+
+  box-shadow:
+    0 12px 30px rgba(0,229,255,.10);
+}
+
+.flowStatCard svg{
+
+  width:32px;
+  height:32px;
+
+  color:var(--flow-cyan);
+}
+
+.flowStatCard h2{
+
+  font-size:34px;
+  font-weight:800;
+}
+
+.flowStatCard span{
+
+  display:block;
+
+  margin-top:6px;
+
+  color:var(--flow-muted);
+}
+
+/* =========================================================
+GRID
+========================================================= */
+
+.flowGrid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(320px,1fr)
+    );
+
+  gap:24px;
+}
+
+/* =========================================================
+WIDGETS
+========================================================= */
+
+.flowWidget{
+
+  position:relative;
+
+  overflow:hidden;
+
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+
+  padding:26px;
+
+  min-height:220px;
+
+  border-radius:28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16,20,35,.96),
+      rgba(11,15,28,.94)
+    );
+
+  border:
+    1px solid var(--flow-border);
+
+  transition:.25s;
+}
+
+.flowWidget:hover{
+
+  transform:translateY(-4px);
+
+  border-color:
+    rgba(0,229,255,.22);
+
+  box-shadow:
+    0 12px 34px rgba(0,229,255,.10);
+}
+
+.flowWidget.large{
+
+  grid-column:span 2;
+
+  min-height:620px;
+}
+
+/* =========================================================
+WIDGET TOP
+========================================================= */
+
+.widgetTop{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+}
+
+.widgetTop span{
+
+  font-size:13px;
+  color:var(--flow-muted);
+}
+
+.widgetTop h3{
+
+  margin-top:6px;
+
+  font-size:24px;
+  font-weight:800;
+}
+
+.widgetTop button{
+
+  width:52px;
+  height:52px;
+
+  border:none;
+
+  border-radius:16px;
+
+  cursor:pointer;
+
+  color:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    rgba(255,255,255,.06);
+}
+
+/* =========================================================
+TEXTAREA
+========================================================= */
+
+.flowWidget textarea{
+
+  width:100%;
+
+  min-height:220px;
+
+  resize:none;
+
+  padding:22px;
+
+  border-radius:22px;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  background:
+    rgba(255,255,255,.03);
+
+  color:white;
+
+  font-size:15px;
+
+  outline:none;
+
+  transition:.25s;
+}
+
+.flowWidget textarea:focus{
+
+  border-color:
+    rgba(0,229,255,.35);
+
+  box-shadow:
+    0 0 0 4px rgba(0,229,255,.08);
+}
+
+/* =========================================================
+BUTTONS
+========================================================= */
+
+.generateBtn,
+.refreshBtn{
+
+  height:56px;
+
+  border:none;
+
+  border-radius:18px;
+
+  cursor:pointer;
+
+  font-weight:700;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--flow-cyan),
+      var(--flow-blue)
+    );
+
+  transition:.25s;
+}
+
+.generateBtn:hover,
+.refreshBtn:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 10px 26px rgba(0,229,255,.30);
+}
+
+/* =========================================================
+GENERATED
+========================================================= */
+
+.generatedBox{
+
+  padding:24px;
+
+  border-radius:24px;
+
+  background:
+    rgba(255,255,255,.03);
+
+  border:
+    1px solid rgba(255,255,255,.06);
+}
+
+.generatedTop{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:16px;
+}
+
+.generatedTop h4{
+
+  font-size:18px;
+  font-weight:700;
+}
+
+.generatedTop button{
+
+  width:44px;
+  height:44px;
+
+  border:none;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  color:white;
+
+  background:
+    rgba(255,255,255,.05);
+}
+
+.generatedBox pre{
+
+  white-space:pre-wrap;
+
+  line-height:1.8;
+
+  color:var(--flow-muted);
+
+  font-family:inherit;
+}
+
+/* =========================================================
+LISTS
+========================================================= */
+
+.flowList{
+
+  list-style:none;
+
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.flowList li{
+
+  padding:14px 16px;
+
+  border-radius:16px;
+
+  background:
+    rgba(255,255,255,.03);
+
+  border:
+    1px solid rgba(255,255,255,.04);
+
+  color:var(--flow-muted);
+}
+
+/* =========================================================
+SCORE
+========================================================= */
+
+.scoreCircle{
+
+  width:180px;
+  height:180px;
+
+  margin:auto;
+
+  border-radius:999px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:36px;
+  font-weight:800;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,229,255,.18),
+      rgba(0,229,255,.02)
+    );
+
+  border:
+    8px solid rgba(0,229,255,.45);
+
+  box-shadow:
+    inset 0 0 40px rgba(0,229,255,.12),
+    0 0 40px rgba(0,229,255,.14);
+}
+
+/* =========================================================
+INFRA
+========================================================= */
+
+.infraStats,
+.liveStats{
+
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.infraStats div,
+.liveStats div{
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  padding:14px 16px;
+
+  border-radius:16px;
+
+  background:
+    rgba(255,255,255,.03);
+
+  border:
+    1px solid rgba(255,255,255,.04);
+
+  color:var(--flow-muted);
+}
+
+/* =========================================================
+TOOLBAR
+========================================================= */
+
+.flowToolbar{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.flowSearch{
+
+  flex:1;
+
+  display:flex;
+  align-items:center;
+  gap:14px;
+
+  height:60px;
+
+  padding:0 22px;
+
+  border-radius:20px;
+
+  background:
+    rgba(255,255,255,.03);
+
+  border:
+    1px solid rgba(255,255,255,.06);
+}
+
+.flowSearch input{
+
+  flex:1;
+
+  border:none;
+  outline:none;
+
+  background:none;
+
+  color:white;
+
+  font-size:15px;
+}
+
+/* =========================================================
+HISTORY
+========================================================= */
+
+.historySection{
+
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.sectionTop h3{
+
+  font-size:28px;
+  font-weight:800;
+}
+
+.historyGrid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(340px,1fr)
+    );
+
+  gap:22px;
+}
+
+.historyCard{
+
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+
+  padding:26px;
+
+  border-radius:26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16,20,35,.96),
+      rgba(10,14,26,.92)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.06);
+
+  transition:.25s;
+}
+
+.historyCard:hover{
+
+  transform:translateY(-4px);
+
+  border-color:
+    rgba(0,229,255,.20);
+}
+
+.historyTop{
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  color:var(--flow-muted);
+
+  font-size:13px;
+}
+
+.historyCard h4{
+
+  font-size:20px;
+  font-weight:700;
+}
+
+.historyCard p{
+
+  color:var(--flow-muted);
+
+  line-height:1.7;
+}
+
+.historyActions{
+
+  display:flex;
+  gap:12px;
+}
+
+.historyActions button{
+
+  width:46px;
+  height:46px;
+
+  border:none;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  color:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    rgba(255,255,255,.05);
+
+  transition:.25s;
+}
+
+.historyActions button:hover{
+
+  background:
+    rgba(0,229,255,.14);
+}
+
+/* =========================================================
+LOADER
+========================================================= */
+
+.flowbizAiLoader{
+
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    var(--flow-bg);
+}
+
+.spin{
+
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* =========================================================
+SCROLLBAR
+========================================================= */
+
+*{
+  scrollbar-width:thin;
+  scrollbar-color:
+    rgba(0,229,255,.35)
+    transparent;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:1200px){
+
+  .flowWidget.large{
+    grid-column:span 1;
+  }
+}
+
+@media(max-width:900px){
+
+  .flowTopbar,
+  .flowHero,
+  .flowToolbar{
+
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .flowTopbar h1{
+    font-size:36px;
+  }
+}
+
+@media(max-width:768px){
+
+  .flowbizAiPage{
+    padding:18px;
+  }
+
+  .flowGrid{
+    grid-template-columns:1fr;
+  }
+
+  .flowStats{
+    grid-template-columns:1fr;
+  }
+
+  .historyGrid{
+    grid-template-columns:1fr;
+  }
+
+  .flowTopbar h1{
+    font-size:30px;
+  }
+
+  .scoreCircle{
+
+    width:150px;
+    height:150px;
+
+    font-size:28px;
+  }
+}
+/* =========================================================
+FINAL ULTRA PREMIUM OPTIMIZATION
+FLOWBIZ IA
+========================================================= */
+
+/* ===== WIDTH FIX ===== */
+
+.flowbizAiPage{
+
+  max-width: 1700px;
+
+  margin: 0 auto;
+
+  width: 100%;
+}
+
+/* ===== PERFECT SPACING ===== */
+
+.flowGrid{
+
+  align-items: stretch;
+
+  gap: 26px;
+}
+
+.flowWidget{
+
+  justify-content: flex-start;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.03);
+}
+
+/* ===== BETTER LARGE CARD ===== */
+
+.flowWidget.large{
+
+  min-height: 560px;
+
+  padding: 30px;
+}
+
+/* ===== KPI IMPROVEMENT ===== */
+
+.flowStatCard{
+
+  min-height: 140px;
+
+  transition:
+    transform .25s,
+    border-color .25s,
+    box-shadow .25s;
+}
+
+.flowStatCard:hover{
+
+  transform:
+    translateY(-5px)
+    scale(1.01);
+}
+
+.flowStatCard::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.03),
+      transparent
+    );
+
+  pointer-events:none;
+}
+
+/* ===== PREMIUM TITLES ===== */
+
+.flowTopbar h1,
+.flowHero h3,
+.widgetTop h3,
+.sectionTop h3{
+
+  letter-spacing:-1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #d9f7ff
+    );
+
+  background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+}
+
+/* ===== BUTTONS ===== */
+
+.generateBtn,
+.activateBtn,
+.refreshBtn,
+.flowActions button{
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.generateBtn::before,
+.activateBtn::before,
+.refreshBtn::before,
+.flowActions button::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:-120%;
+
+  width:120%;
+  height:100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.22),
+      transparent
+    );
+
+  transition:.7s;
+}
+
+.generateBtn:hover::before,
+.activateBtn:hover::before,
+.refreshBtn:hover::before,
+.flowActions button:hover::before{
+
+  left:120%;
+}
+
+/* ===== TEXTAREA ===== */
+
+.flowWidget textarea{
+
+  line-height:1.7;
+
+  font-size:15px;
+
+  padding:24px;
+
+  min-height:240px;
+}
+
+.flowWidget textarea::placeholder{
+
+  color:
+    rgba(255,255,255,.42);
+}
+
+/* ===== GENERATED BOX ===== */
+
+.generatedBox{
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.03),
+      rgba(255,255,255,.015)
+    );
+
+  border:
+    1px solid rgba(0,229,255,.10);
+}
+
+.generatedBox pre{
+
+  font-size:14px;
+
+  color:
+    rgba(255,255,255,.78);
+}
+
+/* ===== SCORE CIRCLE ===== */
+
+.scoreCircle{
+
+  position:relative;
+}
+
+.scoreCircle::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:-14px;
+
+  border-radius:999px;
+
+  border:
+    1px solid rgba(0,229,255,.12);
+
+  animation:
+    pulseRing 3s infinite;
+}
+
+@keyframes pulseRing{
+
+  0%{
+    transform:scale(.96);
+    opacity:.8;
+  }
+
+  70%{
+    transform:scale(1.08);
+    opacity:0;
+  }
+
+  100%{
+    opacity:0;
+  }
+}
+
+/* ===== LIST ITEMS ===== */
+
+.flowList li,
+.infraStats div,
+.liveStats div{
+
+  transition:.25s;
+}
+
+.flowList li:hover,
+.infraStats div:hover,
+.liveStats div:hover{
+
+  transform:translateX(4px);
+
+  border-color:
+    rgba(0,229,255,.18);
+
+  background:
+    rgba(255,255,255,.05);
+}
+
+/* ===== SEARCH BAR ===== */
+
+.flowSearch{
+
+  height:64px;
+
+  border-radius:22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.03),
+      rgba(255,255,255,.02)
+    );
+}
+
+.flowSearch input{
+
+  font-size:15px;
+}
+
+/* ===== HISTORY ===== */
+
+.historyCard{
+
+  min-height:240px;
+}
+
+.historyCard p{
+
+  flex:1;
+}
+
+.historyCard:hover{
+
+  box-shadow:
+    0 10px 34px rgba(0,229,255,.08);
+}
+
+/* ===== SCROLL ===== */
+
+.flowbizAiPage{
+
+  scrollbar-width: thin;
+}
+
+/* ===== GLOW LINES ===== */
+
+.flowWidget::after{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(0,229,255,.25),
+      transparent
+    );
+}
+
+/* ===== TOPBAR PREMIUM ===== */
+
+.flowTopbar{
+
+  overflow:hidden;
+}
+
+.flowTopbar::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:-200px;
+  right:-200px;
+
+  width:420px;
+  height:420px;
+
+  border-radius:999px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,229,255,.10),
+      transparent 70%
+    );
+}
+
+/* ===== HERO ===== */
+
+.flowHero{
+
+  overflow:hidden;
+}
+
+.flowHero::after{
+
+  content:"";
+
+  position:absolute;
+
+  bottom:-120px;
+  right:-120px;
+
+  width:260px;
+  height:260px;
+
+  border-radius:999px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(79,124,255,.14),
+      transparent 70%
+    );
+}
+
+/* ===== RESPONSIVE FINAL ===== */
+
+@media(max-width:1400px){
+
+  .flowGrid{
+
+    grid-template-columns:
+      repeat(
+        auto-fit,
+        minmax(280px,1fr)
+      );
+  }
+}
+
+@media(max-width:1100px){
+
+  .flowWidget.large{
+
+    grid-column:span 1;
+  }
+
+  .flowTopbar,
+  .flowHero{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+}
+
+@media(max-width:768px){
+
+  .flowbizAiPage{
+
+    padding:18px;
+  }
+
+  .flowTopbar h1{
+
+    font-size:30px;
+  }
+
+  .flowGrid{
+
+    grid-template-columns:1fr;
+  }
+
+  .flowStats{
+
+    grid-template-columns:1fr;
+  }
+
+  .flowToolbar{
+
+    flex-direction:column;
+  }
+
+  .flowSearch{
+
+    width:100%;
+  }
+
+  .refreshBtn{
+
+    width:100%;
+  }
+}
+/* =========================================================
+FLOWBIZ IA — COLOR UPGRADE FINAL
+PREMIUM FUTURISTIC UI
+SANS WEBKIT
+========================================================= */
+
+/* ===== GLOBAL COLORS ===== */
+
+:root{
+
+  --flow-cyan:#00e5ff;
+  --flow-blue:#4f7cff;
+  --flow-purple:#8b5cf6;
+  --flow-pink:#ff4fd8;
+  --flow-green:#00ffae;
+  --flow-orange:#ffb547;
+
+  --flow-bg:#07111f;
+  --flow-card:#101827;
+  --flow-border:rgba(255,255,255,.08);
+
+  --flow-text:#f4f7ff;
+  --flow-muted:rgba(255,255,255,.62);
+}
+
+/* ===== PAGE ===== */
+
+.flowbizAiPage{
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(0,229,255,.12),
+      transparent 30%
+    ),
+
+    radial-gradient(circle at top right,
+      rgba(139,92,246,.12),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      180deg,
+      #07111f 0%,
+      #0a1324 100%
+    );
+
+  color:var(--flow-text);
+}
+
+/* ===== TITLES ===== */
+
+.flowTopbar h1,
+.flowHero h3,
+.widgetTop h3,
+.sectionTop h3{
+
+  font-size:38px;
+
+  font-weight:800;
+
+  line-height:1.1;
+
+  letter-spacing:-1px;
+
+  color:#ffffff;
+
+  text-shadow:
+    0 0 18px rgba(0,229,255,.20),
+    0 0 40px rgba(79,124,255,.12);
+}
+
+/* ===== SUBTITLE ===== */
+
+.flowTopbar p,
+.flowHero p{
+
+  color:var(--flow-muted);
+
+  font-size:15px;
+
+  line-height:1.7;
+}
+
+/* ===== BADGE ===== */
+
+.flowBadge{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  width:max-content;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,229,255,.15),
+      rgba(79,124,255,.18)
+    );
+
+  border:
+    1px solid rgba(0,229,255,.18);
+
+  color:#8ff6ff;
+
+  font-weight:700;
+
+  box-shadow:
+    0 0 24px rgba(0,229,255,.12);
+}
+
+/* ===== HERO ===== */
+
+.flowHero{
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16,24,39,.96),
+      rgba(8,15,28,.92)
+    );
+
+  border:
+    1px solid rgba(0,229,255,.12);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,.45),
+    0 0 40px rgba(0,229,255,.06);
+
+  border-radius:30px;
+}
+
+/* ===== KPI CARDS ===== */
+
+.flowStatCard{
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16,24,39,.96),
+      rgba(10,17,30,.95)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.06);
+
+  border-radius:26px;
+
+  transition:.3s;
+}
+
+.flowStatCard:hover{
+
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(0,229,255,.25);
+
+  box-shadow:
+    0 0 40px rgba(0,229,255,.10);
+}
+
+.flowStatCard h2{
+
+  font-size:38px;
+
+  font-weight:800;
+
+  color:#ffffff;
+}
+
+.flowStatCard span{
+
+  color:rgba(255,255,255,.62);
+}
+
+/* ===== KPI COLORS ===== */
+
+.flowStatCard.revenue{
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(0,229,255,.10),
+      rgba(79,124,255,.08)
+    );
+}
+
+.flowStatCard.revenue h2{
+
+  color:#7ff9ff;
+}
+
+.flowStatCard.clients h2{
+
+  color:#84ffcb;
+}
+
+.flowStatCard.factures h2{
+
+  color:#ffe08a;
+}
+
+.flowStatCard.workflow h2{
+
+  color:#c79dff;
+}
+
+/* ===== ICONS ===== */
+
+.flowStatCard svg,
+.widgetMiniTop svg,
+.widgetTop svg{
+
+  color:var(--flow-cyan);
+
+  filter:
+    drop-shadow(
+      0 0 10px rgba(0,229,255,.35)
+    );
+}
+
+/* ===== WIDGETS ===== */
+
+.flowWidget{
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16,24,39,.96),
+      rgba(10,17,30,.95)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.06);
+
+  border-radius:28px;
+
+  transition:.3s;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.35);
+}
+
+.flowWidget:hover{
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(0,229,255,.18);
+
+  box-shadow:
+    0 0 40px rgba(0,229,255,.08);
+}
+
+/* ===== MINI TITLES ===== */
+
+.widgetMiniTop{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  color:#ffffff;
+}
+
+/* ===== SCORE ===== */
+
+.scoreCircle{
+
+  width:170px;
+  height:170px;
+
+  border-radius:999px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  margin:auto;
+
+  font-size:38px;
+
+  font-weight:800;
+
+  color:#ffffff;
+
+  border:
+    8px solid rgba(0,229,255,.22);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,229,255,.10),
+      rgba(79,124,255,.04)
+    );
+
+  box-shadow:
+    0 0 40px rgba(0,229,255,.18);
+}
+
+/* ===== INPUT ===== */
+
+.flowWidget textarea,
+.flowSearch{
+
+  background:
+    rgba(255,255,255,.03);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  color:#ffffff;
+}
+
+.flowWidget textarea::placeholder,
+.flowSearch input::placeholder{
+
+  color:
+    rgba(255,255,255,.42);
+}
+
+/* ===== BUTTONS ===== */
+
+.generateBtn,
+.activateBtn,
+.refreshBtn{
+
+  background:
+    linear-gradient(
+      135deg,
+      #00e5ff,
+      #4f7cff
+    );
+
+  color:#ffffff;
+
+  font-weight:700;
+
+  border:none;
+
+  box-shadow:
+    0 0 30px rgba(0,229,255,.28);
+
+  transition:.3s;
+}
+
+.generateBtn:hover,
+.activateBtn:hover,
+.refreshBtn:hover{
+
+  transform:
+    translateY(-2px)
+    scale(1.01);
+
+  box-shadow:
+    0 0 45px rgba(0,229,255,.42);
+}
+
+/* ===== LIST ITEMS ===== */
+
+.flowList li,
+.infraStats div,
+.liveStats div{
+
+  background:
+    rgba(255,255,255,.03);
+
+  border:
+    1px solid rgba(255,255,255,.05);
+
+  color:#ffffff;
+
+  transition:.25s;
+}
+
+.flowList li:hover,
+.infraStats div:hover,
+.liveStats div:hover{
+
+  background:
+    rgba(0,229,255,.08);
+
+  border-color:
+    rgba(0,229,255,.18);
+
+  transform:
+    translateX(4px);
+}
+
+/* ===== HISTORY ===== */
+
+.historyCard{
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16,24,39,.96),
+      rgba(10,17,30,.95)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.06);
+
+  border-radius:24px;
+}
+
+.historyCard h4{
+
+  color:#ffffff;
+}
+
+.historyCard p{
+
+  color:
+    rgba(255,255,255,.65);
+}
+
+/* ===== SCROLLBAR ===== */
+
+*{
+
+  scrollbar-width:thin;
+
+  scrollbar-color:
+    rgba(0,229,255,.55)
+    transparent;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+  .flowTopbar h1{
+
+    font-size:30px;
+  }
+
+  .scoreCircle{
+
+    width:130px;
+    height:130px;
+
+    font-size:28px;
+  }
+
+  .flowStatCard h2{
+
+    font-size:28px;
+  }
+}

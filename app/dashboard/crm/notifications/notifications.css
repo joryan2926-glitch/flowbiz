@@ -1,0 +1,408 @@
+/* ======================================================
+FLOWBIZ NOTIFICATIONS
+ULTRA PREMIUM UI
+====================================================== */
+
+.notifPage{
+
+  min-height:100vh;
+
+  padding:32px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(110,89,255,0.18),
+      transparent 30%),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,212,255,0.12),
+      transparent 30%),
+
+    #070b14;
+
+  color:white;
+}
+
+/* ======================================================
+HEADER
+====================================================== */
+
+.notifHeader{
+
+  margin-bottom:32px;
+}
+
+.notifBadge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  margin-bottom:18px;
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+.notifHeader h1{
+
+  font-size:44px;
+
+  font-weight:800;
+
+  margin-bottom:12px;
+}
+
+.notifHeader p{
+
+  color:
+    rgba(255,255,255,0.65);
+
+  line-height:1.7;
+}
+
+/* ======================================================
+SEARCH
+====================================================== */
+
+.notifSearch{
+
+  height:58px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  padding:0 18px;
+
+  margin-bottom:28px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+}
+
+.notifSearch input{
+
+  flex:1;
+
+  background:none;
+
+  border:none;
+
+  outline:none;
+
+  color:white;
+}
+
+/* ======================================================
+LIST
+====================================================== */
+
+.notifList{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+}
+
+/* ======================================================
+CARD
+====================================================== */
+
+.notifCard{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  padding:26px;
+
+  border-radius:28px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  transition:0.25s;
+}
+
+.notifCard:hover{
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(110,89,255,0.28);
+}
+
+.notifCard.read{
+
+  opacity:0.7;
+}
+
+/* ======================================================
+LEFT
+====================================================== */
+
+.notifLeft{
+
+  display:flex;
+
+  gap:18px;
+
+  flex:1;
+}
+
+/* ======================================================
+ICON
+====================================================== */
+
+.notifIcon{
+
+  width:64px;
+
+  height:64px;
+
+  border-radius:20px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  flex-shrink:0;
+}
+
+.notifIcon.success{
+
+  background:
+    rgba(0,217,126,0.18);
+
+  color:#00d97e;
+}
+
+.notifIcon.warning{
+
+  background:
+    rgba(255,184,0,0.16);
+
+  color:#ffb800;
+}
+
+.notifIcon.info{
+
+  background:
+    rgba(0,212,255,0.16);
+
+  color:#00d4ff;
+}
+
+/* ======================================================
+TEXT
+====================================================== */
+
+.notifLeft h3{
+
+  font-size:20px;
+
+  margin-bottom:10px;
+}
+
+.notifLeft p{
+
+  margin-bottom:14px;
+
+  line-height:1.7;
+
+  color:
+    rgba(255,255,255,0.74);
+}
+
+.notifLeft span{
+
+  color:
+    rgba(255,255,255,0.5);
+
+  font-size:13px;
+}
+
+/* ======================================================
+RIGHT
+====================================================== */
+
+.notifRight{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:14px;
+
+  align-items:flex-end;
+}
+
+/* ======================================================
+BUTTONS
+====================================================== */
+
+.notifRead{
+
+  border:none;
+
+  padding:10px 16px;
+
+  border-radius:14px;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  color:white;
+
+  cursor:pointer;
+}
+
+.notifRead.active{
+
+  background:
+    rgba(0,217,126,0.18);
+
+  color:#00d97e;
+}
+
+.notifDelete{
+
+  width:48px;
+
+  height:48px;
+
+  border:none;
+
+  border-radius:14px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  color:white;
+
+  cursor:pointer;
+}
+
+.notifDelete:hover{
+
+  background:
+    rgba(255,77,109,0.18);
+
+  color:#ff4d6d;
+}
+
+/* ======================================================
+LOADER
+====================================================== */
+
+.notifLoader{
+
+  width:100%;
+
+  min-height:100vh;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:#070b14;
+}
+
+.spin{
+
+  animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+@media(max-width:1000px){
+
+  .notifCard{
+
+    flex-direction:column;
+  }
+
+  .notifRight{
+
+    width:100%;
+
+    flex-direction:row;
+
+    justify-content:space-between;
+  }
+}
+
+@media(max-width:768px){
+
+  .notifPage{
+
+    padding:20px;
+  }
+
+  .notifHeader h1{
+
+    font-size:34px;
+  }
+}

@@ -1,0 +1,532 @@
+/* ======================================================
+FLOWBIZ TASKS
+ULTRA PREMIUM UI
+====================================================== */
+
+.tasksPage{
+
+  min-height:100vh;
+
+  padding:32px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(110,89,255,0.18),
+      transparent 30%),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,212,255,0.12),
+      transparent 30%),
+
+    #070b14;
+
+  color:white;
+}
+
+/* ======================================================
+HEADER
+====================================================== */
+
+.tasksHeader{
+
+  margin-bottom:32px;
+}
+
+.tasksBadge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  margin-bottom:18px;
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+.tasksHeader h1{
+
+  font-size:44px;
+
+  font-weight:800;
+
+  margin-bottom:12px;
+}
+
+.tasksHeader p{
+
+  color:
+    rgba(255,255,255,0.65);
+
+  line-height:1.7;
+}
+
+/* ======================================================
+CREATE
+====================================================== */
+
+.tasksCreate{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+
+  padding:28px;
+
+  margin-bottom:28px;
+
+  border-radius:28px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+}
+
+.tasksCreate input,
+.tasksCreate textarea,
+.tasksCreate select{
+
+  width:100%;
+
+  border:none;
+
+  outline:none;
+
+  border-radius:16px;
+
+  padding:18px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  color:white;
+}
+
+.tasksCreate textarea{
+
+  min-height:120px;
+
+  resize:none;
+}
+
+.tasksCreate option{
+
+  background:#101522;
+}
+
+.tasksRow{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:18px;
+}
+
+.tasksCreate button{
+
+  height:56px;
+
+  border:none;
+
+  border-radius:18px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff);
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+}
+
+/* ======================================================
+SEARCH
+====================================================== */
+
+.tasksSearch{
+
+  height:58px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  padding:0 18px;
+
+  margin-bottom:28px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+}
+
+.tasksSearch input{
+
+  flex:1;
+
+  background:none;
+
+  border:none;
+
+  outline:none;
+
+  color:white;
+}
+
+/* ======================================================
+LIST
+====================================================== */
+
+.tasksList{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+}
+
+/* ======================================================
+CARD
+====================================================== */
+
+.taskCard{
+
+  display:flex;
+
+  align-items:flex-start;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  padding:28px;
+
+  border-radius:28px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  transition:0.25s;
+}
+
+.taskCard:hover{
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(110,89,255,0.28);
+}
+
+.taskCard.done{
+
+  opacity:0.7;
+}
+
+/* ======================================================
+LEFT
+====================================================== */
+
+.taskLeft{
+
+  display:flex;
+
+  gap:18px;
+
+  flex:1;
+}
+
+.taskCheck{
+
+  width:52px;
+
+  height:52px;
+
+  border:none;
+
+  border-radius:16px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff);
+
+  color:white;
+
+  cursor:pointer;
+
+  flex-shrink:0;
+}
+
+/* ======================================================
+TEXT
+====================================================== */
+
+.taskLeft h3{
+
+  font-size:20px;
+
+  margin-bottom:12px;
+}
+
+.taskLeft p{
+
+  color:
+    rgba(255,255,255,0.74);
+
+  line-height:1.8;
+
+  margin-bottom:18px;
+}
+
+/* ======================================================
+META
+====================================================== */
+
+.taskMeta{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:14px;
+}
+
+.taskMeta span{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:10px 14px;
+
+  border-radius:14px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  color:
+    rgba(255,255,255,0.68);
+
+  font-size:13px;
+}
+
+/* ======================================================
+RIGHT
+====================================================== */
+
+.taskRight{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:14px;
+
+  align-items:flex-end;
+}
+
+/* ======================================================
+STATUS
+====================================================== */
+
+.taskStatus{
+
+  padding:10px 16px;
+
+  border-radius:14px;
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+.taskStatus.todo{
+
+  background:
+    rgba(255,184,0,0.14);
+
+  color:#ffb800;
+}
+
+.taskStatus.done{
+
+  background:
+    rgba(0,217,126,0.14);
+
+  color:#00d97e;
+}
+
+/* ======================================================
+DELETE
+====================================================== */
+
+.taskDelete{
+
+  width:48px;
+
+  height:48px;
+
+  border:none;
+
+  border-radius:14px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:0.2s;
+}
+
+.taskDelete:hover{
+
+  background:
+    rgba(255,77,109,0.18);
+
+  color:#ff4d6d;
+}
+
+/* ======================================================
+LOADER
+====================================================== */
+
+.tasksLoader{
+
+  width:100%;
+
+  min-height:100vh;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:#070b14;
+}
+
+.spin{
+
+  animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+@media(max-width:1000px){
+
+  .tasksRow{
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .taskCard{
+
+    flex-direction:column;
+  }
+
+  .taskRight{
+
+    width:100%;
+
+    flex-direction:row;
+
+    justify-content:space-between;
+  }
+}
+
+@media(max-width:768px){
+
+  .tasksPage{
+
+    padding:20px;
+  }
+
+  .tasksHeader h1{
+
+    font-size:34px;
+  }
+}

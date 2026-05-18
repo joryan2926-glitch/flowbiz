@@ -1,0 +1,658 @@
+/* ======================================================
+FLOWBIZ DASHBOARD NOTIFICATIONS
+ULTRA PREMIUM UI
+====================================================== */
+
+.dashboardNotificationsPage{
+
+  min-height:100vh;
+
+  padding:32px;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(110,89,255,.18),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,212,255,.12),
+      transparent 30%
+    ),
+
+    #070b14;
+
+  color:white;
+}
+
+/* ======================================================
+HEADER
+====================================================== */
+
+.dashboardNotificationsHeader{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:24px;
+
+  margin-bottom:32px;
+}
+
+.dashboardNotificationsBadge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  margin-bottom:20px;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  backdrop-filter:
+    blur(12px);
+}
+
+.dashboardNotificationsHeader h1{
+
+  font-size:44px;
+
+  font-weight:800;
+
+  margin-bottom:12px;
+
+  letter-spacing:-1px;
+}
+
+.dashboardNotificationsHeader p{
+
+  max-width:720px;
+
+  color:
+    rgba(255,255,255,.65);
+
+  line-height:1.7;
+
+  font-size:15px;
+}
+
+/* ======================================================
+BUTTON
+====================================================== */
+
+.dashboardNotificationsButton,
+.dashboardNotificationsFilter{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:10px;
+
+  height:56px;
+
+  padding:0 22px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff
+    );
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.dashboardNotificationsButton:hover,
+.dashboardNotificationsFilter:hover{
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 14px 36px
+    rgba(110,89,255,.35);
+}
+
+/* ======================================================
+STATS
+====================================================== */
+
+.dashboardNotificationsStats{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(260px,1fr)
+    );
+
+  gap:22px;
+
+  margin-bottom:28px;
+}
+
+.dashboardNotificationsStatCard{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:18px;
+
+  padding:24px;
+
+  border-radius:26px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  backdrop-filter:
+    blur(16px);
+}
+
+.dashboardNotificationsStatIcon{
+
+  width:64px;
+
+  height:64px;
+
+  border-radius:20px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+}
+
+.dashboardNotificationsStatIcon.purple{
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #8f7dff
+    );
+}
+
+.dashboardNotificationsStatIcon.blue{
+
+  background:
+    linear-gradient(
+      135deg,
+      #00bfff,
+      #00d4ff
+    );
+}
+
+.dashboardNotificationsStatIcon.green{
+
+  background:
+    linear-gradient(
+      135deg,
+      #00d97e,
+      #00ffae
+    );
+}
+
+.dashboardNotificationsStatCard span{
+
+  display:block;
+
+  color:
+    rgba(255,255,255,.65);
+
+  margin-bottom:6px;
+}
+
+.dashboardNotificationsStatCard strong{
+
+  font-size:30px;
+
+  font-weight:800;
+}
+
+/* ======================================================
+TOPBAR
+====================================================== */
+
+.dashboardNotificationsTopbar{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:18px;
+
+  margin-bottom:28px;
+}
+
+.dashboardNotificationsSearch{
+
+  flex:1;
+
+  height:58px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  padding:0 18px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  backdrop-filter:
+    blur(12px);
+}
+
+.dashboardNotificationsSearch input{
+
+  flex:1;
+
+  background:none;
+
+  border:none;
+
+  outline:none;
+
+  color:white;
+
+  font-size:15px;
+}
+
+.dashboardNotificationsSearch input::placeholder{
+
+  color:
+    rgba(255,255,255,.45);
+}
+
+/* ======================================================
+LIST
+====================================================== */
+
+.dashboardNotificationsList{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+}
+
+/* ======================================================
+CARD
+====================================================== */
+
+.dashboardNotificationCard{
+
+  position:relative;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  padding:24px;
+
+  border-radius:26px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  backdrop-filter:
+    blur(16px);
+
+  transition:.25s;
+}
+
+.dashboardNotificationCard:hover{
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 16px 40px
+    rgba(0,0,0,.28);
+}
+
+/* ======================================================
+UNREAD
+====================================================== */
+
+.dashboardNotificationCard.unread{
+
+  border-color:
+    rgba(110,89,255,.28);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(110,89,255,.12),
+      rgba(0,212,255,.08)
+    );
+}
+
+.dashboardNotificationCard.unread::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:24px;
+
+  right:24px;
+
+  width:12px;
+
+  height:12px;
+
+  border-radius:999px;
+
+  background:#00d4ff;
+
+  box-shadow:
+    0 0 18px
+    rgba(0,212,255,.65);
+}
+
+/* ======================================================
+LEFT
+====================================================== */
+
+.dashboardNotificationLeft{
+
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:18px;
+
+  flex:1;
+}
+
+/* ======================================================
+ICON
+====================================================== */
+
+.dashboardNotificationIcon{
+
+  width:64px;
+
+  height:64px;
+
+  border-radius:20px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  flex-shrink:0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #00d4ff
+    );
+}
+
+/* ======================================================
+TYPE COLORS
+====================================================== */
+
+.dashboardNotificationCard.client
+.dashboardNotificationIcon{
+
+  background:
+    linear-gradient(
+      135deg,
+      #6e59ff,
+      #8f7dff
+    );
+}
+
+.dashboardNotificationCard.finance
+.dashboardNotificationIcon{
+
+  background:
+    linear-gradient(
+      135deg,
+      #00d97e,
+      #00ffae
+    );
+}
+
+.dashboardNotificationCard.calendar
+.dashboardNotificationIcon{
+
+  background:
+    linear-gradient(
+      135deg,
+      #00bfff,
+      #00d4ff
+    );
+}
+
+.dashboardNotificationCard.security
+.dashboardNotificationIcon{
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff9f43,
+      #ffb976
+    );
+}
+
+.dashboardNotificationCard.marketing
+.dashboardNotificationIcon{
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff4d6d,
+      #ff7b54
+    );
+}
+
+/* ======================================================
+TEXT
+====================================================== */
+
+.dashboardNotificationLeft h3{
+
+  font-size:18px;
+
+  font-weight:700;
+
+  margin-bottom:8px;
+}
+
+.dashboardNotificationLeft p{
+
+  color:
+    rgba(255,255,255,.68);
+
+  line-height:1.7;
+
+  margin-bottom:12px;
+
+  font-size:14px;
+}
+
+.dashboardNotificationLeft span{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  color:
+    rgba(255,255,255,.5);
+
+  font-size:13px;
+}
+
+/* ======================================================
+ACTIONS
+====================================================== */
+
+.dashboardNotificationActions{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+}
+
+.dashboardNotificationActions button{
+
+  width:46px;
+
+  height:46px;
+
+  border:none;
+
+  border-radius:14px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,.06);
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:.2s;
+}
+
+.dashboardNotificationActions button:hover{
+
+  background:
+    rgba(110,89,255,.18);
+
+  border-color:
+    rgba(110,89,255,.25);
+}
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+@media(max-width:768px){
+
+  .dashboardNotificationsPage{
+
+    padding:20px;
+  }
+
+  .dashboardNotificationsHeader{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+
+  .dashboardNotificationsHeader h1{
+
+    font-size:34px;
+  }
+
+  .dashboardNotificationsTopbar{
+
+    flex-direction:column;
+  }
+
+  .dashboardNotificationsFilter{
+
+    width:100%;
+  }
+
+  .dashboardNotificationCard{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+
+  .dashboardNotificationActions{
+
+    width:100%;
+
+    justify-content:flex-end;
+  }
+
+  .dashboardNotificationsStats{
+
+    grid-template-columns:1fr;
+  }
+}

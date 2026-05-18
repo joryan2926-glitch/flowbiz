@@ -1,0 +1,352 @@
+/* =========================================================
+FLOWBIZ AI AGENTS
+ULTRA PREMIUM FINAL DESIGN
+========================================================= */
+
+.agentsPage{
+  position:relative;
+  overflow:hidden;
+  min-height:100vh;
+  padding:32px;
+  background:
+    radial-gradient(circle at top left,
+    rgba(99,102,241,.16),
+    transparent 22%),
+    radial-gradient(circle at bottom right,
+    rgba(168,85,247,.16),
+    transparent 22%),
+    linear-gradient(
+      180deg,
+      #050816,
+      #070b1d
+    );
+}
+
+.agentsPage::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    );
+  background-size:34px 34px;
+  opacity:.14;
+}
+
+/* =========================================================
+GLOWS
+========================================================= */
+
+.agentsGlowOne{
+  position:absolute;
+  top:-220px;
+  left:-180px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(99,102,241,.18);
+  filter:blur(120px);
+}
+
+.agentsGlowTwo{
+  position:absolute;
+  right:-220px;
+  bottom:-220px;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  background:
+    rgba(168,85,247,.18);
+  filter:blur(120px);
+}
+
+/* =========================================================
+TOPBAR
+========================================================= */
+
+.agentsTopbar{
+  position:relative;
+  z-index:2;
+  margin-bottom:42px;
+}
+
+.agentsBadge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:
+    rgba(255,255,255,.06);
+  border:
+    1px solid rgba(255,255,255,.08);
+  color:#a5b4fc;
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.agentsTopbar h1{
+  margin-top:22px;
+  background:
+    linear-gradient(
+      90deg,
+      #fff,
+      #c4b5fd,
+      #818cf8
+    );
+  background-clip:text;
+  color:transparent;
+  font-size:2.9rem;
+  font-weight:800;
+}
+
+.agentsTopbar p{
+  margin-top:14px;
+  max-width:720px;
+  color:#9ca3af;
+  line-height:1.7;
+}
+
+/* =========================================================
+FORM
+========================================================= */
+
+.agentForm{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  padding:30px;
+  border-radius:30px;
+  margin-bottom:34px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.055),
+      rgba(255,255,255,.02)
+    );
+  border:
+    1px solid rgba(255,255,255,.08);
+  backdrop-filter:
+    blur(24px);
+}
+
+.agentForm input,
+.agentForm textarea{
+  width:100%;
+  border:none;
+  outline:none;
+  resize:none;
+  padding:20px;
+  border-radius:20px;
+  background:
+    rgba(255,255,255,.04);
+  border:
+    1px solid rgba(255,255,255,.05);
+  color:white;
+  font-size:.95rem;
+}
+
+.agentForm textarea{
+  min-height:180px;
+}
+
+.agentForm input::placeholder,
+.agentForm textarea::placeholder{
+  color:#64748b;
+}
+
+/* =========================================================
+BUTTON
+========================================================= */
+
+.agentForm button{
+  height:58px;
+  border:none;
+  cursor:pointer;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+  color:white;
+  font-size:.95rem;
+  font-weight:700;
+  box-shadow:
+    0 24px 60px rgba(99,102,241,.24);
+}
+
+/* =========================================================
+GRID
+========================================================= */
+
+.agentsGrid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(360px,1fr));
+  gap:24px;
+}
+
+/* =========================================================
+CARD
+========================================================= */
+
+.agentCard{
+  position:relative;
+  overflow:hidden;
+  padding:28px;
+  border-radius:30px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.055),
+      rgba(255,255,255,.02)
+    );
+  border:
+    1px solid rgba(255,255,255,.08);
+  backdrop-filter:
+    blur(24px);
+  transition:
+    transform .28s ease,
+    border-color .28s ease;
+}
+
+.agentCard:hover{
+  transform:
+    translateY(-5px);
+  border-color:
+    rgba(129,140,248,.16);
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.agentHeader{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.agentIcon{
+  width:72px;
+  height:72px;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  border-radius:22px;
+  background:
+    rgba(99,102,241,.14);
+  border:
+    1px solid rgba(129,140,248,.18);
+}
+
+.agentIcon svg{
+  width:30px;
+  height:30px;
+  color:#818cf8;
+}
+
+.agentHeader strong{
+  display:block;
+  color:white;
+  font-size:1rem;
+  font-weight:800;
+}
+
+.agentHeader span{
+  display:block;
+  margin-top:6px;
+  color:#94a3b8;
+}
+
+/* =========================================================
+OBJECTIVE
+========================================================= */
+
+.agentObjective{
+  margin-top:24px;
+  color:#d1d5db;
+  line-height:1.8;
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.agentFooter{
+  margin-top:28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.agentStatus,
+.agentBrain{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#818cf8;
+  font-size:.85rem;
+  font-weight:700;
+}
+
+.agentStatus svg,
+.agentBrain svg{
+  width:18px;
+  height:18px;
+}
+
+/* =========================================================
+LOADER
+========================================================= */
+
+.agentsLoader{
+  width:100%;
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  background:#050816;
+}
+
+.agentsLoader svg{
+  width:52px;
+  height:52px;
+  color:#818cf8;
+}
+
+/* =========================================================
+SPIN
+========================================================= */
+
+.spin{
+  animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
