@@ -379,3 +379,294 @@ h1 {
     gap: 10px;
   }
 }
+
+/* =========================================================
+FLOWBIZ LANDING — PREMIUM PUBLISH FINAL
+========================================================= */
+
+
+.homePage {
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(0,255,157,0.24), transparent 30%),
+    radial-gradient(circle at 85% 8%, rgba(124,92,255,0.34), transparent 34%),
+    radial-gradient(circle at 50% 80%, rgba(0,212,255,0.10), transparent 38%),
+    linear-gradient(135deg, #030611 0%, #0b1024 50%, #040711 100%);
+}
+
+
+.homePage::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255,255,255,0.024) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.024) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+
+.homePage > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.siteHeader {
+  top: 16px;
+  background: rgba(5, 8, 20, 0.78);
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow:
+    0 28px 90px rgba(0,0,0,0.36),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+
+.brandIcon {
+  box-shadow: 0 0 34px rgba(0,212,255,0.34);
+  animation: logoPulse 3.6s ease-in-out infinite;
+}
+
+
+.hero {
+  position: relative;
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 680px;
+  height: 680px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(0,212,255,0.13), transparent 65%);
+  animation: floatGlow 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+
+.heroBadge,
+.sectionLabel {
+  background: linear-gradient(135deg, rgba(0,255,157,0.16), rgba(124,92,255,0.24));
+  border-color: rgba(0,212,255,0.35);
+  box-shadow: 0 0 26px rgba(124,92,255,0.24);
+}
+
+
+h1 {
+  text-shadow:
+    0 0 28px rgba(0,212,255,0.18),
+    0 0 70px rgba(124,92,255,0.12);
+  animation: fadeUp 0.8s ease both;
+}
+
+
+.hero p,
+.heroActions,
+.trustBar {
+  animation: fadeUp 0.9s ease both;
+}
+
+
+.primaryBtn,
+.headerBtn,
+.priceBtn {
+  background: linear-gradient(135deg, #00ff9d 0%, #00d4ff 45%, #7c5cff 100%);
+  box-shadow:
+    0 0 42px rgba(0,212,255,0.28),
+    0 18px 46px rgba(0,0,0,0.28);
+}
+
+
+.secondaryBtn,
+.smallBtn,
+.ghostBtn {
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.055));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+
+.moduleCard,
+.priceCard,
+.step,
+.glassCard,
+.faqItem,
+.finalCta {
+  position: relative;
+  overflow: hidden;
+  border-radius: 34px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow:
+    0 30px 90px rgba(0,0,0,0.34),
+    inset 0 1px 0 rgba(255,255,255,0.10);
+}
+
+
+.moduleCard:hover,
+.priceCard:hover,
+.step:hover,
+.glassCard:hover,
+.faqItem:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,255,157,0.34);
+  box-shadow:
+    0 34px 100px rgba(0,0,0,0.42),
+    0 0 36px rgba(0,212,255,0.12);
+}
+
+
+.glassCard::before,
+.step::before,
+.moduleCard::before,
+.priceCard::before,
+.faqItem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.14) 45%, transparent 70%);
+  transform: translateX(-130%);
+  transition: transform 0.75s ease;
+  pointer-events: none;
+}
+
+
+.glassCard:hover::before,
+.step:hover::before,
+.moduleCard:hover::before,
+.priceCard:hover::before,
+.faqItem:hover::before {
+  transform: translateX(130%);
+}
+
+
+.moduleCard::after,
+.priceCard::after,
+.step::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 2px;
+  left: 26px;
+  bottom: 18px;
+  background: linear-gradient(90deg, #00ff9d, transparent);
+  opacity: 0.55;
+}
+
+
+.moduleCard svg,
+.glassCard svg,
+.faqItem svg {
+  color: #00ff9d;
+}
+
+
+.priceCard strong {
+  background: linear-gradient(135deg, #00ff9d, #00d4ff);
+  color: transparent;
+  background-clip: text;
+}
+
+
+.trustBar span {
+  background: rgba(255,255,255,0.085);
+  border-color: rgba(255,255,255,0.14);
+}
+
+
+.finalCta {
+  border-color: rgba(0,255,157,0.22);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(0,255,157,0.18), transparent 30%),
+    linear-gradient(145deg, rgba(255,255,255,0.14), rgba(255,255,255,0.055));
+}
+
+
+/* anti-blocage clic */
+a,
+button,
+.primaryBtn,
+.secondaryBtn,
+.smallBtn,
+.ghostBtn,
+.headerBtn,
+.priceBtn,
+.moduleCard {
+  pointer-events: auto;
+}
+
+
+.hero::before,
+.homePage::before {
+  pointer-events: none;
+}
+
+
+/* animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.75;
+  }
+
+
+  50% {
+    transform: translateY(-24px) translateX(18px);
+    opacity: 1;
+  }
+}
+
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+
+@media (max-width: 980px) {
+  h1 {
+    font-size: clamp(42px, 13vw, 72px);
+  }
+
+
+  .hero p {
+    font-size: 16px;
+  }
+
+
+  .siteNav {
+    gap: 10px;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
