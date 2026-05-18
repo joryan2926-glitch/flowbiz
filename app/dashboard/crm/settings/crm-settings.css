@@ -333,3 +333,28 @@ RESPONSIVE
     font-size:34px;
   }
 }
+
+.settingsPage {
+  padding: 32px;
+  color: white;
+}
+
+
+.settingsLoader {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: white;
+}
+
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

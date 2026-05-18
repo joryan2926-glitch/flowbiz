@@ -5,7 +5,7 @@ FLOWBIZ CRM NOTIFICATIONS
 REALTIME NOTIFICATION CENTER
 ====================================================== */
 
-import "./crm-notifications.css";
+import "./notifications.css";
 
 import {
 
