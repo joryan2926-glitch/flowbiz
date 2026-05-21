@@ -1,5 +1,6 @@
 "use client";
 
+import "./landing.css";
 
 import Link from "next/link";
 import {

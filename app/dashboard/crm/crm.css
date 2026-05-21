@@ -1,1093 +1,534 @@
-/* ======================================================
-FLOWBIZ CRM
-ULTRA PREMIUM SaaS UI
-FINAL VERSION
-====================================================== */
+/* =========================================================
+FLOWBIZ CRM DASHBOARD — PREMIUM FINAL
+========================================================= */
 
 
-.crmPage{
-
-
-  min-height:100vh;
-
-
-  padding:32px;
-
-
+.crmPage,
+.crmLoader {
+  min-height: 100vh;
+  width: 100%;
+  padding: 34px;
+  color: #ffffff;
   background:
-    radial-gradient(
-      circle at top left,
-      rgba(110,89,255,0.18),
-      transparent 28%
-    ),
-
-
-    radial-gradient(
-      circle at bottom right,
-      rgba(0,212,255,0.12),
-      transparent 30%
-    ),
-
-
-    #070b14;
-
-
-  color:white;
-
-
-  overflow:hidden;
+    radial-gradient(circle at 14% 8%, rgba(0, 255, 157, 0.18), transparent 32%),
+    radial-gradient(circle at 86% 12%, rgba(124, 92, 255, 0.24), transparent 36%),
+    linear-gradient(135deg, #050711 0%, #0b1024 52%, #050711 100%);
+  overflow-x: hidden;
 }
 
 
-/* ======================================================
-TOPBAR
-====================================================== */
-
-
-.crmTopbar{
-
-
-  margin-bottom:34px;
+.crmLoader {
+  display: grid;
+  place-items: center;
 }
 
 
-.crmBadge{
-
-
-  display:inline-flex;
-
-
-  align-items:center;
-
-
-  gap:8px;
-
-
-  padding:8px 14px;
-
-
-  margin-bottom:18px;
-
-
-  border-radius:999px;
-
-
-  background:
-    rgba(255,255,255,0.06);
-
-
-  border:
-    1px solid
-    rgba(255,255,255,0.08);
-
-
-  font-size:13px;
-
-
-  font-weight:700;
-
-
-  letter-spacing:0.4px;
+.crmHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 22px;
+  margin-bottom: 26px;
+  animation: crmFadeUp 0.55s ease both;
 }
 
 
-.crmTopbar h1{
-
-
-  font-size:48px;
-
-
-  font-weight:800;
-
-
-  line-height:1.1;
-
-
-  margin-bottom:14px;
+.crmBadge {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(124, 92, 255, 0.18);
+  border: 1px solid rgba(124, 92, 255, 0.35);
+  color: #dcd6ff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
 }
 
 
-.crmTopbar p{
-
-
-  max-width:720px;
-
-
-  line-height:1.8;
-
-
-  color:
-    rgba(255,255,255,0.66);
-
-
-  font-size:15px;
+.crmHeader h1 {
+  margin: 16px 0 10px;
+  font-size: clamp(38px, 5vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -0.08em;
+  background: linear-gradient(135deg, #00ff9d, #00d4ff, #7c5cff);
+  color: transparent;
+  background-clip: text;
 }
 
 
-/* ======================================================
-STATS
-====================================================== */
-
-
-.crmStats{
-
-
-  display:grid;
-
-
-  grid-template-columns:
-    repeat(4,1fr);
-
-
-  gap:22px;
-
-
-  margin-bottom:32px;
+.crmHeader p {
+  max-width: 720px;
+  margin: 0;
+  color: #b7bed6;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 650;
 }
 
 
-/* ======================================================
-STAT CARD
-====================================================== */
-
-
-.crmStatCard{
-
-
-  position:relative;
-
-
-  overflow:hidden;
-
-
-  display:flex;
-
-
-  align-items:center;
-
-
-  gap:18px;
-
-
-  padding:24px;
-
-
-  border-radius:28px;
-
-
-  background:
-    rgba(255,255,255,0.05);
-
-
-  border:
-    1px solid
-    rgba(255,255,255,0.08);
-
-
-  backdrop-filter:
-    blur(20px);
-
-
-  transition:0.28s ease;
+.crmHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 
-.crmStatCard::before{
-
-
-  content:"";
-
-
-  position:absolute;
-
-
-  inset:0;
-
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,0.06),
-      transparent
-    );
-
-
-  pointer-events:none;
+.crmIconBtn,
+.crmPrimaryBtn,
+.crmActionBtn,
+.crmFormTop button,
+.crmForm button {
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.18s ease;
 }
 
 
-.crmStatCard:hover{
-
-
-  transform:
-    translateY(-6px);
-
-
-  border-color:
-    rgba(110,89,255,0.32);
+.crmIconBtn,
+.crmActionBtn {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 
-/* ======================================================
-ICON
-====================================================== */
-
-
-.crmStatIcon{
-
-
-  width:68px;
-
-
-  height:68px;
-
-
-  border-radius:22px;
-
-
-  display:flex;
-
-
-  align-items:center;
-
-
-  justify-content:center;
-
-
-  background:
-    linear-gradient(
-      135deg,
-      #6e59ff,
-      #8f7bff
-    );
-
-
-  flex-shrink:0;
+.crmPrimaryBtn,
+.crmForm button {
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: linear-gradient(135deg, #00ff9d, #00d4ff, #7c5cff);
+  font-weight: 950;
+  box-shadow: 0 0 34px rgba(0, 212, 255, 0.22);
 }
 
 
-.crmStatIcon svg{
-
-
-  width:28px;
-
-
-  height:28px;
+.crmIconBtn:hover,
+.crmPrimaryBtn:hover,
+.crmActionBtn:hover,
+.crmFormTop button:hover,
+.crmForm button:hover {
+  transform: translateY(-3px);
 }
 
 
-.crmStatIcon.purple{
-
-
-  background:
-    linear-gradient(
-      135deg,
-      #7c4dff,
-      #b388ff
-    );
+.crmStats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 
-.crmStatIcon.green{
-
-
-  background:
-    linear-gradient(
-      135deg,
-      #00c853,
-      #69f0ae
-    );
-}
-
-
-.crmStatIcon.orange{
-
-
-  background:
-    linear-gradient(
-      135deg,
-      #ff9800,
-      #ffd180
-    );
-}
-
-
-/* ======================================================
-STAT TEXT
-====================================================== */
-
-
-.crmStatCard span{
-
-
-  display:block;
-
-
-  margin-bottom:8px;
-
-
-  color:
-    rgba(255,255,255,0.62);
-
-
-  font-size:14px;
-}
-
-
-.crmStatCard strong{
-
-
-  font-size:32px;
-
-
-  font-weight:800;
-
-
-  line-height:1;
-}
-
-
-/* ======================================================
-ACTIONS
-====================================================== */
-
-
-.crmActions{
-
-
-  display:flex;
-
-
-  align-items:center;
-
-
-  gap:18px;
-
-
-  margin-bottom:30px;
-}
-
-
-/* ======================================================
-SEARCH
-====================================================== */
-
-
-.crmSearch{
-
-
-  flex:1;
-
-
-  height:60px;
-
-
-  display:flex;
-
-
-  align-items:center;
-
-
-  gap:14px;
-
-
-  padding:0 18px;
-
-
-  border-radius:20px;
-
-
-  background:
-    rgba(255,255,255,0.05);
-
-
-  border:
-    1px solid
-    rgba(255,255,255,0.08);
-
-
-  backdrop-filter:
-    blur(20px);
-}
-
-
-.crmSearch input{
-
-
-  flex:1;
-
-
-  height:100%;
-
-
-  border:none;
-
-
-  outline:none;
-
-
-  background:none;
-
-
-  color:white;
-
-
-  font-size:15px;
-}
-
-
-.crmSearch input::placeholder{
-
-
-  color:
-    rgba(255,255,255,0.42);
-}
-
-
-/* ======================================================
-FILTER
-====================================================== */
-
-
-.crmFilterButton{
-
-
-  height:60px;
-
-
-  padding:0 24px;
-
-
-  border:none;
-
-
-  border-radius:20px;
-
-
-  display:flex;
-
-
-  align-items:center;
-
-
-  gap:10px;
-
-
-  background:
-    rgba(255,255,255,0.06);
-
-
-  border:
-    1px solid
-    rgba(255,255,255,0.08);
-
-
-  color:white;
-
-
-  font-weight:700;
-
-
-  cursor:pointer;
-
-
-  transition:0.25s;
-}
-
-
-.crmFilterButton:hover{
-
-
-  background:
-    rgba(110,89,255,0.18);
-}
-
-
-/* ======================================================
-CREATE
-====================================================== */
-
-
-.crmCreate{
-
-
-  display:grid;
-
-
-  grid-template-columns:
-    repeat(5,1fr) 170px;
-
-
-  gap:18px;
-
-
-  margin-bottom:34px;
-}
-
-
-.crmCreate input{
-
-
-  height:60px;
-
-
-  padding:0 18px;
-
-
-  border:none;
-
-
-  outline:none;
-
-
-  border-radius:20px;
-
-
-  background:
-    rgba(255,255,255,0.05);
-
-
-  border:
-    1px solid
-    rgba(255,255,255,0.08);
-
-
-  color:white;
-
-
-  font-size:14px;
-
-
-  backdrop-filter:
-    blur(20px);
-}
-
-
-.crmCreate input::placeholder{
-
-
-  color:
-    rgba(255,255,255,0.42);
-}
-
-
-/* ======================================================
-BUTTON
-====================================================== */
-
-
-.crmCreate button{
-
-
-  height:60px;
-
-
-  border:none;
-
-
-  border-radius:20px;
-
-
-  display:flex;
-
-
-  align-items:center;
-
-
-  justify-content:center;
-
-
-  gap:10px;
-
-
-  background:
-    linear-gradient(
-      135deg,
-      #6e59ff,
-      #00d4ff
-    );
-
-
-  color:white;
-
-
-  font-weight:700;
-
-
-  cursor:pointer;
-
-
-  transition:0.28s;
-}
-
-
-.crmCreate button:hover{
-
-
-  transform:
-    translateY(-3px);
-
-
+.crmStatCard,
+.crmFormCard,
+.crmClientCard,
+.crmEmpty {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.13), rgba(255,255,255,0.055));
+  border: 1px solid rgba(255,255,255,0.15);
   box-shadow:
-    0 10px 40px
-    rgba(110,89,255,0.32);
+    0 24px 70px rgba(0,0,0,0.28),
+    inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 
-/* ======================================================
-GRID
-====================================================== */
-
-
-.crmGrid{
-
-
-  display:grid;
-
-
-  grid-template-columns:
-    repeat(
-      auto-fill,
-      minmax(340px,1fr)
-    );
-
-
-  gap:24px;
+.crmStatCard {
+  min-height: 118px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: crmFadeUp 0.6s ease both;
 }
 
 
-/* ======================================================
-CARD
-====================================================== */
-
-
-.crmCard{
-
-
-  position:relative;
-
-
-  overflow:hidden;
-
-
-  padding:26px;
-
-
-  border-radius:30px;
-
-
-  background:
-    rgba(255,255,255,0.05);
-
-
-  border:
-    1px solid
-    rgba(255,255,255,0.08);
-
-
-  backdrop-filter:
-    blur(20px);
-
-
-  transition:0.3s ease;
+.crmStatCard svg {
+  width: 32px;
+  height: 32px;
+  color: #00ff9d;
+  filter: drop-shadow(0 0 14px rgba(0, 255, 157, 0.25));
 }
 
 
-.crmCard::before{
-
-
-  content:"";
-
-
-  position:absolute;
-
-
-  inset:0;
-
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,0.05),
-      transparent
-    );
-
-
-  pointer-events:none;
+.crmStatCard strong {
+  display: block;
+  font-size: 28px;
+  letter-spacing: -0.05em;
 }
 
 
-.crmCard:hover{
-
-
-  transform:
-    translateY(-6px);
-
-
-  border-color:
-    rgba(110,89,255,0.3);
+.crmStatCard span {
+  display: block;
+  margin-top: 4px;
+  color: #aab0c5;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 
-/* ======================================================
-HEADER
-====================================================== */
-
-
-.crmCardHeader{
-
-
-  display:flex;
-
-
-  align-items:center;
-
-
-  gap:16px;
-
-
-  margin-bottom:22px;
+.crmToolbar {
+  margin: 20px 0;
 }
 
 
-/* ======================================================
-AVATAR
-====================================================== */
-
-
-.crmAvatar{
-
-
-  width:64px;
-
-
-  height:64px;
-
-
-  border-radius:20px;
-
-
-  display:flex;
-
-
-  align-items:center;
-
-
-  justify-content:center;
-
-
-  background:
-    linear-gradient(
-      135deg,
-      #6e59ff,
-      #00d4ff
-    );
-
-
-  font-size:24px;
-
-
-  font-weight:800;
-
-
-  flex-shrink:0;
+.crmSearch {
+  max-width: 620px;
+  min-height: 52px;
+  padding: 0 16px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.14);
 }
 
 
-/* ======================================================
-TEXT
-====================================================== */
-
-
-.crmCardHeader strong{
-
-
-  display:block;
-
-
-  margin-bottom:8px;
-
-
-  font-size:18px;
-
-
-  font-weight:700;
+.crmSearch svg {
+  color: #00d4ff;
 }
 
 
-.crmCardHeader span{
-
-
-  color:
-    rgba(255,255,255,0.58);
-
-
-  font-size:14px;
+.crmSearch input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 750;
 }
 
 
-/* ======================================================
-INFOS
-====================================================== */
-
-
-.crmInfos{
-
-
-  display:flex;
-
-
-  flex-direction:column;
-
-
-  gap:14px;
-
-
-  margin-bottom:24px;
+.crmSearch input::placeholder {
+  color: #8f96ad;
 }
 
 
-.crmInfos div{
-
-
-  display:flex;
-
-
-  align-items:center;
-
-
-  gap:12px;
-
-
-  padding:14px 16px;
-
-
-  border-radius:16px;
-
-
-  background:
-    rgba(255,255,255,0.05);
-
-
-  color:
-    rgba(255,255,255,0.72);
-
-
-  font-size:14px;
+.crmFormCard {
+  padding: 24px;
+  margin-bottom: 22px;
+  animation: crmFadeUp 0.45s ease both;
 }
 
 
-/* ======================================================
-FOOTER
-====================================================== */
-
-
-.crmFooter{
-
-
-  display:flex;
-
-
-  align-items:center;
-
-
-  justify-content:space-between;
-
-
-  gap:14px;
+.crmFormTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
 }
 
 
-/* ======================================================
-STAGE
-====================================================== */
-
-
-.crmStage{
-
-
-  padding:10px 16px;
-
-
-  border-radius:14px;
-
-
-  background:
-    rgba(110,89,255,0.16);
-
-
-  color:#9d8bff;
-
-
-  font-size:13px;
-
-
-  font-weight:700;
-
-
-  text-transform:capitalize;
+.crmFormTop h2 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: -0.04em;
 }
 
 
-/* ======================================================
-STATUS
-====================================================== */
-
-
-.crmStatus{
-
-
-  padding:10px 16px;
-
-
-  border-radius:14px;
-
-
-  background:
-    rgba(0,200,83,0.16);
-
-
-  color:#69f0ae;
-
-
-  font-size:13px;
-
-
-  font-weight:700;
-
-
-  text-transform:capitalize;
+.crmFormTop button {
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.13);
+  font-weight: 850;
 }
 
 
-/* ======================================================
-LOADER
-====================================================== */
-
-
-.crmLoader{
-
-
-  width:100%;
-
-
-  min-height:100vh;
-
-
-  display:flex;
-
-
-  align-items:center;
-
-
-  justify-content:center;
-
-
-  background:#070b14;
+.crmForm {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
 }
 
 
-.spin{
-
-
-  animation:
-    spin 1s linear infinite;
+.crmForm input,
+.crmForm select {
+  min-height: 48px;
+  border-radius: 15px;
+  padding: 0 14px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.085);
+  color: #ffffff;
+  outline: none;
+  font-weight: 750;
 }
 
 
-@keyframes spin{
+.crmForm input::placeholder {
+  color: #8f96ad;
+}
 
 
-  from{
+.crmForm input:focus,
+.crmForm select:focus {
+  border-color: rgba(0,212,255,0.5);
+  box-shadow: 0 0 0 4px rgba(0,212,255,0.08);
+}
 
 
-    transform:
-      rotate(0deg);
+.crmContent {
+  margin-top: 18px;
+}
+
+
+.crmClientList {
+  display: grid;
+  gap: 14px;
+}
+
+
+.crmClientCard {
+  min-height: 124px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 58px 1fr 170px 150px;
+  align-items: center;
+  gap: 18px;
+  animation: crmFadeUp 0.55s ease both;
+}
+
+
+.crmClientCard::before,
+.crmStatCard::before,
+.crmFormCard::before,
+.crmEmpty::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.12), transparent);
+  transform: translateX(-140%);
+  transition: transform 0.75s ease;
+  pointer-events: none;
+}
+
+
+.crmClientCard:hover::before,
+.crmStatCard:hover::before,
+.crmFormCard:hover::before,
+.crmEmpty:hover::before {
+  transform: translateX(140%);
+}
+
+
+.crmClientCard:hover,
+.crmStatCard:hover {
+  border-color: rgba(0,255,157,0.32);
+  transform: translateY(-3px);
+}
+
+
+.crmClientAvatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #00ff9d, #00d4ff, #7c5cff);
+  font-size: 22px;
+  font-weight: 950;
+  box-shadow: 0 0 30px rgba(0,212,255,0.24);
+}
+
+
+.crmClientMain h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+}
+
+
+.crmClientMain p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #aab0c5;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+
+.crmClientMain svg {
+  color: #00d4ff;
+}
+
+
+.crmClientStatus {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+}
+
+
+.crmClientStatus span {
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(0,255,157,0.12);
+  border: 1px solid rgba(0,255,157,0.28);
+  color: #c9ffe8;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+
+.crmClientStatus strong {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+
+.crmClientActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+}
+
+
+.crmActionBtn.danger {
+  background: rgba(255,80,80,0.12);
+  border-color: rgba(255,80,80,0.28);
+}
+
+
+.crmActionBtn.danger svg {
+  color: #ff8f8f;
+}
+
+
+.crmEmpty {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+
+.crmEmpty svg {
+  width: 42px;
+  height: 42px;
+  color: #ffcf70;
+}
+
+
+.crmEmpty h3 {
+  margin: 14px 0 6px;
+  font-size: 24px;
+}
+
+
+.crmEmpty p {
+  margin: 0;
+  color: #aab0c5;
+}
+
+
+.spin {
+  animation: crmSpin 0.9s linear infinite;
+}
+
+
+@keyframes crmFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
   }
 
 
-  to{
-
-
-    transform:
-      rotate(360deg);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 
-/* ======================================================
-RESPONSIVE
-====================================================== */
-
-
-@media(max-width:1400px){
-
-
-  .crmCreate{
-
-
-    grid-template-columns:
-      repeat(2,1fr);
+@keyframes crmSpin {
+  to {
+    transform: rotate(360deg);
   }
 }
 
 
-@media(max-width:1200px){
+@media (max-width: 1100px) {
+  .crmHeader {
+    flex-direction: column;
+  }
 
 
-  .crmStats{
+  .crmStats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
 
-    grid-template-columns:
-      repeat(2,1fr);
+  .crmForm {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .crmClientCard {
+    grid-template-columns: 58px 1fr;
+  }
+
+
+  .crmClientStatus,
+  .crmClientActions {
+    grid-column: 2;
+    justify-content: flex-start;
   }
 }
 
 
-@media(max-width:768px){
-
-
-  .crmPage{
-
-
-    padding:20px;
+@media (max-width: 680px) {
+  .crmPage {
+    padding: 22px 14px;
   }
 
 
-  .crmTopbar h1{
-
-
-    font-size:36px;
+  .crmStats,
+  .crmForm {
+    grid-template-columns: 1fr;
   }
 
 
-  .crmStats{
-
-
-    grid-template-columns:
-      1fr;
+  .crmClientCard {
+    grid-template-columns: 1fr;
   }
 
 
-  .crmActions{
-
-
-    flex-direction:column;
+  .crmClientStatus,
+  .crmClientActions {
+    grid-column: auto;
   }
 
 
-  .crmCreate{
-
-
-    grid-template-columns:
-      1fr;
+  .crmHeaderActions,
+  .crmPrimaryBtn {
+    width: 100%;
   }
 
 
-  .crmGrid{
-
-
-    grid-template-columns:
-      1fr;
+  .crmPrimaryBtn {
+    justify-content: center;
   }
 }

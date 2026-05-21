@@ -1,89 +1,125 @@
 "use client";
 
+
 import {
   useEffect,
   useState,
 } from "react";
 
+
 import { supabase }
 from "@/app/lib/supabase";
 
-export function useBilling(){
+
+export function useBilling() {
+
 
   const [
     loading,
     setLoading,
   ] = useState(true);
 
+
   const [
     invoices,
     setInvoices,
-  ] = useState([]);
+  ] = useState<any[]>([]);
+
 
   const [
     subscriptions,
     setSubscriptions,
-  ] = useState([]);
+  ] = useState<any[]>([]);
+
 
   const [
     payments,
     setPayments,
-  ] = useState([]);
+  ] = useState<any[]>([]);
 
-  async function loadBilling(){
 
-    const [
+  useEffect(() => {
 
-      invoicesRes,
 
-      subscriptionsRes,
+    async function loadBilling(){
 
-      paymentsRes,
 
-    ] = await Promise.all([
+      const [
 
-      supabase
-        .from("invoices")
-        .select("*"),
 
-      supabase
-        .from("subscriptions")
-        .select("*"),
+        invoicesRes,
 
-      supabase
-        .from("payments")
-        .select("*"),
-    ]);
 
-    setInvoices(
-      invoicesRes.data || []
-    );
+        subscriptionsRes,
 
-    setSubscriptions(
-      subscriptionsRes.data || []
-    );
 
-    setPayments(
-      paymentsRes.data || []
-    );
+        paymentsRes,
 
-    setLoading(false);
-  }
 
-  useEffect(()=>{
+      ] = await Promise.all([
+
+
+        supabase
+          .from("invoices")
+          .select("*"),
+
+
+        supabase
+          .from("subscriptions")
+          .select("*"),
+
+
+        supabase
+          .from("payments")
+          .select("*"),
+
+
+      ]);
+
+
+      setInvoices(
+        invoicesRes.data || []
+      );
+
+
+      setSubscriptions(
+        subscriptionsRes.data || []
+      );
+
+
+      setPayments(
+        paymentsRes.data || []
+      );
+
+
+      setLoading(false);
+
+
+    }
+
 
     loadBilling();
 
-  },[]);
+
+  }, []);
+
 
   return{
 
+
     loading,
+
 
     invoices,
 
+
     subscriptions,
 
+
     payments,
+
+
   };
+
+
 }

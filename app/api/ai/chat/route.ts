@@ -1,146 +1,106 @@
-// ======================================================
-// app/api/ai/chat/route.ts
-// FLOWBIZ AI CHAT
-// FINAL VERSION
-// ======================================================
+import { NextResponse } from "next/server";
 
-import {
-  NextResponse,
-} from "next/server";
 
-import OpenAI
-from "openai";
+export async function POST(req: Request) {
+  try {
 
-/* ======================================================
-OPENAI
-====================================================== */
 
-const openai =
-  new OpenAI({
+    const body = await req.json();
 
-    apiKey:
-      process.env
-        .OPENAI_API_KEY,
-  });
 
-/* ======================================================
-POST
-====================================================== */
+    const message = body.message;
 
-export async function POST(
-  request:Request
-){
 
-  try{
-
-    const body =
-      await request.json();
-
-    const {
-      message,
-    } = body;
-
-    /*
-    ====================================================
-    VALIDATION
-    ====================================================
-    */
-
-    if(!message){
-
+    if (!message) {
       return NextResponse.json(
-
         {
-          error:
-            "Message requis",
+          error: "Message requis"
         },
-
         {
-          status:400,
+          status: 400
         }
       );
     }
 
-    /*
-    ====================================================
-    OPENAI
-    ====================================================
-    */
 
-    const completion =
+    const OPENAI_API_KEY =
+      process.env.OPENAI_API_KEY;
 
-      await openai.chat.completions.create({
 
-        model:"gpt-4.1-mini",
+    if (!OPENAI_API_KEY) {
+      return NextResponse.json(
+        {
+          error: "OPENAI_API_KEY manquante"
+        },
+        {
+          status: 500
+        }
+      );
+    }
 
-        messages:[
 
-          {
-            role:"system",
+    const response = await fetch(
+      "https://api.openai.com/v1/chat/completions",
+      {
+        method: "POST",
 
-            content:`
 
-              Tu es FlowBiz AI,
-              assistant business premium.
+        headers: {
+          "Content-Type": "application/json",
 
-              Tu aides les entreprises
-              sur :
 
-              - CRM
-              - ventes
-              - marketing
-              - automatisation
-              - stratégie
-              - finance
-              - relation client
-              - croissance business
+          Authorization:
+            `Bearer ${OPENAI_API_KEY}`,
+        },
 
-              Réponses professionnelles,
-              modernes,
-              claires,
-              premium.
 
-            `,
-          },
+        body: JSON.stringify({
+          model: "gpt-4o-mini",
 
-          {
-            role:"user",
 
-            content:message,
-          },
-        ],
+          messages: [
+            {
+              role: "system",
 
-        temperature:0.7,
-      });
 
-    /*
-    ====================================================
-    RESPONSE
-    ====================================================
-    */
+              content:
+                "Tu es FlowBiz AI, assistant intelligent professionnel."
+            },
 
-    return NextResponse.json({
 
-      success:true,
+            {
+              role: "user",
 
-      response:
 
-        completion
-          .choices?.[0]
-          ?.message
-          ?.content || "",
-    });
+              content: message
+            }
+          ],
 
-  }catch(error:any){
+
+          temperature: 0.7,
+        }),
+      }
+    );
+
+
+    const data = await response.json();
+
+
+    return NextResponse.json(data);
+
+
+  } catch (error) {
+
+
+    console.error(error);
+
 
     return NextResponse.json(
-
       {
-        error:error.message,
+        error: "Erreur serveur IA"
       },
-
       {
-        status:500,
+        status: 500
       }
     );
   }

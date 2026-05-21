@@ -1,0 +1,652 @@
+.subscriptionsPage {
+  min-height: 100vh;
+  padding: 34px;
+  color: white;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(0,255,157,.18), transparent 30%),
+    radial-gradient(circle at 86% 10%, rgba(124,92,255,.26), transparent 36%),
+    linear-gradient(135deg, #050711 0%, #0b1024 50%, #050711 100%);
+}
+
+
+.subscriptionsHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  margin-bottom: 26px;
+}
+
+
+.subscriptionsBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(124,92,255,.18);
+  border: 1px solid rgba(0,212,255,.28);
+  color: #dcd6ff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+
+.subscriptionsHeader h1 {
+  margin: 16px 0 10px;
+  font-size: clamp(42px, 5vw, 78px);
+  line-height: .95;
+  letter-spacing: -.08em;
+  background: linear-gradient(135deg, #00ff9d, #00d4ff, #7c5cff);
+  color: transparent;
+  background-clip: text;
+}
+
+
+.subscriptionsHeader p {
+  max-width: 760px;
+  color: #b7bed6;
+  line-height: 1.6;
+}
+
+
+.subscriptionsActions,
+.linkedPages {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+
+.primaryBtn,
+.ghostBtn,
+.subscribeBtn,
+.linkedPages a,
+.linkedPages button {
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 16px;
+  border: none;
+  text-decoration: none;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  cursor: pointer;
+  font-weight: 900;
+  transition: .18s ease;
+}
+
+
+.primaryBtn,
+.subscribeBtn {
+  background: linear-gradient(135deg, #00ff9d, #00d4ff, #7c5cff);
+}
+
+
+.ghostBtn,
+.linkedPages a,
+.linkedPages button {
+  background: rgba(255,255,255,.09);
+  border: 1px solid rgba(255,255,255,.14);
+}
+
+
+.primaryBtn:hover,
+.ghostBtn:hover,
+.subscribeBtn:hover,
+.linkedPages a:hover,
+.linkedPages button:hover,
+.planCard:hover,
+.statCard:hover {
+  transform: translateY(-3px);
+}
+
+
+.subscriptionsStats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+
+.statCard,
+.planCard {
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(255,255,255,.14), rgba(255,255,255,.055));
+  border: 1px solid rgba(255,255,255,.15);
+  box-shadow: 0 24px 70px rgba(0,0,0,.30);
+}
+
+
+.statCard {
+  min-height: 116px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.statCard svg {
+  color: #00ff9d;
+}
+
+
+.statCard strong {
+  display: block;
+  font-size: 26px;
+}
+
+
+.statCard span {
+  color: #aab0c5;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+
+.planCard {
+  padding: 24px;
+}
+
+
+.planCard.active {
+  border-color: rgba(0,255,157,.45);
+}
+
+
+.planTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.planTop span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(0,212,255,.12);
+  color: #d8f8ff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+
+.planCard h2 {
+  margin: 20px 0 8px;
+  font-size: 24px;
+}
+
+
+.planCard strong {
+  font-size: 34px;
+  color: #00ff9d;
+}
+
+
+.planCard p {
+  color: #aab0c5;
+  line-height: 1.55;
+}
+
+
+.planCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0;
+  display: grid;
+  gap: 10px;
+}
+
+
+.planCard li {
+  color: #cfd4e8;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+}
+
+
+.subscribeBtn {
+  width: 100%;
+}
+
+
+.linkedPages {
+  margin-top: 24px;
+}
+
+
+.spin {
+  animation: spin .9s linear infinite;
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .subscriptionsStats,
+  .plansGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  .subscriptionsHeader {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 680px) {
+  .subscriptionsPage {
+    padding: 22px 14px;
+  }
+
+
+  .subscriptionsStats,
+  .plansGrid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .primaryBtn,
+  .ghostBtn,
+  .linkedPages a,
+  .linkedPages button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+FLOWBIZ ABONNEMENTS — ULTRA PREMIUM FINAL
+========================================================= */
+
+
+.subscriptionsPage {
+  min-height: 100vh;
+  width: 100%;
+  padding: 34px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(0,255,157,0.20), transparent 30%),
+    radial-gradient(circle at 86% 10%, rgba(124,92,255,0.28), transparent 36%),
+    radial-gradient(circle at 50% 90%, rgba(0,212,255,0.10), transparent 38%),
+    linear-gradient(135deg, #050711 0%, #0b1024 50%, #050711 100%);
+  overflow-x: hidden;
+}
+
+
+.subscriptionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 22px;
+  margin-bottom: 28px;
+  animation: subFadeUp 0.55s ease both;
+}
+
+
+.subscriptionsBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(0,255,157,0.14), rgba(124,92,255,0.22));
+  border: 1px solid rgba(0,212,255,0.30);
+  color: #dcd6ff;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+}
+
+
+.subscriptionsHeader h1 {
+  margin: 16px 0 10px;
+  font-size: clamp(42px, 5vw, 82px);
+  line-height: 0.95;
+  letter-spacing: -0.08em;
+  background: linear-gradient(135deg, #00ff9d, #00d4ff, #7c5cff);
+  color: transparent;
+  background-clip: text;
+}
+
+
+.subscriptionsHeader p {
+  max-width: 780px;
+  margin: 0;
+  color: #b7bed6;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 650;
+}
+
+
+.subscriptionsActions,
+.linkedPages {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+
+.primaryBtn,
+.ghostBtn,
+.subscribeBtn,
+.linkedPages a,
+.linkedPages button {
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 17px;
+  border: none;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  cursor: pointer;
+  font-weight: 950;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+
+.primaryBtn,
+.subscribeBtn {
+  background: linear-gradient(135deg, #00ff9d, #00d4ff, #7c5cff);
+  box-shadow: 0 0 36px rgba(0,212,255,0.22);
+}
+
+
+.ghostBtn,
+.linkedPages a,
+.linkedPages button {
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+
+.primaryBtn:hover,
+.ghostBtn:hover,
+.subscribeBtn:hover,
+.linkedPages a:hover,
+.linkedPages button:hover,
+.planCard:hover,
+.statCard:hover {
+  transform: translateY(-4px);
+}
+
+
+.subscriptionsStats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+
+.statCard,
+.planCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.15), rgba(255,255,255,0.055));
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow:
+    0 26px 80px rgba(0,0,0,0.34),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+
+.statCard {
+  min-height: 118px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  animation: subFadeUp 0.6s ease both;
+}
+
+
+.statCard svg {
+  width: 32px;
+  height: 32px;
+  color: #00ff9d;
+  filter: drop-shadow(0 0 14px rgba(0,255,157,0.25));
+}
+
+
+.statCard strong {
+  display: block;
+  font-size: 26px;
+  letter-spacing: -0.05em;
+}
+
+
+.statCard span {
+  display: block;
+  margin-top: 4px;
+  color: #aab0c5;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+
+.planCard {
+  padding: 24px;
+  animation: subFadeUp 0.65s ease both;
+}
+
+
+.planCard.active {
+  border-color: rgba(0,255,157,0.48);
+  box-shadow:
+    0 30px 90px rgba(0,0,0,0.38),
+    0 0 42px rgba(0,255,157,0.11);
+}
+
+
+.planTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.planTop span {
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(0,212,255,0.12);
+  border: 1px solid rgba(0,212,255,0.28);
+  color: #d8f8ff;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+
+.planTop svg {
+  color: #00ff9d;
+}
+
+
+.planCard h2 {
+  margin: 20px 0 8px;
+  font-size: 24px;
+  letter-spacing: -0.04em;
+}
+
+
+.planCard strong {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 36px;
+  letter-spacing: -0.06em;
+  background: linear-gradient(135deg, #00ff9d, #00d4ff);
+  color: transparent;
+  background-clip: text;
+}
+
+
+.planCard p {
+  min-height: 48px;
+  color: #aab0c5;
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+
+.planCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0;
+  display: grid;
+  gap: 10px;
+}
+
+
+.planCard li {
+  color: #cfd4e8;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+
+.planCard li svg {
+  color: #00ff9d;
+}
+
+
+.subscribeBtn {
+  width: 100%;
+}
+
+
+.subscribeBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+.linkedPages {
+  margin-top: 24px;
+}
+
+
+.linkedPages a,
+.linkedPages button {
+  flex: 1;
+  min-width: 180px;
+}
+
+
+/* effet premium */
+.statCard::before,
+.planCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.12), transparent);
+  transform: translateX(-140%);
+  transition: transform 0.75s ease;
+  pointer-events: none;
+}
+
+
+.statCard:hover::before,
+.planCard:hover::before {
+  transform: translateX(140%);
+}
+
+
+.statCard:hover,
+.planCard:hover {
+  border-color: rgba(0,255,157,0.32);
+}
+
+
+.spin {
+  animation: subSpin 0.9s linear infinite;
+}
+
+
+@keyframes subFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes subSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 1180px) {
+  .subscriptionsStats,
+  .plansGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  .subscriptionsHeader {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 680px) {
+  .subscriptionsPage {
+    padding: 22px 14px;
+  }
+
+
+  .subscriptionsStats,
+  .plansGrid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .primaryBtn,
+  .ghostBtn,
+  .linkedPages a,
+  .linkedPages button {
+    width: 100%;
+  }
+}

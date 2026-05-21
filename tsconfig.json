@@ -8,7 +8,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noImplicitAny": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
@@ -24,8 +24,7 @@
         "name": "next"
       }
     ],
-    "baseUrl": "./",
-    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"

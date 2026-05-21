@@ -1,176 +1,52 @@
-// ======================================================
-// app/api/crm/send-email/route.ts
-// FLOWBIZ CRM EMAILS FINAL
-// WITH HISTORY SAVE
-// ======================================================
+import { NextRequest, NextResponse } from "next/server";
 
-import {
-  NextResponse,
-} from "next/server";
 
-import {
-  Resend,
-} from "resend";
+export async function POST(req: NextRequest) {
+  try {
+    const body = await req.json();
 
-import {
-  createClient,
-} from "@supabase/supabase-js";
-
-/* ======================================================
-RESEND
-====================================================== */
-
-const resend =
-  new Resend(
-
-    process.env
-      .RESEND_API_KEY
-  );
-
-/* ======================================================
-SUPABASE
-====================================================== */
-
-const supabase =
-  createClient(
-
-    process.env
-      .NEXT_PUBLIC_SUPABASE_URL!,
-
-    process.env
-      .SUPABASE_SERVICE_ROLE_KEY!
-  );
-
-/* ======================================================
-POST
-====================================================== */
-
-export async function POST(
-  request:Request
-){
-
-  try{
-
-    const body =
-      await request.json();
 
     const {
-
       to,
       subject,
       message,
-
     } = body;
 
-    /*
-    ====================================================
-    SEND EMAIL
-    ====================================================
-    */
 
-    await resend.emails.send({
+    if (!to || !subject || !message) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Champs manquants",
+        },
+        { status: 400 }
+      );
+    }
 
-      from:
-        "FlowBiz <onboarding@resend.dev>",
 
-      to,
+    console.log("EMAIL CRM");
+    console.log("To:", to);
+    console.log("Subject:", subject);
 
-      subject,
-
-      html:`
-
-        <div
-          style="
-            background:#070b1d;
-            padding:40px;
-            font-family:Arial;
-            color:white;
-          "
-        >
-
-          <h1
-            style="
-              font-size:28px;
-              margin-bottom:20px;
-            "
-          >
-
-            FlowBiz CRM
-
-          </h1>
-
-          <div
-            style="
-              background:#111827;
-              padding:24px;
-              border-radius:20px;
-              border:1px solid rgba(255,255,255,.08);
-            "
-          >
-
-            <p
-              style="
-                color:#d1d5db;
-                line-height:1.8;
-                font-size:15px;
-              "
-            >
-
-              ${message}
-
-            </p>
-
-          </div>
-
-        </div>
-      `,
-    });
-
-    /*
-    ====================================================
-    SAVE HISTORY
-    ====================================================
-    */
-
-    await supabase
-
-      .from(
-        "crm_email_history"
-      )
-
-      .insert({
-
-        recipient:to,
-
-        subject,
-
-        message,
-
-        status:"sent",
-      });
-
-    /*
-    ====================================================
-    RESPONSE
-    ====================================================
-    */
 
     return NextResponse.json({
-
-      success:true,
+      success: true,
+      message: "Email envoyé avec succès",
     });
 
-  }catch(error:any){
+
+  } catch (error) {
+
+
+    console.error(error);
+
 
     return NextResponse.json(
-
       {
-        error:error.message,
+        success: false,
+        error: "Erreur serveur",
       },
-
-      {
-        status:500,
-      }
+      { status: 500 }
     );
   }
 }
