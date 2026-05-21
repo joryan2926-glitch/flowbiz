@@ -8,11 +8,11 @@ export default function Home() {
         alignItems: "center",
         background: "#050816",
         color: "white",
-        flexDirection: "column",
+        fontSize: "42px",
+        fontWeight: "bold",
       }}
     >
-      <h1>FLOWBIZ</h1>
-      <p>Application opérationnelle</p>
+      FLOWBIZ ONLINE
     </main>
   );
 }
